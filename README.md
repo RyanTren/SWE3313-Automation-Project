@@ -1,2 +1,12 @@
-# SWE3313-Automation-Project
-Automation of J's Resturant
+### SWE3313-Automation-Project
+ #Program: Automation of J's Resturant
+
+
+##Team
+* Ryan
+* Shams
+* Isa
+* Alix
+* Nhut
+
+
