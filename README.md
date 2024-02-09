@@ -49,7 +49,7 @@ data rather than calculating it.
 * __[Technology Description](redirect github sublink here (techdescription.md file))__
 
 ## Project Plan
-* __[Project Plan](gantt chart file goes here)__ - YouTrack
+* __[Project Plan]((https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Project%20Plan/SWE3313-Group_1-Automation_of_J's_Restaurant.pdf))__ - monday.com
 
 
 ## Project Plan Video Presentation
