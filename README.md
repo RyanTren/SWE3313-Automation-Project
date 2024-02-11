@@ -39,8 +39,7 @@ data rather than calculating it.
 * __[Ryan's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/ryansresume.md)__ 
 * __[Shams's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/shamsresume.md)__
 * __[Isa's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/isasresume.md)__
-* __[Prince's Resume Page 1](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/princesresume1.md)__
-* __[Prince's Resume Page 2](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/princesresume2.md)__
+* __[Prince's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/Prince%20Duepa.pdf)__
 * __[Nhut's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/nhutsresume.md)__
 
 ## Team Assignment
