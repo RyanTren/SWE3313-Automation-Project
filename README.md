@@ -43,7 +43,7 @@ data rather than calculating it.
 * __[Nhut's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/nhutsresume.md)__
 
 ## Team Assignment
-* __[Team Assignments](redirect github sublink here (resume.md file))__
+* __[Team Assignments](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Assignment/Roles)__
 ## Technology Selection
 * __[Technology Description](redirect github sublink here (techdescription.md file))__
 
