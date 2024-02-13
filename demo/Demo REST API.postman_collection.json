@@ -1,0 +1,151 @@
+{
+  "info": {
+    "_postman_id": "d747a104-6faa-40d0-96c6-b7c65002ba67",
+    "name": "Demo REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "11241946"
+  },
+  "item": [
+    {
+      "name": "Greeting",
+      "item": [
+        {
+          "name": "Generic Greeting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/greeting",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "greeting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Greet A Person",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/greeting?name=Samwise+Gamee",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "greeting"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "James"
+                },
+                {
+                  "key": "name",
+                  "value": "Jackson",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Say `hi`!"
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "List All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/users/all",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add User using JSON Body",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Steve Rogers\",\n    \"email\": \"cevans@avengerco.gov\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/users/add",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add User using URL Params",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/users/add/qparams?name=Bruce Banner&email=mruffalo@avengerco.gov",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "add",
+                "qparams"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Bruce Banner"
+                },
+                {
+                  "key": "email",
+                  "value": "mruffalo@avengerco.gov"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Interact with User model/resource"
+    }
+  ]
+}
