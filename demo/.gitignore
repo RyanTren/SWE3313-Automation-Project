@@ -4,7 +4,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-frontend/generated
+frontend/generated/
 
 
 ### STS ###
