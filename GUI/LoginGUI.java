@@ -23,43 +23,56 @@ public class LoginGUI extends JFrame {
 
         Font font = new Font("Corbel", Font.PLAIN, 14); // Customize the font here
 
-        // Username Label
+
+        // Logo
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.insets = defaultInsets;
+        constraints.gridwidth = 2; // Span two columns
+        constraints.insets = new Insets(5, 5, 10, 5); // Adjust padding
+        JLabel logoLabel = new JLabel(new ImageIcon("J's Restaurant Logo.png")); // Replace with the actual path
+        panel.add(logoLabel, constraints);
+
+// Username Label
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        constraints.gridwidth = 1; // Reset to default
+        constraints.insets = new Insets(5, 5, 5, 5); // Reset padding
         JLabel usernameLabel = new JLabel("Username:");
         usernameLabel.setFont(font);
+        usernameLabel.setForeground(Color.red); // Set the desired font color
         panel.add(usernameLabel, constraints);
 
-        // Username Field
+// Username Field
         constraints.gridx = 1;
-        constraints.gridy = 0;
+        constraints.gridy = 1;
         constraints.insets = new Insets(5, 5, 5, 20); // Adjust right padding for the username field
         constraints.fill = GridBagConstraints.HORIZONTAL;
         usernameField = new JTextField(20);
         usernameField.setFont(font);
         panel.add(usernameField, constraints);
 
-        // Password Label
+// Password Label
         constraints.gridx = 0;
-        constraints.gridy = 1;
+        constraints.gridy = 2;
         constraints.insets = defaultInsets;
         JLabel passwordLabel = new JLabel("Password:");
         passwordLabel.setFont(font);
+        passwordLabel.setForeground(Color.red); // Set the desired font color
         panel.add(passwordLabel, constraints);
 
-        // Password Field
+// Password Field
         constraints.gridx = 1;
-        constraints.gridy = 1;
+        constraints.gridy = 2;
         constraints.insets = new Insets(5, 5, 5, 20); // Adjust right padding for the password field
         constraints.fill = GridBagConstraints.HORIZONTAL;
         passwordField = new JPasswordField(20);
         passwordField.setFont(font);
         panel.add(passwordField, constraints);
 
+
         // Login Button
         constraints.gridx = 0;
-        constraints.gridy = 2;
+        constraints.gridy = 3;
         constraints.gridwidth = 2;
         constraints.insets = new Insets(5, 5, 5, 5); // Adjust top and bottom padding for the login button
         constraints.fill = GridBagConstraints.NONE;
