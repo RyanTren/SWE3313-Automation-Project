@@ -21,7 +21,7 @@ public class LoginGUI extends JFrame {
         GridBagConstraints constraints = new GridBagConstraints();
         Insets defaultInsets = new Insets(5, 5, 5, 5); // Default padding
 
-        Font font = new Font("Franklin Gothic Medium", Font.ITALIC, 15); // Customize the font here
+        Font font = new Font("Franklin Gothic Medium", Font.PLAIN, 15); // Customize the font here
 
 
         // Logo
