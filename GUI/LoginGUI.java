@@ -1,5 +1,8 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.plaf.BorderUIResource;
 import java.awt.*;
+import java.awt.geom.RoundRectangle2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,10 +21,12 @@ public class LoginGUI extends JFrame {
         createBackgroundPanel();
 
         JPanel panel = new JPanel(new GridBagLayout());
+        panel.setBackground(new Color(255,246,242));
         GridBagConstraints constraints = new GridBagConstraints();
         Insets defaultInsets = new Insets(5, 5, 5, 5); // Default padding
 
-        Font font = new Font("Franklin Gothic Medium", Font.PLAIN, 15); // Customize the font here
+        Font font = new Font("Franklin Gothic Medium", Font.ITALIC, 18); // Customize the font here
+        Font loginFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
 
 
         // Logo
@@ -50,6 +55,8 @@ public class LoginGUI extends JFrame {
         constraints.fill = GridBagConstraints.HORIZONTAL;
         usernameField = new JTextField(20);
         usernameField.setFont(font);
+        usernameField.setBorder(BorderFactory.createEmptyBorder());
+        usernameField.setOpaque(true);
         panel.add(usernameField, constraints);
 
 // Password Label
@@ -69,6 +76,8 @@ public class LoginGUI extends JFrame {
         constraints.fill = GridBagConstraints.HORIZONTAL;
         passwordField = new JPasswordField(20);
         passwordField.setFont(font);
+        passwordField.setBorder(BorderFactory.createEmptyBorder());
+        passwordField.setOpaque(true);
         panel.add(passwordField, constraints);
 
 
@@ -80,7 +89,8 @@ public class LoginGUI extends JFrame {
         constraints.fill = GridBagConstraints.NONE;
         constraints.anchor = GridBagConstraints.CENTER;
         loginButton = new JButton("Login");
-        loginButton.setFont(font);
+        loginButton.setFont(loginFont);
+        loginButton.setBorder(BorderFactory.createEmptyBorder());
         loginButton.setForeground(new Color(0, 128, 0));
         loginButton.setBackground(new Color(0, 128, 0)); // Set the desired green color
         panel.add(loginButton, constraints);
@@ -89,44 +99,17 @@ public class LoginGUI extends JFrame {
         backgroundPanel.add(panel);
         pack();
         setLocationRelativeTo(null);
-
-        startBackgroundAnimation();
     }
 
     private void createBackgroundPanel() {
         backgroundPanel = new JPanel() {
+
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                drawAnimatedBackground(g);
             }
         };
         backgroundPanel.setLayout(new BorderLayout());
-    }
-
-    private void drawAnimatedBackground(Graphics g) {
-        int width = backgroundPanel.getWidth();
-        int height = backgroundPanel.getHeight();
-
-        GradientPaint gradientPaint = new GradientPaint(
-                width / 2, 0, Color.LIGHT_GRAY,
-                width / 2, height, Color.WHITE);
-
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setPaint(gradientPaint);
-        g2d.fillRect(0, 0, width, height);
-
-        // You can customize the animation effect here
-        int animationOffset = animationCounter % width;
-        g2d.setColor(new Color(135, 206, 250, 50)); // Adjust alpha for transparency
-        g2d.fillRect(animationOffset, 0, 10, height);
-
-        animationCounter++;
-    }
-
-    private void startBackgroundAnimation() {
-        Timer timer = new Timer(50, e -> backgroundPanel.repaint());
-        timer.start();
     }
 
     public static void main(String[] args) {
