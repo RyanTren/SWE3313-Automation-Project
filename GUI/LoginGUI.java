@@ -21,7 +21,7 @@ public class LoginGUI extends JFrame {
         GridBagConstraints constraints = new GridBagConstraints();
         Insets defaultInsets = new Insets(5, 5, 5, 5); // Default padding
 
-        Font font = new Font("Corbel", Font.PLAIN, 14); // Customize the font here
+        Font font = new Font("Franklin Gothic Medium", Font.ITALIC, 15); // Customize the font here
 
 
         // Logo
@@ -38,8 +38,9 @@ public class LoginGUI extends JFrame {
         constraints.gridwidth = 1; // Reset to default
         constraints.insets = new Insets(5, 5, 5, 5); // Reset padding
         JLabel usernameLabel = new JLabel("Username:");
+        usernameLabel.setFont(font.deriveFont(Font.BOLD, 16));
         usernameLabel.setFont(font);
-        usernameLabel.setForeground(Color.red); // Set the desired font color
+        usernameLabel.setForeground(new Color(119,11,3)); // Set the desired font color
         panel.add(usernameLabel, constraints);
 
 // Username Field
@@ -56,8 +57,9 @@ public class LoginGUI extends JFrame {
         constraints.gridy = 2;
         constraints.insets = defaultInsets;
         JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setFont(font.deriveFont(Font.BOLD, 16));
         passwordLabel.setFont(font);
-        passwordLabel.setForeground(Color.red); // Set the desired font color
+        passwordLabel.setForeground(new Color(119,11,3)); // Set the desired font color
         panel.add(passwordLabel, constraints);
 
 // Password Field
@@ -79,6 +81,7 @@ public class LoginGUI extends JFrame {
         constraints.anchor = GridBagConstraints.CENTER;
         loginButton = new JButton("Login");
         loginButton.setFont(font);
+        loginButton.setForeground(new Color(0, 128, 0));
         loginButton.setBackground(new Color(0, 128, 0)); // Set the desired green color
         panel.add(loginButton, constraints);
 
