@@ -12,7 +12,7 @@ public class LoginGUI extends JFrame {
     private int animationCounter = 0;
 
     public LoginGUI() {
-        setTitle("J's Restaurant POS");
+        setTitle("J's Restaurant User Login");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         createBackgroundPanel();
@@ -79,6 +79,7 @@ public class LoginGUI extends JFrame {
         constraints.anchor = GridBagConstraints.CENTER;
         loginButton = new JButton("Login");
         loginButton.setFont(font);
+        loginButton.setBackground(new Color(0, 128, 0)); // Set the desired green color
         panel.add(loginButton, constraints);
 
         getContentPane().add(backgroundPanel);
