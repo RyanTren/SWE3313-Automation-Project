@@ -1,0 +1,7 @@
+services:
+  db:
+    image: mysql
+    env_file:
+      - .env
+    ports: # bind localhost to container
+      - 3306:3306
