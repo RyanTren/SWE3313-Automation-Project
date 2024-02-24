@@ -17,6 +17,7 @@ public class LoginGUI implements ActionListener {
     private JButton loginButton;
     private JPanel panel;
 
+
     //private int animationCounter = 0;
 
     public LoginGUI(Font loginFont) {
@@ -24,7 +25,6 @@ public class LoginGUI implements ActionListener {
         panel.setBackground(new Color(255, 246, 242));
         GridBagConstraints constraints = new GridBagConstraints();
         Insets defaultInsets = new Insets(5, 5, 5, 5); // Default padding
-
         // Logo
         constraints.gridx = 0;
         constraints.gridy = 0;

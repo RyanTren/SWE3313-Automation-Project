@@ -6,21 +6,34 @@ import javax.swing.*;
 import java.awt.*;
 
 public class App {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         // main application window
         Font appFont = new Font("Franklin Gothic Medium", Font.ITALIC, 18);
-        JFrame frame = new JFrame("J's Restaurant");
-        frame.setPreferredSize(new Dimension(750, 600));
-        frame.setFont(appFont);
+        JFrame loginFrame = new JFrame("J's Restaurant");
+        JFrame waiterFrame = new JFrame("Waiter");
+        //Full Screens the Application
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+       loginFrame.setPreferredSize(screenSize);
+
+        //frame.setPreferredSize();
+       loginFrame.setFont(appFont);
         // set overall font style
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+       loginFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Add application components
-        Font loginFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
-        frame.setContentPane(new LoginGUI(loginFont).getPanel());
+       Font loginFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
+       loginFrame.setContentPane(new LoginGUI(loginFont).getPanel());
 
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+       loginFrame.pack();
+       loginFrame.setLocationRelativeTo(null);
+       loginFrame.setVisible(true);
+       Font waiterFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
+       loginFrame.setContentPane(new LoginGUI(waiterFont).getPanel());
+
+
+       loginFrame.pack();
+       waiterFrame.pack();
+       waiterFrame.setVisible(true);
+
+   }
 }
