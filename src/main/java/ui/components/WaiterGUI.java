@@ -80,23 +80,18 @@ public class WaiterGUI extends JFrame implements ActionListener{
     //Constructor for Tables
     public WaiterGUI(Button tableFont){
         table1 = new JButton("Table 1");
-//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(null);
         table1.setBounds(0, 0, 75, 50);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
         this.setVisible(true);
         this.add(table1);
-
+//        this.setResizable(false);
 
 
 //        JButton table2 = new JButton();
 
 
 //        JButton table3 = new JButton();
-
-
-
-
-
 
 
     }
@@ -121,6 +116,8 @@ public class WaiterGUI extends JFrame implements ActionListener{
         //Full Screens the Application
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         waiterFrame.setPreferredSize(screenSize);
+
+        System.out.println(screenSize); //testing to see if default screen is maximized
 
         waiterFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //frame.setPreferredSize();
