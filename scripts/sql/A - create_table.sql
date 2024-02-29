@@ -1,17 +1,15 @@
 # This is an example - update with correct definition when that's defined
-DROP TABLE if exists User;
-create table if not exists User
-(
-    id       int auto_increment
-        primary key,
-    name     varchar(500) charset utf8mb3 not null,
-    dob      date,
-    password varchar(100) charset utf8mb3 not null
+DROP TABLE IF EXISTS User;
+CREATE TABLE IF NOT EXISTS User (
+    id       INT AUTO_INCREMENT PRIMARY KEY,
+    name     VARCHAR(500) CHARACTER SET utf8mb3 NOT NULL,
+    dob      DATE,
+    password VARCHAR(100) CHARACTER SET utf8mb3 NOT NULL
 );
 
-insert into User value (1, 'Manager', '1883-01-01', 'Manager');
-insert into User value (2, 'WaiterOne', '1883-01-01', 'WaiterOne');
-insert into User value (2, 'WaiterTwo', '1883-01-01', 'WaiterTwo');
-insert into User value (2, 'WaiterThree', '1883-01-01', 'WaiterThree');
+INSERT INTO User VALUES (1, 'Manager', '1883-01-01', 'Manager');
+INSERT INTO User VALUES (2, 'WaiterOne', '1883-01-01', 'WaiterOne');
+INSERT INTO User VALUES (3, 'WaiterTwo', '1883-01-01', 'WaiterTwo');
+INSERT INTO User VALUES (4, 'WaiterThree', '1883-01-01', 'WaiterThree');
 
 
