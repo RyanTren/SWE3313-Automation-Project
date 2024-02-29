@@ -127,7 +127,7 @@ public class WaiterGUI extends JFrame implements ActionListener{
 
         // Add application components
         tableButton = new Button("Table 1");
-        waiterFrame.setContentPane(new WaiterGUI(tableButton).getPanel());
+//        waiterFrame.setContentPane(new WaiterGUI(tableButton).getPanel());
 
         appFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
         waiterFrame.setContentPane(new WaiterGUI(appFont).getPanel());

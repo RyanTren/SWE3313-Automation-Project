@@ -9,4 +9,9 @@ create table if not exists User
     password varchar(100) charset utf8mb3 not null
 );
 
-insert into User value (1000, 'John Doe', '1883-01-01', 'super-secrete');
+insert into User value (1, 'Manager', '1883-01-01', 'Manager');
+insert into User value (2, 'WaiterOne', '1883-01-01', 'WaiterOne');
+insert into User value (2, 'WaiterTwo', '1883-01-01', 'WaiterTwo');
+insert into User value (2, 'WaiterThree', '1883-01-01', 'WaiterThree');
+
+
