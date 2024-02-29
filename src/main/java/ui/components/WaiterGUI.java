@@ -137,5 +137,4 @@ public class WaiterGUI extends JFrame implements ActionListener{
         waiterFrame.setLocationRelativeTo(null);
         waiterFrame.setVisible(true);
     }
-
 }
