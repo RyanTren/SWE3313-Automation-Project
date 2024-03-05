@@ -98,7 +98,7 @@ values ('Cameron', 'busboy', 'b1user', 'b1password');
 -- cooks
 insert into jrestaurant_cooks (name, role, cook_username, cook_password)
 values ('Lily', 'cook', 'cuser1', 'c1password'),
-       ('Charlotte', 'cook', 'c2user', 'c2password');
+    ('Charlotte', 'cook', 'c2user', 'c2password');
 
 
 
