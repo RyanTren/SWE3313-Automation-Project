@@ -132,7 +132,7 @@ public class LoginGUI implements ActionListener {
         loginButton = new JButton("Login");
         loginButton.setFont(font);
         loginButton.setBorder(BorderFactory.createEmptyBorder());
-        loginButton.setForeground(new Color(0, 128, 0));
+//        loginButton.setForeground(new Color(0, 128, 0));
         loginButton.setBackground(new Color(0, 128, 0)); // Set the desired green color
         panel.add(loginButton, constraints);
         // event listener for when someone presses the button
