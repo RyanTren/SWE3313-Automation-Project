@@ -59,7 +59,7 @@ data rather than calculating it.
 * [Requirements Video Presentation](youtube link here)
 
 ## User Interface Design
-* __[User Interface Design Information](redirect github sublink here (.md file))__
+* __[User Interface Design Information](https://github.com/RyanTren/SWE3313-Automation-Project/blob/Login-GUI-Draft/User%20Interface%20Design/SWE3313%20-%20Group_1_Prototype_1.pdf)__
 * __[User Interface Design Video Presentation](youtube link here)__
 
 ## Technical Design
