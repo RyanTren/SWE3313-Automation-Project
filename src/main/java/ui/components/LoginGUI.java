@@ -27,7 +27,7 @@ public class LoginGUI implements ActionListener {
         constraints.gridy = 0;
         constraints.gridwidth = 2; // Span two columns
         constraints.insets = new Insets(5, 5, 10, 5); // Adjust padding
-        JLabel logoLabel = new JLabel(new ImageIcon("J's Restaurant Logo.png")); // Replace with the actual path
+        JLabel logoLabel = new JLabel(new ImageIcon("assets/J's Restaurant Logo.png")); // Replace with the actual path
         panel.add(logoLabel, constraints);
 
         // Username Field

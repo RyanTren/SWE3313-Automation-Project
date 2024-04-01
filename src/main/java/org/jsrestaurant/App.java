@@ -10,7 +10,7 @@ public class App {
         // main application window
         Font appFont = new Font("Franklin Gothic Medium", Font.ITALIC, 18);
         JFrame loginFrame = new JFrame("J's Restaurant");
-        JFrame waiterFrame = new JFrame("Waiter");
+//        JFrame waiterFrame = new JFrame("Waiter");
 
         //Full Screens the Application
        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -35,7 +35,7 @@ public class App {
 
        //waiterFrame isn't finished atm
 //       waiterFrame.pack();
-       waiterFrame.setVisible(true);
+//       waiterFrame.setVisible(true);
 
    }
 }

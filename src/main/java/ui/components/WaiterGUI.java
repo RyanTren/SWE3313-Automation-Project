@@ -27,12 +27,9 @@
  * Because our customer is also in the process of establishing their entire network architecture, our
  * customer requests that this component/prototype be developed for running on a stand-alone
  * desktop/laptop computer without any web based or networked elements.
- */
-
-
-/**
+ * <p>
  * Brainstorming for WaiterGUI.java:
- *
+ * <p>
  * implement a 6 x 5 table which are clickable buttons to redirect to present the menu items
  * color-code the tables
  * label the table numbers with JLabel
@@ -40,62 +37,121 @@
 
 package ui.components;
 
+import org.jsrestaurant.App;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class WaiterGUI extends JFrame implements ActionListener {
-    private JPanel waiterPanel;
-    private JLabel welcomeMessageTitle;
-
+    private JPanel waiterBackgroundPanel;
+    private JPanel waiterTopLayerBackgroundPanel;
     public WaiterGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setUndecorated(true); // Remove window decorations
+        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
         setTitle("J's Restaurant | Waiter Screen");
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        setPreferredSize(screenSize);
 
+        // Background panel with BorderLayout
+        waiterBackgroundPanel = new JPanel(new BorderLayout());
+        waiterBackgroundPanel.setBackground(new Color(255, 255, 255));
+        add(waiterBackgroundPanel);
+
+        // Create a panel for the additional background
+        waiterTopLayerBackgroundPanel = new JPanel();
+        waiterTopLayerBackgroundPanel.setBackground(new Color(217, 217, 217, 50)); // Adjust the color and opacity as needed
+
+        // Add the additional background panel to the content panel as a layered component
+        waiterBackgroundPanel.add(waiterTopLayerBackgroundPanel, BorderLayout.CENTER);
+
+
+        // Add the content panel to the frame or another container
+        add(waiterBackgroundPanel);
+
+        // Creating a panel for the top bar components
+        JPanel topBarPanel = new JPanel();
+        topBarPanel.setLayout(new BoxLayout(topBarPanel, BoxLayout.X_AXIS));
+        topBarPanel.setBackground(new Color(255, 246, 242));
+        topBarPanel.setPreferredSize(new Dimension(getWidth(), 350));
+        waiterBackgroundPanel.add(topBarPanel, BorderLayout.NORTH);
+
+        // Loading and adding the logo to the top bar
+        try {
+            // Loading the original image
+            String imagePath = "C:/Users/Ryan/OneDrive/Desktop/github repo storage/SWE3313-Automation-Project/assets/J's Restaurant Logo.png";
+            BufferedImage originalImage = ImageIO.read(new File(imagePath));
+
+            // Define the desired width and height for the resized image
+            int desiredWidth = 350; // Adjust as needed
+            int desiredHeight = 350; // Adjust as needed
+
+            // Create a new BufferedImage with the desired width and height
+            BufferedImage resizedImage = new BufferedImage(desiredWidth, desiredHeight, BufferedImage.TYPE_INT_ARGB);
+
+            // Scale the original image to fit the new dimensions
+            Graphics2D g2d = resizedImage.createGraphics();
+            g2d.drawImage(originalImage, 0, 0, desiredWidth, desiredHeight, null);
+            g2d.dispose();
+
+            // Convert the resized BufferedImage to an ImageIcon
+            ImageIcon resizedIcon = new ImageIcon(resizedImage);
+
+            // Create a JLabel with the resized ImageIcon
+            JLabel logoLabel = new JLabel(resizedIcon);
+
+            // Add logo to the top bar
+            topBarPanel.add(logoLabel);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to load image: " + e.getMessage());
+        }
 
         // Creating the welcome message
-        welcomeMessageTitle = new JLabel("Welcome Back, Waiter");
+        JLabel welcomeMessageTitle = new JLabel("Welcome Back, Waiter");
         welcomeMessageTitle.setFont(new Font("Arial", Font.BOLD, 24));
-        welcomeMessageTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        add(welcomeMessageTitle, BorderLayout.NORTH);
+        welcomeMessageTitle.setHorizontalAlignment(SwingConstants.CENTER); // Center the welcome message
+        topBarPanel.add(welcomeMessageTitle);
 
-        // Adding the logo
-        waiterPanel = new JPanel(new GridBagLayout());
-        waiterPanel.setBackground(Color.WHITE);
-        add(waiterPanel, BorderLayout.CENTER);
+        // Add horizontal glue to create space between the welcome message and the logout button
+        topBarPanel.add(Box.createHorizontalGlue());
 
-        // Loading and adding the logo
-
-        GridBagConstraints constraints = new GridBagConstraints();
-        Insets defaultInsets = new Insets(5, 0, 0, 0); // Default padding
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-//        constraints.gridwidth = 2; // Span two columns
-//        constraints.insets = new Insets(5, 5, 10, 5); // Adjust padding
-        JLabel logoLabel = new JLabel(new ImageIcon("J's Restaurant Logo.png"));
-        waiterPanel.add(logoLabel, constraints);
-
-        // Pack and display the frame
-        pack();
-        setLocationRelativeTo(null);
-        setVisible(true);
+        //Logout Button
+        JButton logoutButton = getjButton();
+        logoutButton.addActionListener(this); // Register action listener
+        topBarPanel.add(logoutButton);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new WaiterGUI();
-            }
-        });
+    private static JButton getjButton() {
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBackground(new Color(181, 29, 29)); // Set background color to a shade of red
+        logoutButton.setForeground(Color.WHITE); // Set text color to white
+        logoutButton.setFont(new Font("Arial", Font.BOLD, 18)); // Set font & size
+        logoutButton.setFocusPainted(false); // Remove focus border
+        logoutButton.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Change cursor to hand on hover
+        logoutButton.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        return logoutButton;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Action event handling if needed
+        // Redirect to LoginGUI
+        App.main(new String[0]); // Call App's main method without passing any arguments
+    }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new WaiterGUI().setVisible(true));
     }
 }
+
+
+
+
+
+
+
 
 
