@@ -11,13 +11,13 @@ public class App {
         Font appFont = new Font("Franklin Gothic Medium", Font.ITALIC, 18);
         JFrame loginFrame = new JFrame("J's Restaurant");
         JFrame waiterFrame = new JFrame("Waiter");
+
         //Full Screens the Application
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+       Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
        loginFrame.setPreferredSize(screenSize);
 
-        //frame.setPreferredSize();
+       //frame.setPreferredSize();
        loginFrame.setFont(appFont);
-        // set overall font style
        loginFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Add application components
@@ -32,7 +32,9 @@ public class App {
 
 
        loginFrame.pack();
-       waiterFrame.pack();
+
+       //waiterFrame isn't finished atm
+//       waiterFrame.pack();
        waiterFrame.setVisible(true);
 
    }

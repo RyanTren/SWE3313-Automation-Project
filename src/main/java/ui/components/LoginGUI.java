@@ -17,9 +17,6 @@ public class LoginGUI implements ActionListener {
     private JButton loginButton;
     private JPanel panel;
 
-
-    //private int animationCounter = 0;
-
     public LoginGUI(Font loginFont) {
         panel = new JPanel(new GridBagLayout());
         panel.setBackground(new Color(255, 246, 242));

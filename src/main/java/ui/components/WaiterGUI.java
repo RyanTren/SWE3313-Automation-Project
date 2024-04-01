@@ -1,11 +1,3 @@
-package ui.components;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-
 /**
  * Requirements For Waiter GUI:
  * o 30 tables, in a generic layout, 4 seats at each table (6 x 5 layout)
@@ -22,7 +14,7 @@ import java.awt.event.ActionListener;
  * o If they select to add an item to the table’s tab
  *  They are presented with various categories of food items offered. Here they can
  * select the appropriate category and then find the desired item.
- *  For example, if a patron ordered a Caesar salad, the waiter would login,
+ *  For example, if a patron ordered a Caesar salad, the waiter would log in,
  * select the table, and choose “Add Item.” They would then select the
  * “Soups/Salads” from the category list, and then select the desired salad
  * from the items presented. They are then returned to that table’s screen
@@ -30,7 +22,7 @@ import java.awt.event.ActionListener;
  *  This saves the waiter from walking back and forth to the kitchen to deliver and
  * check up on food orders.
  *  Orders placed by wait-staff using the computer terminals on the restaurant floor
- * are displayed to the kitchen staff through a queue, i.e., on a first-in, first- out
+ * are displayed to the kitchen staff through a queue, i.e., on a first-in, first-out
  * basis.
  * Because our customer is also in the process of establishing their entire network architecture, our
  * customer requests that this component/prototype be developed for running on a stand-alone
@@ -45,96 +37,65 @@ import java.awt.event.ActionListener;
  * color-code the tables
  * label the table numbers with JLabel
  */
-public class WaiterGUI extends JFrame implements ActionListener{
-    private JFrame waiterFrame;
+
+package ui.components;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class WaiterGUI extends JFrame implements ActionListener {
     private JPanel waiterPanel;
     private JLabel welcomeMessageTitle;
-    private JButton table1;
-//    private JButton tableTwo;
-//    private JButton tableThree;
-//    private JButton tableFour;
-//    private JButton tableFive;
-//    private JButton tableSix;
-//    private JButton tableSeven;
-//    private JButton tableEight;
-//    private JButton tableNine;
-//    private JButton tableTen;
+
+    public WaiterGUI() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("J's Restaurant | Waiter Screen");
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setPreferredSize(screenSize);
 
 
+        // Creating the welcome message
+        welcomeMessageTitle = new JLabel("Welcome Back, Waiter");
+        welcomeMessageTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        welcomeMessageTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        add(welcomeMessageTitle, BorderLayout.NORTH);
 
-    //This method is going to be used to make the Welcome message.
-    public WaiterGUI(Font welcomeFont){
-        waiterFrame = new JFrame("Welcome, Waiter \uD83D\uDC81");
-        waiterFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        welcomeMessageTitle = new JLabel("Welcome, Waiter \uD83D\uDC81");
-
+        // Adding the logo
         waiterPanel = new JPanel(new GridBagLayout());
-        waiterPanel.setBackground(new Color(255, 255, 255));
+        waiterPanel.setBackground(Color.WHITE);
+        add(waiterPanel, BorderLayout.CENTER);
+
+        // Loading and adding the logo
 
         GridBagConstraints constraints = new GridBagConstraints();
-        constraints.insets = new Insets(10,10,10,10);
+        Insets defaultInsets = new Insets(5, 0, 0, 0); // Default padding
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+//        constraints.gridwidth = 2; // Span two columns
+//        constraints.insets = new Insets(5, 5, 10, 5); // Adjust padding
+        JLabel logoLabel = new JLabel(new ImageIcon("J's Restaurant Logo.png"));
+        waiterPanel.add(logoLabel, constraints);
 
+        // Pack and display the frame
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
-    //Constructor for Tables
-    public WaiterGUI(Button tableFont){
-        table1 = new JButton("Table 1");
-        table1.setBounds(0, 0, 75, 50);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(null);
-        this.setVisible(true);
-        this.add(table1);
-//        this.setResizable(false);
-
-
-//        JButton table2 = new JButton();
-
-
-//        JButton table3 = new JButton();
-
-
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new WaiterGUI();
+            }
+        });
     }
 
-    private Container getPanel() {
-        return waiterPanel;
-    }
-
-    //Override Method for ActionListener implementation for tableButtons
     @Override
     public void actionPerformed(ActionEvent e) {
-
-    }
-    public static void main(String[] args) {
-        // main application window
-        Font appFont = new Font("Franklin Gothic Medium", Font.ITALIC, 18);
-        Button tableButton = new Button("Table 1");
-
-        JFrame waiterFrame = new JFrame("J's Restaurant | Waiter Screen");
-
-
-        //Full Screens the Application
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        waiterFrame.setPreferredSize(screenSize);
-
-        System.out.println(screenSize); //testing to see if default screen is maximized
-
-        waiterFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //frame.setPreferredSize();
-        waiterFrame.setFont(appFont);
-        // set overall font style
-        waiterFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-        // Add application components
-        tableButton = new Button("Table 1");
-//        waiterFrame.setContentPane(new WaiterGUI(tableButton).getPanel());
-
-        appFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
-        waiterFrame.setContentPane(new WaiterGUI(appFont).getPanel());
-
-
-        waiterFrame.pack();
-        waiterFrame.setLocationRelativeTo(null);
-        waiterFrame.setVisible(true);
+        // Action event handling if needed
     }
 }
+
+
