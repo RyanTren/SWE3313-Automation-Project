@@ -50,7 +50,29 @@ import java.io.IOException;
 
 public class WaiterGUI extends JFrame implements ActionListener {
     private JPanel waiterBackgroundPanel;
-    private JPanel waiterTopLayerBackgroundPanel;
+    private RoundedPanel waiterTopLayerBackgroundPanel;
+
+    // Nested class for creating a rounded panel
+    private class RoundedPanel extends JPanel {
+        private int arcWidth;
+        private Color backgroundColor;
+
+        public RoundedPanel(int arcWidth, Color backgroundColor) {
+            this.arcWidth = arcWidth;
+            this.backgroundColor = backgroundColor;
+            setOpaque(false); // Allow transparency
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            Graphics2D g2d = (Graphics2D) g.create();
+            g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2d.setColor(backgroundColor);
+            g2d.fillRoundRect(0, 0, getWidth(), getHeight(), arcWidth, arcWidth);
+            g2d.dispose();
+        }
+    }
     public WaiterGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setUndecorated(true); // Remove window decorations
@@ -63,15 +85,11 @@ public class WaiterGUI extends JFrame implements ActionListener {
         add(waiterBackgroundPanel);
 
         // Create a panel for the additional background
-        waiterTopLayerBackgroundPanel = new JPanel();
-        waiterTopLayerBackgroundPanel.setBackground(new Color(217, 217, 217, 50)); // Adjust the color and opacity as needed
+        waiterTopLayerBackgroundPanel = new RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
+        waiterTopLayerBackgroundPanel.setPreferredSize(new Dimension(500, 100)); // Adjust the preferred size as needed
 
         // Add the additional background panel to the content panel as a layered component
         waiterBackgroundPanel.add(waiterTopLayerBackgroundPanel, BorderLayout.CENTER);
-
-
-        // Add the content panel to the frame or another container
-        add(waiterBackgroundPanel);
 
         // Creating a panel for the top bar components
         JPanel topBarPanel = new JPanel();
