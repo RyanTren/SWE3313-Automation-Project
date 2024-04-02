@@ -164,13 +164,13 @@ public class WaiterTable extends JFrame implements ActionListener {
         JPanel tablePanel = new JPanel(new GridLayout(6, 5, 5, 5)); // 6 rows, 5 columns
         for (int i = 1; i <= 30; i++) {
             JButton tableButton = new JButton("Table " + i);
+
             tableButton.setPreferredSize(new Dimension(100, 100)); // Set preferred size for table buttons
             tableButton.setActionCommand(Integer.toString(i)); // Set action command to table number
             tableButton.addActionListener(this); // Add action listener to handle button click
 
-            // Example color coding based on status
-            // You can replace this with your own logic
-            tableButton.setBackground(Color.GREEN); // Set background color to green (open)
+            tableButton.setForeground(Color.WHITE); // Set font color to white
+            tableButton.setBackground(new Color(89, 188, 99)); // Set background color to green (open)
 
             tablePanel.add(tableButton);
         }
