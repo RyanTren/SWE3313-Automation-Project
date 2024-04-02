@@ -1,6 +1,5 @@
 /**
  * Requirements For Waiter GUI:
- * o 30 tables, in a generic layout, 4 seats at each table (6 x 5 layout)
  * o 5 distinct menu categories with at least 4 distinct food items: (Beverages, Appetizers, Entrées, Desserts, Sides)
  * o The orders queue/display may be shown on the console for this sprint
  * o At least 3 wait staff: (3 different waiter login)
@@ -30,9 +29,7 @@
  * <p>
  * Brainstorming for WaiterGUI.java:
  * <p>
- * implement a 6 x 5 table which are clickable buttons to redirect to present the menu items
- * color-code the tables
- * label the table numbers with JLabel
+ *  color-code the tables
  */
 
 package ui.components;
