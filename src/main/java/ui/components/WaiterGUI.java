@@ -47,6 +47,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class WaiterGUI extends JFrame implements ActionListener {
     private JPanel waiterBackgroundPanel;
@@ -142,6 +143,9 @@ public class WaiterGUI extends JFrame implements ActionListener {
         JButton logoutButton = getjButton();
         logoutButton.addActionListener(this); // Register action listener
         topBarPanel.add(logoutButton);
+
+        //Table Buttons
+        createAndShowGUI();
     }
 
     private static JButton getjButton() {
@@ -153,6 +157,35 @@ public class WaiterGUI extends JFrame implements ActionListener {
         logoutButton.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Change cursor to hand on hover
         logoutButton.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         return logoutButton;
+    }
+
+    //Table Button part 1
+    private void createAndShowGUI() {
+        JPanel tablePanel = new JPanel(new GridLayout(6, 5, 5, 5)); // 6 rows, 5 columns
+        for (int i = 1; i <= 30; i++) {
+            JButton tableButton = new JButton("Table " + i);
+            tableButton.setPreferredSize(new Dimension(100, 100)); // Set preferred size for table buttons
+            tableButton.setActionCommand(Integer.toString(i)); // Set action command to table number
+            tableButton.addActionListener(this); // Add action listener to handle button click
+
+            // Example color coding based on status
+            // You can replace this with your own logic
+            tableButton.setBackground(Color.GREEN); // Set background color to green (open)
+
+            tablePanel.add(tableButton);
+        }
+        waiterBackgroundPanel.add(tablePanel, BorderLayout.CENTER);
+    }
+
+
+    //Table Button part 2
+    private static ArrayList<JButton> createButtons(int count) {
+        ArrayList<JButton> buttons = new ArrayList<>();
+        for (int i = 1; i <= count; i++) {
+            JButton button = new JButton("Button " + i);
+            buttons.add(button);
+        }
+        return buttons;
     }
 
     @Override
