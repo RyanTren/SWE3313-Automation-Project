@@ -49,12 +49,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class WaiterGUI extends JFrame implements ActionListener {
+public class WaiterTable extends JFrame implements ActionListener {
     private JPanel waiterBackgroundPanel;
     private RoundedPanel waiterTopLayerBackgroundPanel;
 
     // Nested class for creating a rounded panel
-    private class RoundedPanel extends JPanel {
+    static class RoundedPanel extends JPanel {
         private int arcWidth;
         private Color backgroundColor;
 
@@ -74,7 +74,7 @@ public class WaiterGUI extends JFrame implements ActionListener {
             g2d.dispose();
         }
     }
-    public WaiterGUI() {
+    public WaiterTable() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setUndecorated(true); // Remove window decorations
         setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
@@ -190,11 +190,20 @@ public class WaiterGUI extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Redirect to LoginGUI
-        App.main(new String[0]); // Call App's main method without passing any arguments
+        String actionCommand = e.getActionCommand();
+        if (actionCommand != null && actionCommand.matches("\\d+")) {
+            int tableNumber = Integer.parseInt(actionCommand);
+            new WaiterDrinkMenu(tableNumber).setVisible(true);
+        } else {
+            // Handle other actions, such as logout
+            dispose(); // Close this window
+            // Redirect to LoginGUI
+            App.main(new String[0]); // Call App's main method without passing any arguments
+        }
     }
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new WaiterGUI().setVisible(true));
+        SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
     }
 }
 
