@@ -194,6 +194,7 @@ public class WaiterTable extends JFrame implements ActionListener {
         if (actionCommand != null && actionCommand.matches("\\d+")) {
             int tableNumber = Integer.parseInt(actionCommand);
             new WaiterDrinkMenu(tableNumber).setVisible(true);
+            dispose(); // Close this window
         } else {
             // Handle other actions, such as logout
             dispose(); // Close this window

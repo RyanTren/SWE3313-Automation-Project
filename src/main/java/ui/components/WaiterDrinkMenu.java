@@ -99,8 +99,8 @@ public class WaiterDrinkMenu extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Redirect to LoginGUI
-        WaiterTable.main(new String[0]); // Call App's main method without passing any arguments
+        dispose(); // Close the current window (WaiterDrinkMenu)
+        new WaiterTable().setVisible(true); // Open the WaiterTable window again
     }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
