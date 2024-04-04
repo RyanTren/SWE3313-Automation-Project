@@ -1,7 +1,5 @@
 package ui.components;
 
-import org.jsrestaurant.App;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -45,7 +43,7 @@ public class WaiterDrinkMenu extends JFrame implements ActionListener {
         // Loading and adding the logo to the top bar
         try {
             // Loading the original image
-            String imagePath = "C:/Users/Ryan/OneDrive/Desktop/github repo storage/SWE3313-Automation-Project/assets/J's Restaurant Logo.png";
+            String imagePath = "assets/J's Restaurant Logo.png";
             BufferedImage originalImage = ImageIO.read(new File(imagePath));
 
             // Define the desired width and height for the resized image
@@ -99,7 +97,7 @@ public class WaiterDrinkMenu extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        dispose(); // Close the current window (WaiterDrinkMenu)
+        dispose(); // Close the current window (WaitearDrinkMenu)
         new WaiterTable().setVisible(true); // Open the WaiterTable window again
     }
     public static void main(String[] args) {
