@@ -13,7 +13,7 @@ public class DatabaseConnection {
         try {
             Dotenv dotenv = Dotenv.load(); // .env file
             String dbName = dotenv.get("MYSQL_DATABASE");
-            String url = "jdbc:mysql://localhost:3306/" + dbName;
+            String url = String.format("jdbc:mysql://localhost:3306/%s", dbName);
             String username = "root";
             String password = dotenv.get("MYSQL_ROOT_PASSWORD");
             connection = DriverManager.getConnection(url, username, password);

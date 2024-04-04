@@ -46,7 +46,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class WaiterTable extends JFrame implements ActionListener {
+public class WaiterTable extends JPanel implements ActionListener {
     private JPanel waiterBackgroundPanel;
     private RoundedPanel waiterTopLayerBackgroundPanel;
 
@@ -72,10 +72,10 @@ public class WaiterTable extends JFrame implements ActionListener {
         }
     }
     public WaiterTable() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setUndecorated(true); // Remove window decorations
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
-        setTitle("J's Restaurant | Waiter Screen");
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setUndecorated(true); // Remove window decorations
+//        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
+//        setTitle("J's Restaurant | Waiter Screen");
 
         // Background panel with BorderLayout
         waiterBackgroundPanel = new JPanel(new BorderLayout());
@@ -99,7 +99,7 @@ public class WaiterTable extends JFrame implements ActionListener {
         // Loading and adding the logo to the top bar
         try {
             // Loading the original image
-            String imagePath = "C:/Users/Ryan/OneDrive/Desktop/github repo storage/SWE3313-Automation-Project/assets/J's Restaurant Logo.png";
+            String imagePath = "assets/J's Restaurant Logo.png";
             BufferedImage originalImage = ImageIO.read(new File(imagePath));
 
             // Define the desired width and height for the resized image
@@ -191,25 +191,16 @@ public class WaiterTable extends JFrame implements ActionListener {
         if (actionCommand != null && actionCommand.matches("\\d+")) {
             int tableNumber = Integer.parseInt(actionCommand);
             new WaiterDrinkMenu(tableNumber).setVisible(true);
-            dispose(); // Close this window
+//            dispose(); // Close this window
         } else {
             // Handle other actions, such as logout
-            dispose(); // Close this window
+//            dispose(); // Close this window
             // Redirect to LoginGUI
             App.main(new String[0]); // Call App's main method without passing any arguments
         }
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
-    }
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
+//    }
 }
-
-
-
-
-
-
-
-
-
