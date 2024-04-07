@@ -1,5 +1,6 @@
 -- dropping the table means to avoid the issue of " (table name) table already exists"
 DROP TABLE IF EXISTS jrestaurant_employees;
+DROP TABLE IF EXISTS restaurant_statistics;
 
 
 create table jrestaurant_employees
@@ -12,7 +13,6 @@ create table jrestaurant_employees
     hoursWorked float
 );
 
-<<<<<<< HEAD
 
 create table restaurant_statistics
 (
@@ -24,9 +24,6 @@ create table restaurant_statistics
     tablesServed varchar(100)
 );
 
-
-=======
->>>>>>> refs/remotes/origin/Login-GUI-Draft
 -- here we insert values for each employee
 -- managers
 insert into jrestaurant_employees(name, role, username, password, hoursWorked)
@@ -50,8 +47,5 @@ values ('Lily', 'cook', 'cuser1', 'c1password', 7),
 
 -- hosts
 insert into jrestaurant_employees(name, role, username, password, hoursWorked)
-<<<<<<< HEAD
 values ('Dean', 'host', 'huser1', 'h1password', 4);
-=======
 values ('Dean', 'host', 'huser1', 'h1password', 4);
->>>>>>> refs/remotes/origin/Login-GUI-Draft
