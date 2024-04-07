@@ -5,35 +5,41 @@ import ui.components.LoginGUI;
 import javax.swing.*;
 import java.awt.*;
 
+
+
+/*
+For any members who are testing the application, you must first run Docker...
+
+Go to Terminal, fetch this repo, type "docker compose up -d" and wait for it to start.
+Once this is done, run App.java.
+
+If the log-in for any of the Employees don't work: terminate the program, go back to the terminal
+and type "docker compose down --volumes" and type "docker compose up -d" again.
+
+All of the GUI's will run off of App.java
+ */
+
 public class App {
    public static void main(String[] args) {
         // main application window
         Font appFont = new Font("Franklin Gothic Medium", Font.ITALIC, 18);
-        JFrame loginFrame = new JFrame("J's Restaurant");
-        JFrame waiterFrame = new JFrame("Waiter");
+        JFrame appWindow = new JFrame("J's Restaurant");
+
         //Full Screens the Application
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-       loginFrame.setPreferredSize(screenSize);
+        appWindow.setPreferredSize(screenSize);
 
-        //frame.setPreferredSize();
-       loginFrame.setFont(appFont);
-        // set overall font style
-       loginFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        appWindow.setFont(appFont);
+        appWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        //this line doesn't work for some reason but for the other java files it does...
+//      loginFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // Add application components
-       Font loginFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
-       loginFrame.setContentPane(new LoginGUI(loginFont).getPanel());
+        appWindow.setContentPane(new LoginGUI(appFont).getPanel());
 
-       loginFrame.pack();
-       loginFrame.setLocationRelativeTo(null);
-       loginFrame.setVisible(true);
-       Font waiterFont = new Font("Franklin Gothic Medium", Font.PLAIN, 18); // Customize the font here
-       loginFrame.setContentPane(new LoginGUI(waiterFont).getPanel());
-
-
-       loginFrame.pack();
-       waiterFrame.pack();
-       waiterFrame.setVisible(true);
-
+        appWindow.pack();
+        appWindow.setLocationRelativeTo(null);
+        appWindow.setVisible(true);
    }
 }

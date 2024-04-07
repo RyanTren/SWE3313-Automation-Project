@@ -12,6 +12,7 @@ create table jrestaurant_employees
     hoursWorked float
 );
 
+<<<<<<< HEAD
 
 create table restaurant_statistics
 (
@@ -24,6 +25,8 @@ create table restaurant_statistics
 );
 
 
+=======
+>>>>>>> refs/remotes/origin/Login-GUI-Draft
 -- here we insert values for each employee
 -- managers
 insert into jrestaurant_employees(name, role, username, password, hoursWorked)
@@ -47,4 +50,8 @@ values ('Lily', 'cook', 'cuser1', 'c1password', 7),
 
 -- hosts
 insert into jrestaurant_employees(name, role, username, password, hoursWorked)
+<<<<<<< HEAD
 values ('Dean', 'host', 'huser1', 'h1password', 4);
+=======
+values ('Dean', 'host', 'huser1', 'h1password', 4);
+>>>>>>> refs/remotes/origin/Login-GUI-Draft
