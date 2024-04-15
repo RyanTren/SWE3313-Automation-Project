@@ -72,15 +72,13 @@ public class WaiterTable extends JPanel implements ActionListener {
         }
     }
     public WaiterTable() {
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setUndecorated(true); // Remove window decorations
-//        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
-//        setTitle("J's Restaurant | Waiter Screen");
 
         // Background panel with BorderLayout
+        setLayout(new BorderLayout()); // BorderLayout for JPanel
+
         waiterBackgroundPanel = new JPanel(new BorderLayout());
         waiterBackgroundPanel.setBackground(new Color(255, 255, 255));
-        add(waiterBackgroundPanel);
+        add(waiterBackgroundPanel, BorderLayout.CENTER);
 
         // Create a panel for the additional background
         waiterTopLayerBackgroundPanel = new RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
@@ -143,7 +141,43 @@ public class WaiterTable extends JPanel implements ActionListener {
 
         //Table Buttons
         createAndShowGUI();
+
+        // Add legend
+//        addLegend();
     }
+
+//    legend takes up the whole topBarPanel, resizing doesn't seem to work
+
+//    public void addLegend(){
+//        // Create a panel for the legend
+//        JPanel legendPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5)); // FlowLayout for legend
+//        legendPanel.setBackground(new Color(255, 246, 242)); // Set background color
+//
+//        // Legend labels
+//        JLabel legendLabel = new JLabel("Table Status Legend: ");
+//        legendPanel.add(legendLabel);
+//
+//        // Add colored panels for each status
+//        addLegendItem(legendPanel, "Open", new Color(89, 188, 99)); // Green for open
+//        addLegendItem(legendPanel, "Occupied", new Color(255, 255, 102)); // Yellow for occupied
+//        addLegendItem(legendPanel, "Dirty", new Color(255, 0, 0)); // Red for dirty
+//
+//        // Add legend panel to the top bar panel
+//        waiterBackgroundPanel.add(legendPanel, BorderLayout.NORTH);
+//    }
+//
+//
+//
+//    // Add legend item with colored panel and label
+//    private void addLegendItem(JPanel legendPanel, String text, Color color) {
+//        JPanel colorPanel = new JPanel();
+//        colorPanel.setBackground(color);
+//        colorPanel.setPreferredSize(new Dimension(20, 20)); // Set size of color panel
+//
+//        JLabel statusLabel = new JLabel(text);
+//        legendPanel.add(colorPanel);
+//        legendPanel.add(statusLabel);
+//    }
 
     private static JButton getjButton() {
         JButton logoutButton = new JButton("Logout");
@@ -190,17 +224,15 @@ public class WaiterTable extends JPanel implements ActionListener {
         String actionCommand = e.getActionCommand();
         if (actionCommand != null && actionCommand.matches("\\d+")) {
             int tableNumber = Integer.parseInt(actionCommand);
-            new WaiterDrinkMenu(tableNumber).setVisible(true);
-//            dispose(); // Close this window
+            new WaiterStarterMenu(tableNumber).setVisible(true); // Updated line
+            System.out.println("Selected table: " + tableNumber);
         } else {
             // Handle other actions, such as logout
-//            dispose(); // Close this window
-            // Redirect to LoginGUI
+            System.out.println("Logout button clicked");
             App.main(new String[0]); // Call App's main method without passing any arguments
         }
     }
-
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
-//    }
 }
+
+
+

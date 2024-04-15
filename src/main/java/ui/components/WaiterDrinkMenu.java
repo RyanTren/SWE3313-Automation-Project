@@ -9,16 +9,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class WaiterDrinkMenu extends JFrame implements ActionListener {
+public class WaiterDrinkMenu extends JPanel implements ActionListener {
     private JPanel menuBackgroundPanel;
-    private WaiterTable.RoundedPanel menuTopLayerBackgroundPanel;
+//    private WaiterTable.RoundedPanel menuTopLayerBackgroundPanel;
     public WaiterDrinkMenu(int tableNumber) {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setUndecorated(true); // Remove window decorations
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
-        setTitle("J's Restaurant | Table " + tableNumber + " Drink Menu");
+
         setSize(400, 300);
-        setLocationRelativeTo(null); // Center the window
         setVisible(true);
 
         // Background panel with BorderLayout
@@ -27,11 +23,11 @@ public class WaiterDrinkMenu extends JFrame implements ActionListener {
         add(menuBackgroundPanel);
 
         // Create a panel for the additional background
-        menuTopLayerBackgroundPanel = new WaiterTable.RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
-        menuTopLayerBackgroundPanel.setPreferredSize(new Dimension(500, 100)); // Adjust the preferred size as needed
+//        menuTopLayerBackgroundPanel = new WaiterTable.RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
+//        menuTopLayerBackgroundPanel.setPreferredSize(new Dimension(500, 100)); // Adjust the preferred size as needed
 
         // Add the additional background panel to the content panel as a layered component
-        menuBackgroundPanel.add(menuTopLayerBackgroundPanel, BorderLayout.CENTER);
+//        menuBackgroundPanel.add(menuTopLayerBackgroundPanel, BorderLayout.CENTER);
 
         // Creating a panel for the top bar components
         JPanel topBarPanel = new JPanel();
@@ -97,7 +93,7 @@ public class WaiterDrinkMenu extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        dispose(); // Close the current window (WaitearDrinkMenu)
+//        dispose(); // Close the current window (WaitearDrinkMenu)
         new WaiterTable().setVisible(true); // Open the WaiterTable window again
     }
     public static void main(String[] args) {

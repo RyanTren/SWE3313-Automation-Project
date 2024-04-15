@@ -11,16 +11,17 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class WaiterStarterMenu extends JFrame implements ActionListener {
+public class WaiterStarterMenu extends JPanel implements ActionListener {
     private JPanel menuBackgroundPanel;
-    private WaiterTable.RoundedPanel menuTopLayerBackgroundPanel;
+//    private WaiterTable.RoundedPanel menuTopLayerBackgroundPanel;
     public WaiterStarterMenu(int tableNumber) {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setUndecorated(true); // Remove window decorations
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
-        setTitle("J's Restaurant | Table " + tableNumber + " Starter Menu");
+        System.out.println("WaiterStarterMenu constructor called for table " + tableNumber);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setUndecorated(true); // Remove window decorations
+//        setExtendedState(JFrame.MAXIMIZED_BOTH); // Make the application full screen
+//        setTitle("J's Restaurant | Table " + tableNumber + " Starter Menu");
         setSize(400, 300);
-        setLocationRelativeTo(null); // Center the window
+//        setLocationRelativeTo(null); // Center the window
         setVisible(true);
 
         // Background panel with BorderLayout
@@ -28,12 +29,12 @@ public class WaiterStarterMenu extends JFrame implements ActionListener {
         menuBackgroundPanel.setBackground(new Color(255, 255, 255));
         add(menuBackgroundPanel);
 
-        // Create a panel for the additional background
-        menuTopLayerBackgroundPanel = new WaiterTable.RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
-        menuTopLayerBackgroundPanel.setPreferredSize(new Dimension(500, 100)); // Adjust the preferred size as needed
-
-        // Add the additional background panel to the content panel as a layered component
-        menuBackgroundPanel.add(menuTopLayerBackgroundPanel, BorderLayout.CENTER);
+//        // Create a panel for the additional background
+//        menuTopLayerBackgroundPanel = new WaiterTable.RoundedPanel(20, new Color(217, 217, 217, 50)); // Adjust the arc width, arc height, color, and opacity as needed
+//        menuTopLayerBackgroundPanel.setPreferredSize(new Dimension(500, 100)); // Adjust the preferred size as needed
+//
+//        // Add the additional background panel to the content panel as a layered component
+//        menuBackgroundPanel.add(menuTopLayerBackgroundPanel, BorderLayout.CENTER);
 
         // Creating a panel for the top bar components
         JPanel topBarPanel = new JPanel();
@@ -99,10 +100,21 @@ public class WaiterStarterMenu extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        dispose(); // Close the current window (WaiterStarterMenu)
-        new WaiterTable().setVisible(true); // Open the WaiterTable window again
+        // Remove the current WaiterStarterMenu from its parent container
+        Container parent = this.getParent();
+        parent.remove(this);
+        parent.revalidate();
+        parent.repaint();
+
+        // Show the previous panel (WaiterTable)
+        if (parent instanceof JFrame) {
+            ((JFrame) parent).setVisible(true);
+        } else {
+            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+            if (frame != null) {
+                frame.setVisible(true);
+            }
+        }
     }
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new WaiterTable().setVisible(true));
-    }
+
 }
