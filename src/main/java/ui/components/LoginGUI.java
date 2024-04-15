@@ -45,6 +45,7 @@ public class LoginGUI implements ActionListener {
         initLoginButton(constraints, loginFont);
 
         cards = new JPanel(new CardLayout());
+
         // 1st view added becomes the default view
         cards.add(GUI_NAMES.LOGIN.name(), loginPanel);
 
