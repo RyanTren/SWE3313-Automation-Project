@@ -47,6 +47,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class WaiterTable extends JPanel implements ActionListener {
+
     private JPanel waiterBackgroundPanel;
     private RoundedPanel waiterTopLayerBackgroundPanel;
 
@@ -219,12 +220,59 @@ public class WaiterTable extends JPanel implements ActionListener {
         return buttons;
     }
 
+    //Lines 226-233 wasn't working so i looked up another way to change the screen once a table is selected
+
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        String actionCommand = e.getActionCommand();
+//        if (actionCommand != null && actionCommand.matches("\\d+")) {
+//            int tableNumber = Integer.parseInt(actionCommand);
+////            new WaiterStarterMenu(tableNumber).setVisible(true); // Updated line
+//            SwingUtilities.getWindowAncestor(this).add(new WaiterStarterMenu(tableNumber));
+//            SwingUtilities.getWindowAncestor(this).revalidate();
+//            SwingUtilities.getWindowAncestor(this).repaint();
+//            System.out.println("Selected table: " + tableNumber);
+//        } else {
+//            // Handle other actions, such as logout
+//            System.out.println("Logout button clicked");
+//            App.main(new String[0]); // Call App's main method without passing any arguments
+//        }
+//    }
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            String actionCommand = e.getActionCommand();
+//            if (actionCommand != null && actionCommand.matches("\\d+")) {
+//                int tableNumber = Integer.parseInt(actionCommand);
+//                // Get the parent frame
+//                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+//                // Remove the current panel from the frame's content pane
+//                frame.getContentPane().removeAll();
+//                // Add the WaiterStarterMenu panel to the frame
+//                frame.getContentPane().add(new WaiterStarterMenu(tableNumber));
+//                // Repaint the frame to reflect the changes
+//                frame.revalidate();
+//                frame.repaint();
+//                System.out.println("Selected table: " + tableNumber);
+//            } else {
+//                // Handle other actions, such as logout
+//                System.out.println("Logout button clicked");
+//            }
+//        }
     @Override
     public void actionPerformed(ActionEvent e) {
         String actionCommand = e.getActionCommand();
         if (actionCommand != null && actionCommand.matches("\\d+")) {
             int tableNumber = Integer.parseInt(actionCommand);
             new WaiterStarterMenu(tableNumber).setVisible(true); // Updated line
+            // Get the parent frame
+            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+            // Remove the current panel from the frame's content pane
+            frame.getContentPane().removeAll();
+            // Add the WaiterStarterMenu panel to the frame
+            frame.getContentPane().add(new WaiterStarterMenu(tableNumber));
+            // Repaint the frame to reflect the changes
+            frame.revalidate();
+            frame.repaint();
             System.out.println("Selected table: " + tableNumber);
         } else {
             // Handle other actions, such as logout
