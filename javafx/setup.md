@@ -4,7 +4,7 @@
 
 <a href="https://gluonhq.com/products/scene-builder/">Link to Download</a>  (make sure to pick the right OS system)
 
-<img src="javafx/instructionPics/downloadSceneBuilder.png">
+<img src="/instructionPics/downloadSceneBuilder.png">
 
 # 2. Open the project in InteliJ
 
@@ -12,6 +12,6 @@ When you open the Project, go to Files -> Language & Frameworks -> JavaFX -> Pat
 
 Now you need to file the path to SceneBuilder.exe, here what it looks like for me.
 
-<img src="javafx/instructionPics/Step2.png">
+<img src="/instructionPics/Step2.png">
 
 
