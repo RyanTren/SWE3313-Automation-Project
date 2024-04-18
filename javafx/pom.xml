@@ -40,6 +40,13 @@
             <version>21</version>
         </dependency>
 
+        <!--    added dependencies from WaiterTableController.java    -->
+
+
+
+
+
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>

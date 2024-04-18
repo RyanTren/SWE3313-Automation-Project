@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.Model.DrinksMenu">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="-3.0" stroke="WHITE" strokeType="INSIDE" width="1927.0" />
+      <Circle fill="#e8d3d3" layoutX="140.0" layoutY="143.0" radius="100.0" stroke="#e8d3d3" strokeType="INSIDE" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="40.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/J's%20Restaurant%20Logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1784.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Text layoutX="289.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order #1">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="289.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" width="1169.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="903.0" layoutX="1581.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" width="299.0" />
+      <Text layoutX="306.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="1607.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Order">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Line endX="135.0" layoutX="1707.0" layoutY="205.0" startX="-100.0" />
+      <Line endX="135.0" layoutX="1713.0" layoutY="923.0" startX="-100.0" />
+      <Line endX="135.0" layoutX="1713.0" layoutY="860.0" startX="-100.0" />
+      <Button layoutX="1607.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="236.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Text fill="#a41515" layoutX="1613.0" layoutY="896.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="1613.0" layoutY="836.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax 10%">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="1613.0" layoutY="798.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" layoutX="1607.0" layoutY="220.0" stroke="#d9d9d9" strokeType="INSIDE" width="236.0" />
+      <Button layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks" />
+      <Button layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters" />
+      <Button layoutX="786.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Entrees" />
+      <Button layoutX="1003.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Desserts" />
+      <Button layoutX="1230.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA;" text="Sides" />
+      <Group layoutX="334.0" layoutY="362.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 1" />
+            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+         </children>
+      </Group>
+      <Group layoutX="837.0" layoutY="362.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 2" />
+            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+         </children>
+      </Group>
+      <Group layoutX="334.0" layoutY="653.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 3" />
+            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+         </children>
+      </Group>
+      <Group layoutX="837.0" layoutY="653.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 4" />
+            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+         </children>
+      </Group>
+      <Button layoutX="1794.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="1794.0" layoutY="293.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
