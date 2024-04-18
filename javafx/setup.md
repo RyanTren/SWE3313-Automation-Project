@@ -4,7 +4,7 @@
 
 <a href="https://gluonhq.com/products/scene-builder/">Link to Download</a>  (make sure to pick the right OS system)
 
-![Step1](https://raw.githubusercontent.com/yourusername/yourrepository/main/instructionPics/downloadSceneBuilder.png)
+![Step1](https://raw.githubusercontent.com/RyanTren/SWE3313-Automation-Project/javafx/instructionPics/downloadSceneBuilder.png)
 
 # 2. Open the project in InteliJ
 
