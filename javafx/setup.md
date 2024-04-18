@@ -14,4 +14,11 @@ Now you need to file the path to SceneBuilder.exe, here what it looks like for m
 
 <img src="/instructionPics/Step2.png">
 
+# 3. Now you gotta set up JDK 21.0.2
+
+Go to File -> Project Structure -> Modules -> Add a new Module named "AutomatedPOS" -> Sources -> Select 21 for Language Level -> Apply and press okay
+
+<img src="/instructionPics/Step3.png">
+
+<img src="/instructionPics/one.png">
 
