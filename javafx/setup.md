@@ -4,6 +4,8 @@
 
 <a href="https://gluonhq.com/products/scene-builder/">Link to Download</a>  (make sure to pick the right OS system)
 
+![Step1](/instructionPics/downloadSceneBuilder.png)
+
 <img src="/instructionPics/downloadSceneBuilder.png">
 
 # 2. Open the project in InteliJ
