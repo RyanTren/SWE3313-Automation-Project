@@ -25,10 +25,24 @@ public class LoginController {
         // Initialization code, if any
     }
 
+    @FXML
+    private void handleLogin() {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        if (isValidCredentials(username, password)) {
+            // Login successful, print "login" in the console
+            System.out.println("Login");
+            // Clear any previous error message
+            errorLabel.setText("");
+        } else {
+            // Login failed, display error message
+            errorLabel.setText("Invalid username or password.");
+        }
+    }
 
     private boolean isValidCredentials(String username, String password) {
-        // Add your logic to validate the username and password here.
-        // This is just a placeholder, you should replace it with your actual logic.
-        return username.equals("admin") && password.equals("password");
+        // Check if the provided username and password match the desired credentials
+        return username.equals("w1user") && password.equals("w1password");
     }
 }

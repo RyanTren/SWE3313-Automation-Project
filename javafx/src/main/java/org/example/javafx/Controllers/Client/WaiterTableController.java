@@ -2,7 +2,8 @@ package org.example.javafx.Controllers.Client;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup; // Correct import
+import javafx.scene.control.ToggleGroup;
+
 
 public class WaiterTableController {
 
