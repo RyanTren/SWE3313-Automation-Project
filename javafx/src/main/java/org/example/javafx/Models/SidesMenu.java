@@ -1,0 +1,4 @@
+package org.example.javafx.Models;
+
+public class SidesMenu {
+}

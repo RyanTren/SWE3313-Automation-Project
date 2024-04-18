@@ -2,15 +2,16 @@
 
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.Model.DrinksMenu">
    <children>
@@ -18,7 +19,7 @@
       <Circle fill="#e8d3d3" layoutX="140.0" layoutY="143.0" radius="100.0" stroke="#e8d3d3" strokeType="INSIDE" />
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="40.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assets/J's%20Restaurant%20Logo.png" />
+            <Image url="@../../assets/J's Restaurant Logo.png" />
          </image>
       </ImageView>
       <Button layoutX="1784.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Back" textFill="WHITE">
@@ -71,36 +72,90 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" layoutX="1607.0" layoutY="220.0" stroke="#d9d9d9" strokeType="INSIDE" width="236.0" />
-      <Button layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks" />
-      <Button layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters" />
-      <Button layoutX="786.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Entrees" />
-      <Button layoutX="1003.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Desserts" />
-      <Button layoutX="1230.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA;" text="Sides" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" layoutX="1607.0" layoutY="220.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
+      <Button layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.9052631855010986" green="0.2984015643596649" blue="0.2984015643596649" opacity="0.30000001192092896" />
+               </color></DropShadow>
+         </effect></Button>
+      <Button layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color></DropShadow>
+         </effect></Button>
+      <Button layoutX="786.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Entrees">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color></DropShadow>
+         </effect></Button>
+      <Button layoutX="1003.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Desserts">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color></DropShadow>
+         </effect></Button>
+      <Button layoutX="1230.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Sides">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.10000000149011612" />
+               </color></DropShadow>
+         </effect></Button>
       <Group layoutX="334.0" layoutY="362.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color></DropShadow>
+               </effect></Button>
             <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 1" />
             <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
          </children>
       </Group>
       <Group layoutX="837.0" layoutY="362.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3009118437767029" />
+                     </color></DropShadow>
+               </effect></Button>
             <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 2" />
             <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
          </children>
       </Group>
       <Group layoutX="334.0" layoutY="653.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color></DropShadow>
+               </effect></Button>
             <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 3" />
             <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
          </children>
       </Group>
       <Group layoutX="837.0" layoutY="653.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" />
+            <Button mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color></DropShadow>
+               </effect></Button>
             <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 4" />
             <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
          </children>
@@ -115,5 +170,11 @@
             <Font size="19.0" />
          </font>
       </Button>
+      <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Cash" />
+      <Button layoutX="1699.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Card" />
+      <Button layoutX="1784.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="71.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Apple Pay" />
+      <Text layoutX="1628.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash" />
+      <Text layoutX="1717.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card" />
+      <Text layoutX="1793.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Pay" />
    </children>
 </AnchorPane>
