@@ -21,4 +21,4 @@ Go to File -> Project Structure -> Modules -> Add a new Module named "AutomatedP
 
 ![Step 1](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/Step3.png?raw=true)
 
-![Step 1](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/One.png?raw=true)
+![Step 1](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/one.png?raw=true)
