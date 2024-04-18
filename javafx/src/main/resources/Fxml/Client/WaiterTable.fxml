@@ -350,7 +350,7 @@
       </Pane>
       <ImageView fitHeight="242.0" fitWidth="321.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assets/J's%20Restaurant%20Logo.png" />
+            <Image url="@../../assets/J's Restaurant Logo.png" />
          </image>
       </ImageView>
       <Text layoutX="328.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back, Waiter">
