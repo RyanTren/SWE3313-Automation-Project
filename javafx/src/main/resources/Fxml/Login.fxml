@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="1080.0" minWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx.Controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx.Controllers.LoginController">
    <children>
       <VBox layoutX="699.0" layoutY="330.0" maxHeight="500.0" maxWidth="500.0" minHeight="355.0" minWidth="500.0" prefHeight="355.0" prefWidth="500.0">
          <children>
             <ImageView fitHeight="359.0" fitWidth="503.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/J's%20Restaurant%20Logo.png" />
+                  <Image url="@../assets/J's Restaurant Logo.png" />
                </image>
             </ImageView>
          </children>
