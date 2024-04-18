@@ -6,7 +6,7 @@
 
 ![Step1]([https://raw.githubusercontent.com/RyanTren/SWE3313-Automation-Project/javafx/instructionPics/downloadSceneBuilder.png])
 
-![Step1]((https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/downloadSceneBuilder.png))
+![Step1]([https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/downloadSceneBuilder.png])
 
 
 # 2. Open the project in InteliJ
