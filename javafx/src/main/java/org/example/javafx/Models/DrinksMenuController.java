@@ -149,13 +149,31 @@ public class DrinksMenuController implements Initializable {
     }
 
     // Method to navigate to a different FXML file
+//    private void navigateToFXML(String fxmlFileName) {
+//        try {
+//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
+//            fxmlLoader.load();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     private void navigateToFXML(String fxmlFileName) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
-            fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
+        FXMLLoader fxmlLoader;
+
+        // Add conditions based on the fxmlFileName parameter
+        if (fxmlFileName.equals("StarterMenu.fxml")) {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
+        } else if (fxmlFileName.equals("EntreeMenu.fxml")) {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
+        } else if (fxmlFileName.equals("DessertMenu.fxml")) {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
+        } else if (fxmlFileName.equals("SidesMenu.fxml")) {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
+        } else {
+            // Default case or error handling
+            throw new IllegalArgumentException("Invalid FXML file name: " + fxmlFileName);
         }
     }
+
 }
 
