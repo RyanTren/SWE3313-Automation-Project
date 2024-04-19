@@ -126,7 +126,7 @@
          <effect>
             <DropShadow>
                <color>
-                  <Color opacity="0.10000000149011612" />
+                  <Color opacity="0.30000001192092896" />
                </color></DropShadow>
          </effect></Button>
       <Group layoutX="334.0" layoutY="362.0">
@@ -138,8 +138,13 @@
                         <Color opacity="0.30000001192092896" />
                      </color></DropShadow>
                </effect></Button>
-            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 1" />
-            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+            <Text layoutX="217.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Water" />
+            <Text layoutX="219.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00" />
+            <ImageView fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/WaterImage.png" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Group layoutX="837.0" layoutY="362.0">
@@ -151,8 +156,13 @@
                         <Color opacity="0.3009118437767029" />
                      </color></DropShadow>
                </effect></Button>
-            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 2" />
-            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+            <Text layoutX="218.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soda" />
+            <Text layoutX="217.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3.00" />
+            <ImageView fitHeight="105.0" fitWidth="55.0" layoutX="204.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/SodaImage.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Group layoutX="334.0" layoutY="653.0">
@@ -164,8 +174,13 @@
                         <Color opacity="0.30000001192092896" />
                      </color></DropShadow>
                </effect></Button>
-            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 3" />
-            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+            <Text layoutX="217.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IPA" />
+            <Text layoutX="212.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$6.75" />
+            <ImageView fitHeight="127.0" fitWidth="33.0" layoutX="209.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/IPAImage.png" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Group layoutX="837.0" layoutY="653.0">
@@ -177,8 +192,13 @@
                         <Color opacity="0.30000001192092896" />
                      </color></DropShadow>
                </effect></Button>
-            <Text layoutX="218.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item 4" />
-            <Text layoutX="218.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+            <Text layoutX="194.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sweet Tea" />
+            <Text layoutX="206.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2.50" />
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="156.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/SweetTeaImage.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Button fx:id="addQuantityButton" layoutX="1794.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
@@ -191,9 +211,30 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Cash" />
-      <Button layoutX="1699.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Card" />
-      <Button layoutX="1784.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="71.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;" text="Apple Pay" />
+      <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/CashButtonImage.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="1699.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/CardButtonImage.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="1784.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="71.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/ApplePayButtonImage.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Text layoutX="1628.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash" />
       <Text layoutX="1717.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card" />
       <Text layoutX="1793.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Pay" />

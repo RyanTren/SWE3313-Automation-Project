@@ -11,7 +11,7 @@ import org.example.javafx.Views.ViewFactory;
 public class App extends Application {
     @Override
     public void start(Stage stage) {
-        System.out.println("[J's Restaurant Back End Module]");
+        System.out.println("[J's Restaurant Back-End Module]");
         Model.getInstance().getViewFactory().showLoginWindow();
     }
 }
