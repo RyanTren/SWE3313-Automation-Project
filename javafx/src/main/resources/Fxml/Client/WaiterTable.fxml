@@ -16,7 +16,7 @@
    <children>
       <Pane layoutX="14.0" layoutY="226.0" prefHeight="840.0" prefWidth="1892.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 25;">
          <children>
-            <ToggleButton id="tableButton1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 1" textFill="WHITE">
+            <ToggleButton id="tableButton1" fx:id="tableToggleButton1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 1" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -27,7 +27,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton2" layoutX="321.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 2" textFill="WHITE">
+            <ToggleButton id="tableButton2" fx:id="tableToggleButton2" layoutX="321.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 2" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -38,7 +38,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton3" layoutX="638.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 3" textFill="WHITE">
+            <ToggleButton id="tableButton3" fx:id="tableToggleButton3" layoutX="638.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 3" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -49,7 +49,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton4" layoutX="955.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 4" textFill="WHITE">
+            <ToggleButton id="tableButton4" fx:id="tableToggleButton4" layoutX="955.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 4" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -60,7 +60,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton5" layoutX="1268.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 5" textFill="WHITE">
+            <ToggleButton id="tableButton5" fx:id="tableToggleButton5" layoutX="1268.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 5" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -71,7 +71,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton6" layoutX="1578.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 6" textFill="WHITE">
+            <ToggleButton id="tableButton6" fx:id="tableToggleButton6" layoutX="1578.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 6" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -82,7 +82,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton7" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 7" textFill="WHITE">
+            <ToggleButton id="tableButton7" fx:id="tableToggleButton7" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 7" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -93,7 +93,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton8" layoutX="321.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 8" textFill="WHITE">
+            <ToggleButton id="tableButton8" fx:id="tableToggleButton8" layoutX="321.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 8" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -104,7 +104,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton9" layoutX="638.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 9" textFill="WHITE">
+            <ToggleButton id="tableButton9" fx:id="tableToggleButton9" layoutX="638.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 9" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -115,7 +115,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton10" layoutX="955.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 10" textFill="WHITE">
+            <ToggleButton id="tableButton10" fx:id="tableToggleButton10" layoutX="955.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 10" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -126,7 +126,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton11" layoutX="1268.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 11" textFill="WHITE">
+            <ToggleButton id="tableButton11" fx:id="tableToggleButton11" layoutX="1268.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 11" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -137,7 +137,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton12" layoutX="1578.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 12" textFill="WHITE">
+            <ToggleButton id="tableButton12" fx:id="tableToggleButton12" layoutX="1578.0" layoutY="174.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 12" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -148,7 +148,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton13" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 13" textFill="WHITE">
+            <ToggleButton id="tableButton13" fx:id="tableToggleButton13" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 13" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -159,7 +159,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton14" layoutX="321.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 14" textFill="WHITE">
+            <ToggleButton id="tableButton14" fx:id="tableToggleButton14" layoutX="321.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 14" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -170,7 +170,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton15" layoutX="638.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 15" textFill="WHITE">
+            <ToggleButton id="tableButton15" fx:id="tableToggleButton15" layoutX="638.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 15" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -181,7 +181,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton16" layoutX="955.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 16" textFill="WHITE">
+            <ToggleButton id="tableButton16" fx:id="tableToggleButton16" layoutX="955.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 16" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -192,7 +192,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton17" layoutX="1268.0" layoutY="333.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 17" textFill="WHITE">
+            <ToggleButton id="tableButton17" fx:id="tableToggleButton17" layoutX="1268.0" layoutY="333.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 17" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -203,7 +203,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton18" layoutX="1578.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 18" textFill="WHITE">
+            <ToggleButton id="tableButton18" fx:id="tableToggleButton18" layoutX="1578.0" layoutY="334.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 18" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -214,7 +214,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton19" layoutX="14.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 19" textFill="WHITE">
+            <ToggleButton id="tableButton19" fx:id="tableToggleButton19" layoutX="14.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 19" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -225,7 +225,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton20" layoutX="321.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 20" textFill="WHITE">
+            <ToggleButton id="tableButton20" fx:id="tableToggleButton20" layoutX="321.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 20" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -236,7 +236,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton21" layoutX="638.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 21" textFill="WHITE">
+            <ToggleButton id="tableButton21" fx:id="tableToggleButton21" layoutX="638.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 21" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -247,7 +247,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton22" layoutX="955.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 22" textFill="WHITE">
+            <ToggleButton id="tableButton22" fx:id="tableToggleButton22" layoutX="955.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 22" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -258,7 +258,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton23" layoutX="1268.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 23" textFill="WHITE">
+            <ToggleButton id="tableButton23" fx:id="tableToggleButton23" layoutX="1268.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 23" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -269,7 +269,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton24" layoutX="1578.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 24" textFill="WHITE">
+            <ToggleButton id="tableButton24" fx:id="tableToggleButton24" layoutX="1578.0" layoutY="497.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 24" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -280,7 +280,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton25" layoutX="14.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 25" textFill="WHITE">
+            <ToggleButton id="tableButton25" fx:id="tableToggleButton25" layoutX="14.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 25" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -291,7 +291,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton26" layoutX="321.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 26" textFill="WHITE">
+            <ToggleButton id="tableButton26" fx:id="tableToggleButton26" layoutX="321.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 26" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -302,7 +302,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton27" layoutX="638.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 27" textFill="WHITE">
+            <ToggleButton id="tableButton27" fx:id="tableToggleButton27" layoutX="638.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 27" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -313,7 +313,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton28" layoutX="955.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 28" textFill="WHITE">
+            <ToggleButton id="tableButton28" fx:id="tableToggleButton28" layoutX="955.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 28" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -324,7 +324,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton29" layoutX="1268.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 29" textFill="WHITE">
+            <ToggleButton id="tableButton29" fx:id="tableToggleButton29" layoutX="1268.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 29" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -335,7 +335,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ToggleButton>
-            <ToggleButton id="tableButton30" layoutX="1578.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 30" textFill="WHITE">
+            <ToggleButton id="tableButton30" fx:id="tableToggleButton30" layoutX="1578.0" layoutY="669.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="300.0" selected="true" style="-fx-background-color: #59BC63; -fx-background-radius: 6;" text="Table 30" textFill="WHITE">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>

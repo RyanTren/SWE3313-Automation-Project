@@ -4,7 +4,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.javafx.Controllers.Client.ClientController;
 import org.example.javafx.Controllers.Client.WaiterTableController;
 
 /* This class responsible for creating and managing various views in our JavaFX application.*/
