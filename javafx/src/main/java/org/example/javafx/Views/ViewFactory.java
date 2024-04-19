@@ -2,6 +2,12 @@ package org.example.javafx.Views;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+
+import javafx.stage.Screen;
+import javafx.geometry.Rectangle2D;
+import javafx.stage.StageStyle;
+
+
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
@@ -78,6 +84,27 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
+
+        // Set the stage style to transparent to remove the full-screen notification
+        stage.initStyle(StageStyle.TRANSPARENT);
+
+        stage.setScene(scene);
+
+        // Get the primary screen
+        Screen screen = Screen.getPrimary();
+
+        // Get the bounds of the primary screen
+        Rectangle2D bounds = screen.getVisualBounds();
+
+        // Calculate the center position of the screen
+        double centerX = bounds.getMinX() + (bounds.getWidth() - stage.getWidth()) / 2;
+        double centerY = bounds.getMinY() + (bounds.getHeight() - stage.getHeight()) / 2;
+
+        // Set the stage position to the calculated center
+        stage.setX(centerX);
+        stage.setY(centerY);
+
+        // Show the stage
         stage.show();
     }
 

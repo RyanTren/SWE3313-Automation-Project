@@ -118,6 +118,7 @@ public class WaiterTableController implements Initializable {
         // You may navigate to the login screen
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
 
     //tableButton now transitions to the DrinksMenu.fxml but, you have to double-click the button. (need to fix this)
