@@ -105,14 +105,14 @@
             <effect>
                 <DropShadow>
                     <color>
-                        <Color red="0.9058823585510254" green="0.2980392277240753" blue="0.2980392277240753" opacity="0.30000001192092896" />
+                        <Color opacity="0.30000001192092896" />
                     </color></DropShadow>
             </effect></Button>
         <Button fx:id="entreesCategoryButton" layoutX="786.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Entrees">
             <effect>
                 <DropShadow>
                     <color>
-                        <Color opacity="0.30000001192092896" />
+                        <Color red="0.9058823585510254" green="0.2980392277240753" blue="0.2980392277240753" opacity="0.30000001192092896" />
                     </color></DropShadow>
             </effect></Button>
         <Button fx:id="dessertsCategoryButton" layoutX="1003.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Desserts">
@@ -138,11 +138,11 @@
                                 <Color opacity="0.30000001192092896" />
                             </color></DropShadow>
                     </effect></Button>
-                <Text layoutX="205.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cornbread" />
+                <Text layoutX="205.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
                 <Text layoutX="219.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3.00" />
-                <ImageView fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="113.0" fitWidth="170.0" layoutX="148.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../assets/CornbreadImage.png" />
+                        <Image url="@../../assets/PulledPorkImage.png" />
                     </image>
                 </ImageView>
             </children>
