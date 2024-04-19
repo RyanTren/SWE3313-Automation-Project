@@ -1,4 +1,4 @@
 package org.example.javafx.Models;
 
-public class DesertsMenu {
+public class EntreeMenuController {
 }

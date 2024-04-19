@@ -120,31 +120,36 @@ public class WaiterTableController implements Initializable {
         Model.getInstance().getViewFactory().closeStage(stage);
     }
 
-//    private void onClick(){
-//        Stage stage = (Stage) tableToggleButton1.getScene().getWindow();
-//        Model.getInstance().getViewFactory().closeStage(stage);
-//        Model.getInstance().getViewFactory().showDrinksMenu();
-//    }
-
-
     //tableButton now transitions to the DrinksMenu.fxml but, you have to double-click the button. (need to fix this)
+//    private void onClickTable() {
+//        try {
+//            // Load the FXML file for the drinks menu
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DrinksMenu.fxml"));
+//            AnchorPane drinksMenuPane = loader.load();
+//
+//            // Get the current stage
+//            Stage currentStage = (Stage) tableToggleButton1.getScene().getWindow();
+//
+//            // Create a new stage for the drinks menu
+//            Stage drinksMenuStage = new Stage();
+//            drinksMenuStage.setScene(new Scene(drinksMenuPane));
+//
+//            // Close the current stage and show the drinks menu stage
+//            currentStage.close();
+//            drinksMenuStage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     private void onClickTable() {
         try {
-            // Load the FXML file for the drinks menu
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DrinksMenu.fxml"));
-            AnchorPane drinksMenuPane = loader.load();
+            // Show the drinks menu using ViewFactory
+            Model.getInstance().getViewFactory().showDrinksMenu();
 
-            // Get the current stage
+            // Close the current stage (optional)
             Stage currentStage = (Stage) tableToggleButton1.getScene().getWindow();
-
-            // Create a new stage for the drinks menu
-            Stage drinksMenuStage = new Stage();
-            drinksMenuStage.setScene(new Scene(drinksMenuPane));
-
-            // Close the current stage and show the drinks menu stage
             currentStage.close();
-            drinksMenuStage.show();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

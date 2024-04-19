@@ -29,7 +29,7 @@
             <Image url="@../../assets/J's Restaurant Logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="1784.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Back" textFill="WHITE">
+      <Button id="backButton" fx:id="backButton" layoutX="1784.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Back" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
@@ -39,7 +39,7 @@
             <Font size="35.0" />
          </font>
       </Text>
-      <Button fx:id="logoutButton" layoutX="14.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Logout" textFill="WHITE">
+      <Button id="logoutButton" fx:id="logoutButton" layoutX="14.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Logout" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
@@ -52,7 +52,14 @@
                </color>
             </DropShadow>
          </effect></Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="903.0" layoutX="1581.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" width="299.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="903.0" layoutX="1581.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="299.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.3015267252922058" />
+               </color>
+            </DropShadow>
+         </effect></Rectangle>
       <Text layoutX="306.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category">
          <font>
             <Font size="24.0" />
@@ -94,7 +101,7 @@
                   <Color red="0.9052631855010986" green="0.2984015643596649" blue="0.2984015643596649" opacity="0.30000001192092896" />
                </color></DropShadow>
          </effect></Button>
-      <Button fx:id="StartersCategoryButton" layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters">
+      <Button fx:id="startersCategoryButton" layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters">
          <effect>
             <DropShadow>
                <color>

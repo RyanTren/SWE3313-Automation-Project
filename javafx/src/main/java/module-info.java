@@ -2,6 +2,7 @@ module org.example.javafx {
     requires javafx.controls;
     requires javafx.fxml;
 
+    opens org.example.javafx.Models to javafx.fxml;
     opens org.example.javafx.Controllers to javafx.fxml;
     exports org.example.javafx;
 
@@ -10,3 +11,6 @@ module org.example.javafx {
 
     // other module directives
 }
+
+
+
