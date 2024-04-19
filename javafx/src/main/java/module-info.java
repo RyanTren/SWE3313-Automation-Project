@@ -19,7 +19,8 @@
 module org.example.javafx {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop; // Add this line to allow access to java.awt
+    requires java.desktop;
+    requires javafx.graphics; // Add this line to allow access to java.awt
 
     opens org.example.javafx.Models to javafx.fxml;
     opens org.example.javafx.Controllers to javafx.fxml;
