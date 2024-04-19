@@ -19,7 +19,7 @@
       </VBox>
       <TextField layoutX="824.0" layoutY="711.0" prefHeight="25.0" prefWidth="250.0" promptText="Username" style="-fx-border-color: #C9BCBC; -fx-background-color: #FFF6F2;" />
       <PasswordField layoutX="824.0" layoutY="751.0" prefHeight="25.0" prefWidth="250.0" promptText="Password" style="-fx-border-color: #C9BCBC; -fx-background-color: #FFF6F2;" />
-      <Button layoutX="923.0" layoutY="797.0" mnemonicParsing="false" style="-fx-background-color: #14A433;" text="Login" textFill="WHITE">
+      <Button layoutX="923.0" layoutY="797.0" mnemonicParsing="false" style="-fx-background-color: #14A433;" text="Login" textFill="WHITE" fx:id="loginButton" onAction="#handleLogin">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
