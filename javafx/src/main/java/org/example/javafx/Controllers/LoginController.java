@@ -2,6 +2,7 @@ package org.example.javafx.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,10 +10,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.example.javafx.App;
+import org.example.javafx.Models.Model;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
     private TextField usernameField;
@@ -24,40 +28,38 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
-    private Label errorLabel; // Add a label to display error messages
+    private Label errorLabel;
 
-    @FXML
-    private void initialize() {
-        // Initialization code, if any
-    }
-
-    @FXML
-    private void handleLogin() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        if (isValidCredentials(username, password)) {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/Fxml/WaiterTable.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                Stage stage = (Stage) loginButton.getScene().getWindow(); // Get the current stage
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-                // Display an error message if the FXML file fails to load
-                errorLabel.setText("Error loading waiter table screen.");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loginButton.setOnAction(event -> {
+            boolean loginSuccessful = performLogin();
+            if (loginSuccessful) {
+                onLogin();
+            } else {
+                errorLabel.setText("Error: Invalid username or password.");
             }
-        } else {
-            // Login failed, display error message
-            errorLabel.setText("Invalid username or password.");
-        }
+        });
+    }
+
+    private boolean performLogin() {
+        // Hardcoded username and password
+        String validUsername = "w1user";
+        String validPassword = "w1password";
+
+        // Retrieve entered username and password from fields
+        String enteredUsername = usernameField.getText();
+        String enteredPassword = passwordField.getText();
+
+        // Check if entered username and password match the valid credentials
+        boolean isValid = validUsername.equals(enteredUsername) && validPassword.equals(enteredPassword);
+        return isValid;
     }
 
 
-
-    private boolean isValidCredentials(String username, String password) {
-        // Check if the provided username and password match the desired credentials
-        return username.equals("w1user") && password.equals("w1password");
+    private void onLogin(){
+        Stage stage = (Stage) errorLabel.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showWaiterTableWindow();
     }
 }
