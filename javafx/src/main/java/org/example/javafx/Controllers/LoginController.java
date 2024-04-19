@@ -35,9 +35,11 @@ public class LoginController implements Initializable {
         loginButton.setOnAction(event -> {
             boolean loginSuccessful = performLogin();
             if (loginSuccessful) {
+                System.out.println("Logging in!");
                 onLogin();
             } else {
                 errorLabel.setText("Error: Invalid username or password.");
+                System.out.println("Error: Invalid username or password.");
             }
         });
     }
@@ -55,7 +57,6 @@ public class LoginController implements Initializable {
 
         // Check if entered username and password match the valid credentials
         boolean isValid = validUsername.equals(enteredUsername) && validPassword.equals(enteredPassword);
-        System.out.println("Logging in!");
         return isValid;
     }
 
