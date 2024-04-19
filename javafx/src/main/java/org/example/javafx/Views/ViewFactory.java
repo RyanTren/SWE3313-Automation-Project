@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
+import org.example.javafx.Models.DrinksMenuController;
 
 /* This class responsible for creating and managing various views in our JavaFX application.*/
 public class ViewFactory {
@@ -32,14 +33,15 @@ public class ViewFactory {
     }
 
     public void showWaiterTableWindow(){
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml"));
-//        WaiterTableController waiterTableController = new WaiterTableController();
-//        loader.setController(waiterTableController);
-//        createStage(loader);
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml"));
         // Set the controller programmatically
         loader.setController(new WaiterTableController());
+        createStage(loader);
+    }
+
+    public void showDrinksMenu(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DrinksMenuController"));
+        loader.setController(new DrinksMenuController());
         createStage(loader);
     }
 
@@ -56,5 +58,8 @@ public class ViewFactory {
     }
 
     public void closeStage(Stage stage) {
+        if (stage != null) {
+            stage.close();
+        }
     }
 }

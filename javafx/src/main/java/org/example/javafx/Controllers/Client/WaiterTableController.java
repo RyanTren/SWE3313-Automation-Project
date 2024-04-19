@@ -287,4 +287,10 @@ public class WaiterTableController implements Initializable {
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
     }
+
+    private void onClick(){
+        Stage stage = (Stage) tableToggleButton1.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showDrinksMenu();
+    }
 }
