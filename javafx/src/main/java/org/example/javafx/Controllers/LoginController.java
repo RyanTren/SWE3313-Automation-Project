@@ -47,12 +47,15 @@ public class LoginController implements Initializable {
         String validUsername = "w1user";
         String validPassword = "w1password";
 
+        //@Prince @Shams when you guys are free can you put the DB connection/implementation here :) thanks!
+
         // Retrieve entered username and password from fields
         String enteredUsername = usernameField.getText();
         String enteredPassword = passwordField.getText();
 
         // Check if entered username and password match the valid credentials
         boolean isValid = validUsername.equals(enteredUsername) && validPassword.equals(enteredPassword);
+        System.out.println("Logging in!");
         return isValid;
     }
 
