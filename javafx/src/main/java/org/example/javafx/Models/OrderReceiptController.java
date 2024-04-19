@@ -5,7 +5,7 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EntreeMenuController implements Initializable {
+public class OrderReceiptController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
