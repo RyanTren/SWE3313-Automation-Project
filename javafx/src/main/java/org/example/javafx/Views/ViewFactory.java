@@ -76,6 +76,12 @@ public class ViewFactory {
         createStage(loader);
     }
 
+    public void showOrderReceiptWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Model/OrderReceipt.fxml"));
+        loader.setController(new OrderReceiptController());
+        createStage(loader);
+    }
+
     private void createStage(FXMLLoader loader){
         Scene scene = null;
         try{

@@ -20,6 +20,7 @@ public class DesertsMenuController implements Initializable {
 
     @FXML private Button logoutButton;
     @FXML private Button backButton;
+    @FXML private Button checkoutButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -33,6 +34,12 @@ public class DesertsMenuController implements Initializable {
         backButton.setOnAction(event -> {
             System.out.println("User went back a screen.");
             performBack();
+        });
+
+        //Checkout Button Logic
+        checkoutButton.setOnAction(event -> {
+            System.out.println("Getting Customer Receipt...");
+            performCheckout();
         });
 
         // Drinks Category Button Logic
@@ -85,6 +92,17 @@ public class DesertsMenuController implements Initializable {
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showWaiterTableWindow();
+    }
+
+    // Method to handle checkout action
+    private void performCheckout(){
+        //Perform checkout actions here
+        System.out.println("Getting Customer Receipt...");
+
+        //Navigate to OrderReceiptController/OrderReceipt.fxml
+        Stage stage = (Stage) checkoutButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 
     // Method to navigate to a different FXML file
