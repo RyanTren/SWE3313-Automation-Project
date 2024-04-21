@@ -3,6 +3,7 @@ package org.example.javafx.Views;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
 import javafx.stage.StageStyle;
