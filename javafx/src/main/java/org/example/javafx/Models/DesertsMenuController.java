@@ -47,35 +47,35 @@ public class DesertsMenuController implements Initializable {
         // Drinks Category Button Logic
         drinksCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Drinks Category");
-            navigateToFXML("DrinksMenu.fxml");
+//            navigateToFXML("DrinksMenu.fxml");
             Model.getInstance().getViewFactory().showDrinksMenu();
         });
 
         // Entrees Category Button Logic
         entreesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Entrees Category");
-            navigateToFXML("EntreeMenu.fxml");
+//            navigateToFXML("EntreeMenu.fxml");
             Model.getInstance().getViewFactory().showEntreesMenu();
         });
 
         // Starter Category Button Logic
         startersCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Starter Category");
-            navigateToFXML("StarterMenu.fxml");
+//            navigateToFXML("StarterMenu.fxml");
             Model.getInstance().getViewFactory().showStartersMenu();
         });
 
         // Desserts Category Button Logic
         dessertsCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Desserts Category");
-            navigateToFXML("DessertMenu.fxml");
+//            navigateToFXML("DessertMenu.fxml");
             Model.getInstance().getViewFactory().showDessertsMenu();
         });
 
         // Sides Category Button Logic
         sidesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Sides Category");
-            navigateToFXML("SidesMenu.fxml");
+//            navigateToFXML("SidesMenu.fxml");
             Model.getInstance().getViewFactory().showSidesMenu();
         });
     }
@@ -112,46 +112,36 @@ public class DesertsMenuController implements Initializable {
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 
-    // Method to navigate to a different FXML file
 //    private void navigateToFXML(String fxmlFileName) {
+//        FXMLLoader fxmlLoader;
+//
+//        // Add conditions based on the fxmlFileName parameter
+//        if (fxmlFileName.equals("StarterMenu.fxml")) {
+//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
+//        } else if (fxmlFileName.equals("EntreeMenu.fxml")) {
+//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
+//        } else if (fxmlFileName.equals("DessertMenu.fxml")) {
+//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
+//        } else if (fxmlFileName.equals("SidesMenu.fxml")) {
+//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
+//        } else {
+//            // Default case or error handling
+//            throw new IllegalArgumentException("Invalid FXML file name: " + fxmlFileName);
+//        }
+//
 //        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
-//            fxmlLoader.load();
+//            // Load the FXML file
+//            AnchorPane root = fxmlLoader.load();
+//
+//            // Create a new stage and set the scene
+//            Stage stage = new Stage();
+//            stage.setScene(new Scene(root));
+//
+//            // Show the stage
+//            stage.show();
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
 //    }
-
-    private void navigateToFXML(String fxmlFileName) {
-        FXMLLoader fxmlLoader;
-
-        // Add conditions based on the fxmlFileName parameter
-        if (fxmlFileName.equals("StarterMenu.fxml")) {
-            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
-        } else if (fxmlFileName.equals("EntreeMenu.fxml")) {
-            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
-        } else if (fxmlFileName.equals("DessertMenu.fxml")) {
-            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
-        } else if (fxmlFileName.equals("SidesMenu.fxml")) {
-            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
-        } else {
-            // Default case or error handling
-            throw new IllegalArgumentException("Invalid FXML file name: " + fxmlFileName);
-        }
-
-        try {
-            // Load the FXML file
-            AnchorPane root = fxmlLoader.load();
-
-            // Create a new stage and set the scene
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-
-            // Show the stage
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 }
