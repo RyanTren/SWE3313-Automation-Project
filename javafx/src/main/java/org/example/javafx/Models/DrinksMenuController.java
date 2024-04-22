@@ -85,17 +85,17 @@ public class DrinksMenuController implements Initializable {
     @FXML private Button backButton;
     @FXML private Button checkoutButton;
 
-    @FXML private Button drinkOne;
-    @FXML private Button drinkTwo;
-    @FXML private Button drinkThree;
-    @FXML private Button drinkFour;
-
-    @FXML private ImageView waterImage;
-    @FXML private ImageView sodaImage;
-    @FXML private ImageView ipaImage;
-    @FXML private ImageView sweetTeaImage;
-
-    @FXML private ImageView itemImageInsert;
+//    @FXML private Button drinkOne;
+//    @FXML private Button drinkTwo;
+//    @FXML private Button drinkThree;
+//    @FXML private Button drinkFour;
+//
+//    @FXML private ImageView waterImage;
+//    @FXML private ImageView sodaImage;
+//    @FXML private ImageView ipaImage;
+//    @FXML private ImageView sweetTeaImage;
+//
+//    @FXML private ImageView itemImageInsert;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
