@@ -122,12 +122,12 @@ public class ViewFactory {
 //        stage.setMaximized(true);
 
         //This is supposed to get the resolution of the user's device and resize l * w of objects in the fxml
-        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        int width = gd.getDisplayMode().getWidth();
-        int height = gd.getDisplayMode().getHeight();
-
-        stage.setWidth(width);
-        stage.setHeight(height);
+//        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+//        int width = gd.getDisplayMode().getWidth();
+//        int height = gd.getDisplayMode().getHeight();
+//
+//        stage.setWidth(width);
+//        stage.setHeight(height);
 
         // Show the stage
         stage.show();
