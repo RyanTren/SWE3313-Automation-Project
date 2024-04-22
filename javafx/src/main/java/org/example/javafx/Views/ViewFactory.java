@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
 import org.example.javafx.Models.*;
 
+import java.awt.*;
+
 /* This class responsible for creating and managing various views in our JavaFX application.*/
 public class ViewFactory {
     // Client Views
@@ -112,6 +114,20 @@ public class ViewFactory {
 //        // Set the stage position to the calculated center
 //        stage.setX(centerX);
 //        stage.setY(centerY);
+
+//        stage.initStyle(StageStyle.TRANSPARENT);
+//        stage.setScene(scene);
+//
+//        stage.setFullScreen(true);
+//        stage.setMaximized(true);
+
+        //This is supposed to get the resolution of the user's device and resize l * w of objects in the fxml
+        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        int width = gd.getDisplayMode().getWidth();
+        int height = gd.getDisplayMode().getHeight();
+
+        stage.setWidth(width);
+        stage.setHeight(height);
 
         // Show the stage
         stage.show();
