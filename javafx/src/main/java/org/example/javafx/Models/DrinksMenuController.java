@@ -69,6 +69,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javax.swing.text.html.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -84,6 +85,18 @@ public class DrinksMenuController implements Initializable {
     @FXML private Button backButton;
     @FXML private Button checkoutButton;
 
+    @FXML private Button drinkOne;
+    @FXML private Button drinkTwo;
+    @FXML private Button drinkThree;
+    @FXML private Button drinkFour;
+
+    @FXML private ImageView waterImage;
+    @FXML private ImageView sodaImage;
+    @FXML private ImageView ipaImage;
+    @FXML private ImageView sweetTeaImage;
+
+    @FXML private ImageView itemImageInsert;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Logout Button Logic
@@ -97,6 +110,32 @@ public class DrinksMenuController implements Initializable {
             System.out.println("User went back a screen.");
             performBack();
         });
+
+
+        /*What I'm trying to do here is that, if the user click the Water button
+         *it will get added to the Order cart. If someone can fix the image transfer them please..
+         * please help me ;(
+         */
+
+        /*
+        drinkOne.setOnAction(event -> {
+            itemImageInsert.getImage(waterImage.getImage());
+        });
+
+        drinkTwo.setOnAction(event -> {
+            itemImageInsert.getImage(sodaImage.getImage());
+        });
+
+        drinkThree.setOnAction(event -> {
+            itemImageInsert.getImage(ipaImage.getImage());
+        });
+
+        drinkFour.setOnAction(event -> {
+            itemImageInsert.getImage(sweetTeaImage.getImage());
+        });
+        */
+
+
 
         //Checkout Button Logic
         checkoutButton.setOnAction(event -> {
