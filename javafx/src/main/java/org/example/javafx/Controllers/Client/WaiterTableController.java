@@ -69,7 +69,7 @@ public class WaiterTableController implements Initializable {
         // Logout Button Logic
         logoutButton.setOnAction(event -> performLogout());
     }
-    
+
     // Helper method to get ToggleButton by ID dynamically
     private ToggleButton getToggleButtonById(String id) {
         return switch (id) {
@@ -107,7 +107,6 @@ public class WaiterTableController implements Initializable {
         };
     }
 
-
     // Method to handle logout action
     private void performLogout() {
         // Perform logout actions here
@@ -131,5 +130,4 @@ public class WaiterTableController implements Initializable {
             e.printStackTrace();
         }
     }
-
 }
