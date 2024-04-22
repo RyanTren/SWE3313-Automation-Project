@@ -13,8 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StarterMenuController implements Initializable {
-    @FXML
-    private Button drinksCategoryButton;
+    @FXML private Button drinksCategoryButton;
     @FXML private Button entreesCategoryButton;
     @FXML private Button startersCategoryButton;
     @FXML private Button dessertsCategoryButton;

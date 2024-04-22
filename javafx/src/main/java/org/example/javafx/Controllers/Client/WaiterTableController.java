@@ -58,13 +58,11 @@ public class WaiterTableController implements Initializable {
             ToggleButton button = getToggleButtonById("tableToggleButton" + i);
             if (button != null) {
                 int finalI = i; // Capture the value of i in a final variable
-                button.selectedProperty().addListener((observable, oldValue, newValue) -> {
+                button.setOnAction(event -> {
                     System.out.println("Button " + finalI + " clicked."); // Print a debug statement
-                    if (newValue) {
-                        onClickTable(); // Call onClickTable method when a table button is selected
-                        String tableName = "Table " + finalI; // Use finalI here instead of i
-                        System.out.println("Selected Table: " + tableName);
-                    }
+                    onClickTable(); // Call onClickTable method when a table button is clicked
+                    String tableName = "Table " + finalI; // Use finalI here instead of i
+                    System.out.println("Selected Table: " + tableName);
                 });
             }
         }
@@ -72,6 +70,10 @@ public class WaiterTableController implements Initializable {
         // Logout Button Logic
         logoutButton.setOnAction(event -> performLogout());
     }
+
+
+
+
 
     // Helper method to get ToggleButton by ID dynamically
     private ToggleButton getToggleButtonById(String id) {
