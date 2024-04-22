@@ -3,7 +3,9 @@ package org.example.javafx.Models;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -46,30 +48,35 @@ public class DesertsMenuController implements Initializable {
         drinksCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Drinks Category");
             navigateToFXML("DrinksMenu.fxml");
+            Model.getInstance().getViewFactory().showDrinksMenu();
         });
 
         // Entrees Category Button Logic
         entreesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Entrees Category");
-            navigateToFXML("EntreesMenu.fxml");
+            navigateToFXML("EntreeMenu.fxml");
+            Model.getInstance().getViewFactory().showEntreesMenu();
         });
 
-        // Starters Category Button Logic
+        // Starter Category Button Logic
         startersCategoryButton.setOnAction(event -> {
-            System.out.println("Navigating to Starters Category");
-            navigateToFXML("StartersMenu.fxml");
+            System.out.println("Navigating to Starter Category");
+            navigateToFXML("StarterMenu.fxml");
+            Model.getInstance().getViewFactory().showStartersMenu();
         });
 
         // Desserts Category Button Logic
         dessertsCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Desserts Category");
-            navigateToFXML("DessertsMenu.fxml");
+            navigateToFXML("DessertMenu.fxml");
+            Model.getInstance().getViewFactory().showDessertsMenu();
         });
 
         // Sides Category Button Logic
         sidesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Sides Category");
             navigateToFXML("SidesMenu.fxml");
+            Model.getInstance().getViewFactory().showSidesMenu();
         });
     }
 
@@ -131,5 +138,20 @@ public class DesertsMenuController implements Initializable {
             // Default case or error handling
             throw new IllegalArgumentException("Invalid FXML file name: " + fxmlFileName);
         }
+
+        try {
+            // Load the FXML file
+            AnchorPane root = fxmlLoader.load();
+
+            // Create a new stage and set the scene
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+
+            // Show the stage
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 }

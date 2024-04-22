@@ -17,22 +17,22 @@ import org.example.javafx.Models.*;
 /* This class responsible for creating and managing various views in our JavaFX application.*/
 public class ViewFactory {
     // Client Views
-    private AnchorPane dashboardView;
+//    private AnchorPane dashboardView;
 
     public ViewFactory(){
 
     }
 
-    public AnchorPane getDashboardView(){
-        if(dashboardView == null){
-            try{
-                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml")).load();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        return dashboardView;
-    }
+//    public AnchorPane getDashboardView(){
+//        if(dashboardView == null){
+//            try{
+//                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml")).load();
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
+//        }
+//        return dashboardView;
+//    }
 
     public void showLoginWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
@@ -65,7 +65,7 @@ public class ViewFactory {
     }
 
     public void showDessertsMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertsMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
         loader.setController(new DesertsMenuController());
         createStage(loader);
     }
