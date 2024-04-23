@@ -19,12 +19,18 @@
 module org.example.javafx {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop; // Add this line to allow access to java.awt
+    requires java.desktop;
+    requires javafx.graphics; // Add this line to allow access to java.awt
+    requires java.sql;
+    requires io.github.cdimascio.dotenv.java;
+    requires norm;
+    requires java.persistence;
 
     opens org.example.javafx.Models to javafx.fxml;
     opens org.example.javafx.Controllers to javafx.fxml;
     opens org.example.javafx.Controllers.Client to javafx.fxml;
 
     exports org.example.javafx;
+    exports org.example.database;
 }
 

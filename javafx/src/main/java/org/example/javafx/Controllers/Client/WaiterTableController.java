@@ -50,6 +50,7 @@ public class WaiterTableController implements Initializable {
     @FXML private ToggleButton tableToggleButton29;
     @FXML private ToggleButton tableToggleButton30;
     @FXML private Button logoutButton;
+
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Loop through all ToggleButtons and add listeners
@@ -57,13 +58,10 @@ public class WaiterTableController implements Initializable {
             ToggleButton button = getToggleButtonById("tableToggleButton" + i);
             if (button != null) {
                 int finalI = i; // Capture the value of i in a final variable
-                button.selectedProperty().addListener((observable, oldValue, newValue) -> {
-                    System.out.println("Button " + finalI + " clicked."); // Print a debug statement
-                    if (newValue) {
-                        onClickTable(); // Call onClickTable method when a table button is selected
-                        String tableName = "Table " + finalI; // Use finalI here instead of i
-                        System.out.println("Selected Table: " + tableName);
-                    }
+                button.setOnAction(event -> {
+                    onClickTable(); // Call onClickTable method when a table button is clicked
+                    String tableName = "Table " + finalI; // Use finalI here instead of i
+                    System.out.println("Selected Table: " + tableName);
                 });
             }
         }
@@ -109,7 +107,6 @@ public class WaiterTableController implements Initializable {
         };
     }
 
-
     // Method to handle logout action
     private void performLogout() {
         // Perform logout actions here
@@ -121,27 +118,6 @@ public class WaiterTableController implements Initializable {
         Model.getInstance().getViewFactory().showLoginWindow();
     }
 
-    //tableButton now transitions to the DrinksMenu.fxml but, you have to double-click the button. (need to fix this)
-//    private void onClickTable() {
-//        try {
-//            // Load the FXML file for the drinks menu
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DrinksMenu.fxml"));
-//            AnchorPane drinksMenuPane = loader.load();
-//
-//            // Get the current stage
-//            Stage currentStage = (Stage) tableToggleButton1.getScene().getWindow();
-//
-//            // Create a new stage for the drinks menu
-//            Stage drinksMenuStage = new Stage();
-//            drinksMenuStage.setScene(new Scene(drinksMenuPane));
-//
-//            // Close the current stage and show the drinks menu stage
-//            currentStage.close();
-//            drinksMenuStage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
     private void onClickTable() {
         try {
             // Show the drinks menu using ViewFactory
@@ -154,5 +130,4 @@ public class WaiterTableController implements Initializable {
             e.printStackTrace();
         }
     }
-
 }

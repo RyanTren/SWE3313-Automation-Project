@@ -3,6 +3,7 @@ package org.example.javafx.Views;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
 import javafx.stage.StageStyle;
@@ -13,25 +14,27 @@ import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
 import org.example.javafx.Models.*;
 
+import java.awt.*;
+
 /* This class responsible for creating and managing various views in our JavaFX application.*/
 public class ViewFactory {
     // Client Views
-    private AnchorPane dashboardView;
+//    private AnchorPane dashboardView;
 
     public ViewFactory(){
 
     }
 
-    public AnchorPane getDashboardView(){
-        if(dashboardView == null){
-            try{
-                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml")).load();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        return dashboardView;
-    }
+//    public AnchorPane getDashboardView(){
+//        if(dashboardView == null){
+//            try{
+//                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml")).load();
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
+//        }
+//        return dashboardView;
+//    }
 
     public void showLoginWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
@@ -64,7 +67,7 @@ public class ViewFactory {
     }
 
     public void showDessertsMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertsMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
         loader.setController(new DesertsMenuController());
         createStage(loader);
     }
@@ -72,6 +75,12 @@ public class ViewFactory {
     public void showSidesMenu(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
         loader.setController(new SidesMenuController());
+        createStage(loader);
+    }
+
+    public void showOrderReceiptWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Model/OrderReceipt.fxml"));
+        loader.setController(new OrderReceiptController());
         createStage(loader);
     }
 
@@ -84,6 +93,10 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
+
+
+
+//        Need to fix this so that it's fullscreen and adapts to the user's resolution (haven't figure that out yet)
 
 //        // Set the stage style to transparent to remove the full-screen notification
 //        stage.initStyle(StageStyle.TRANSPARENT);
@@ -103,6 +116,20 @@ public class ViewFactory {
 //        // Set the stage position to the calculated center
 //        stage.setX(centerX);
 //        stage.setY(centerY);
+
+//        stage.initStyle(StageStyle.TRANSPARENT);
+//        stage.setScene(scene);
+//
+//        stage.setFullScreen(true);
+//        stage.setMaximized(true);
+
+        //This is supposed to get the resolution of the user's device and resize l * w of objects in the fxml
+//        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+//        int width = gd.getDisplayMode().getWidth();
+//        int height = gd.getDisplayMode().getHeight();
+//
+//        stage.setWidth(width);
+//        stage.setHeight(height);
 
         // Show the stage
         stage.show();
