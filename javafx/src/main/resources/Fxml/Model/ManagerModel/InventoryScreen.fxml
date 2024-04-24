@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx.Models.ManagerModel.InventoryScreenController">
+    <children>
+        <ImageView fitHeight="86.0" fitWidth="124.0" layoutX="1782.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../assets/J's Restaurant Logo.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="1104.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock Room Overview">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Welcome, Manager">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+        </Button>
+        <Button layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Back">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+        </Button>
+        <Button layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Logout">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+        </Button>
+      <Text layoutX="69.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Areas:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="337.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Stock Room" textFill="WHITE">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="1549.0" layoutY="141.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="248.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Add Items" textFill="WHITE">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Group layoutX="803.0" layoutY="231.0">
+         <children>
+            <Group>
+               <children>
+                  <Group>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="66.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="132.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="198.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutY="263.0">
+               <children>
+                  <Group>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="66.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="132.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="198.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutY="521.0">
+               <children>
+                  <Group>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="66.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                     </children>
+                  </Group>
+                  <Group layoutY="132.0" />
+                  <Group layoutY="198.0" />
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b51d1d" height="50.0" layoutX="12.0" layoutY="1016.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="1896.0" />
+      <Text fill="WHITE" layoutX="865.0" layoutY="1055.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Inventory">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+    </children>
+</AnchorPane>
