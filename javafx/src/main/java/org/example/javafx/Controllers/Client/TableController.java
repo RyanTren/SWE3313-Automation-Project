@@ -1,22 +1,16 @@
 package org.example.javafx.Controllers.Client;
 
-import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class WaiterTableController implements Initializable {
+public class TableController implements Initializable {
 
     // Add @FXML declarations for all 30 ToggleButtons
     @FXML private ToggleButton tableToggleButton1;

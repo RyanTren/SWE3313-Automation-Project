@@ -31,7 +31,7 @@
                 <Font size="25.0" />
             </font>
         </Button>
-        <Button fx:id="backButton" layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Back">
+        <Button fx:id="backButton" layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Back" textFill="WHITE">
             <effect>
                 <DropShadow>
                     <color>
@@ -43,7 +43,7 @@
                 <Font size="25.0" />
             </font>
         </Button>
-        <Button fx:id="logoutButton" layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Logout">
+        <Button fx:id="logoutButton" layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Logout" textFill="WHITE">
             <effect>
                 <DropShadow>
                     <color>

@@ -95,7 +95,7 @@ public class DesertsMenuController implements Initializable {
         // You may navigate to the previous screen
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showWaiterTableWindow();
+        Model.getInstance().getViewFactory().showTableWindow();
     }
 
     // Method to handle checkout action

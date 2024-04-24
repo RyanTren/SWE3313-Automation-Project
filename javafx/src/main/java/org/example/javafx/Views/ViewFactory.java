@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 
 
 import javafx.stage.Stage;
-import org.example.javafx.Controllers.Client.WaiterTableController;
+import org.example.javafx.Controllers.Client.TableController;
 import org.example.javafx.Models.ManagerModel.*;
 import org.example.javafx.Models.WaiterModel.*;
 
@@ -21,7 +21,7 @@ public class ViewFactory {
 //    public AnchorPane getDashboardView(){
 //        if(dashboardView == null){
 //            try{
-//                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml")).load();
+//                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/Table.fxml")).load();
 //            }catch (Exception e){
 //                e.printStackTrace();
 //            }
@@ -34,10 +34,10 @@ public class ViewFactory {
         createStage(loader);
     }
 
-    public void showWaiterTableWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/WaiterTable.fxml"));
+    public void showTableWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Table.fxml"));
         // Set the controller programmatically
-        loader.setController(new WaiterTableController());
+        loader.setController(new TableController());
         createStage(loader);
     }
 

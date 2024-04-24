@@ -62,6 +62,6 @@ public class ManagerEmployeeActivityController implements Initializable {
     private void performNavToWaiter(){
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showWaiterTableWindow();
+        Model.getInstance().getViewFactory().showTableWindow();
     }
 }

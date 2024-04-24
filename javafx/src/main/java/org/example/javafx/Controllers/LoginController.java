@@ -64,17 +64,14 @@ public class LoginController implements Initializable {
         Stage stage = (Stage) errorLabel.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         switch (currentUser.role) {
-            case "waiter", "host":
-                Model.getInstance().getViewFactory().showWaiterTableWindow();
+            case "waiter", "host", "busboy":
+                Model.getInstance().getViewFactory().showTableWindow();
                 break;
             case "manager":
                 Model.getInstance().getViewFactory().showManagerAdminPanel();
                 break;
             case "cook":
                 Model.getInstance().getViewFactory().showOrderQueue();
-                break;
-            case "busboy":
-                Model.getInstance().getViewFactory().showWaiterTableWindow();
                 break;
         }
     }
