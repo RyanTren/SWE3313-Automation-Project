@@ -47,7 +47,7 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #FFFFF; -fx-background-radius: 25;" text="Welcome, Manager">
+      <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-radius: 25;" text="Welcome, Manager">
          <effect>
             <DropShadow>
                <color>
