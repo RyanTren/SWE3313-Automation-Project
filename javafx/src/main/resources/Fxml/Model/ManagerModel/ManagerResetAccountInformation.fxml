@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -34,7 +35,7 @@
                 </DropShadow>
             </effect>
         </Button>
-        <Button layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Back" textFill="WHITE">
+        <Button fx:id="backButton" layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Back" textFill="WHITE">
             <effect>
                 <DropShadow>
                     <color>
@@ -43,7 +44,7 @@
                 </DropShadow>
             </effect>
         </Button>
-        <Button layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Logout" textFill="WHITE">
+        <Button fx:id="logoutButton" layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 25;" text="Logout" textFill="WHITE">
             <effect>
                 <DropShadow>
                     <color>
@@ -52,7 +53,7 @@
                 </DropShadow>
             </effect>
         </Button>
-        <Button layoutX="537.0" layoutY="341.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="196.0" style="-fx-background-radius: 25; -fx-background-color: #ECC6C6;" text="Create New Account">
+        <Button fx:id="createAccount" layoutX="537.0" layoutY="341.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="196.0" style="-fx-background-radius: 25; -fx-background-color: #ECC6C6;" text="Create New Account">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
@@ -67,7 +68,7 @@
                 <Font size="29.0" />
             </font>
         </Text>
-        <Button layoutX="1084.0" layoutY="881.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="196.0" style="-fx-background-radius: 25; -fx-background-color: #DFDFDF;" text="Create">
+        <Button fx:id="resetButton" layoutX="1084.0" layoutY="881.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="196.0" style="-fx-background-radius: 25; -fx-background-color: #DFDFDF;" text="Create">
             <font>
                 <Font size="16.0" />
             </font>
@@ -86,17 +87,17 @@
             </DropShadow>
          </effect>
         </Button>
-        <Text fill="RED" layoutX="842.0" layoutY="1034.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reset Account Info!">
-            <effect>
-                <DropShadow>
-                    <color>
-                        <Color opacity="0.30000001192092896" />
-                    </color>
-                </DropShadow>
-            </effect>
-            <font>
-                <Font size="35.0" />
-            </font>
-        </Text>
+      <Label fx:id="resetLabel" layoutX="989.0" layoutY="1011.0" textFill="RED">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
     </children>
 </AnchorPane>
