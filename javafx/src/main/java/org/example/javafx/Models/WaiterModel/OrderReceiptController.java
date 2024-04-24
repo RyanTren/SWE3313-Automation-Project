@@ -1,9 +1,10 @@
-package org.example.javafx.Models;
+package org.example.javafx.Models.WaiterModel;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.example.javafx.Models.Model;
 
 import java.net.URL;
 import java.util.ResourceBundle;

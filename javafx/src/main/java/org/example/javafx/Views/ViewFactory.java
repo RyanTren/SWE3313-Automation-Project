@@ -3,19 +3,11 @@ package org.example.javafx.Views;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Screen;
-import javafx.geometry.Rectangle2D;
-import javafx.stage.StageStyle;
 
-
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
-import org.example.javafx.Models.*;
 import org.example.javafx.Models.ManagerModel.*;
-
-import java.awt.*;
+import org.example.javafx.Models.WaiterModel.*;
 
 /* This class responsible for creating and managing various views in our JavaFX application.*/
 public class ViewFactory {
@@ -50,37 +42,37 @@ public class ViewFactory {
     }
 
     public void showDrinksMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DrinksMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/DrinksMenu.fxml"));
         loader.setController(new DrinksMenuController());
         createStage(loader);
     }
 
     public void showStartersMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/StarterMenu.fxml"));
         loader.setController(new StarterMenuController());
         createStage(loader);
     }
 
     public void showEntreesMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/EntreeMenu.fxml"));
         loader.setController(new EntreeMenuController());
         createStage(loader);
     }
 
     public void showDessertsMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/DessertMenu.fxml"));
         loader.setController(new DesertsMenuController());
         createStage(loader);
     }
 
     public void showSidesMenu(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/SidesMenu.fxml"));
         loader.setController(new SidesMenuController());
         createStage(loader);
     }
 
     public void showOrderReceiptWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Model/OrderReceipt.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Model/WaiterModel/OrderReceipt.fxml"));
         loader.setController(new OrderReceiptController());
         createStage(loader);
     }

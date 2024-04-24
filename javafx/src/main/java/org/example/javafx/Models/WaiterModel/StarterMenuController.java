@@ -1,18 +1,15 @@
-package org.example.javafx.Models;
+package org.example.javafx.Models.WaiterModel;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.example.javafx.Models.Model;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SidesMenuController implements Initializable {
+public class StarterMenuController implements Initializable {
     @FXML private Button drinksCategoryButton;
     @FXML private Button entreesCategoryButton;
     @FXML private Button startersCategoryButton;
@@ -97,6 +94,7 @@ public class SidesMenuController implements Initializable {
         // You may navigate to the login screen
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
 
     // Method to handle back action

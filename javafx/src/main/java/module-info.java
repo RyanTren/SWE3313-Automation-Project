@@ -34,5 +34,6 @@ module org.example.javafx {
 
     exports org.example.javafx;
     exports org.example.database;
+    opens org.example.javafx.Models.WaiterModel to javafx.fxml;
 }
 
