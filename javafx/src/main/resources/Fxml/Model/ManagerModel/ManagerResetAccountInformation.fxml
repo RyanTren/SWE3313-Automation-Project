@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6d2d2" height="624.0" layoutX="918.0" layoutY="341.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="553.0" />
         <ImageView fitHeight="86.0" fitWidth="124.0" layoutX="1782.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -26,7 +21,7 @@
                 <Font size="45.0" />
             </font>
         </Text>
-        <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #FFFFF; -fx-background-radius: 25;" text="Welcome, Manager">
+        <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-radius: 25;" text="Welcome, Manager">
             <effect>
                 <DropShadow>
                     <color>
