@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx.Models.ManagerModel.ManagerAdminPanelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="979.0" layoutY="105.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="1920.0" />
         <ImageView fitHeight="86.0" fitWidth="124.0" layoutX="1782.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">

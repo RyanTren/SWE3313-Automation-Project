@@ -86,44 +86,44 @@ public class ViewFactory {
     }
 
     public void showByDayAnalytics(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/ByDayAnalytics.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/ByDayAnalytics.fxml"));
         loader.setController(new ByDayAnalyticsController());
         createStage(loader);
     }
 
     public void showInventoryScreen(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/InventoryScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/InventoryScreen.fxml"));
         loader.setController(new InventoryScreenController());
         createStage(loader);
     }
 
 
     public void showManagerAdminPanel(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/ManagerAdminPanel.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/ManagerAdminPanel.fxml"));
         loader.setController(new ManagerAdminPanelController());
         createStage(loader);
     }
 
     public void showManagerCreateAccountInformation(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/ManagerCreateAccountInformation.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/ManagerCreateAccountInformation.fxml"));
         loader.setController(new ManagerCreateAccountInfoController());
         createStage(loader);
     }
 
     public void showManagerEmployeeActivity(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/ManagerEmployeeActivity.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/ManagerEmployeeActivity.fxml"));
         loader.setController(new ManagerEmployeeActivityController());
         createStage(loader);
     }
 
     public void showManagerResetAccountInformation(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/ManagerResetAccountInformation.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/ManagerResetAccountInformation.fxml"));
         loader.setController(new ManagerResetAccountInformation());
         createStage(loader);
     }
 
     public void showSalesAnalytics(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerModel/SalesAnalytics.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/ManagerModel/SalesAnalytics.fxml"));
         loader.setController(new SalesAnalyticsController());
         createStage(loader);
     }

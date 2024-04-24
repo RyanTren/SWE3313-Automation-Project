@@ -12,6 +12,11 @@ import java.util.ResourceBundle;
 public class ManagerAdminPanelController implements Initializable {
     @FXML private Button logoutButton;
     @FXML private Button backButton;
+    @FXML private Button accountOverviewButton;
+    @FXML private Button employeeActivityButton;
+    @FXML private Button inventoryStatusButton;
+    @FXML private Button salesAnalyticsButton;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -25,6 +30,29 @@ public class ManagerAdminPanelController implements Initializable {
         backButton.setOnAction(event -> {
             System.out.println("User went back a screen.");
             performBack();
+        });
+
+        // Account Overview Button Logic
+        accountOverviewButton.setOnAction(event -> {
+            System.out.println("Navigating to Account Overview");
+            performAccountOverview();
+        });
+
+        // Employee Activity Button Logic
+        employeeActivityButton.setOnAction(event -> {
+            System.out.println("Navigating to Employee Activity");
+            performEmployeeActivity();
+        });
+
+        // Inventory Status Button Logic
+        inventoryStatusButton.setOnAction(event -> {
+            System.out.println("Navigating to Inventory Status");
+            performInventoryStatus();
+        });
+
+        salesAnalyticsButton.setOnAction(event -> {
+            System.out.println("Navigating to Sales Analytics");
+            performSalesAnalytics();
         });
     }
 
@@ -47,7 +75,42 @@ public class ManagerAdminPanelController implements Initializable {
         // You may navigate to the previous screen
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showWaiterTableWindow();
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
 
+    // Method to navigate to ManagerCreateAccountOverview
+    private void performAccountOverview(){
+        System.out.println("Navigating to Account Overview...");
+
+        Stage stage = (Stage) accountOverviewButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showManagerCreateAccountInformation();
+    }
+
+    // Method to navigate to ManagerEmployeeActivityController
+    private void performEmployeeActivity(){
+        System.out.println("Navigating to Employee Activity...");
+
+        Stage stage = (Stage) employeeActivityButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showManagerEmployeeActivity();
+    }
+
+    // Method to navigate to InventoryScreenController
+    private void performInventoryStatus(){
+        System.out.println("Navigating to Inventory Status...");
+
+        Stage stage = (Stage) inventoryStatusButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showInventoryScreen();
+    }
+
+    // Method to navigate to SalesAnalyticsController
+    private void performSalesAnalytics(){
+        System.out.println("Navigating to Sales Analytics...");
+
+        Stage stage = (Stage) salesAnalyticsButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showSalesAnalytics();
+    }
 }
