@@ -70,13 +70,12 @@ public class LoginController implements Initializable {
             case "manager":
                 Model.getInstance().getViewFactory().showManagerAdminPanel();
                 break;
-
             case "cook":
                 Model.getInstance().getViewFactory().showOrderQueue();
                 break;
-//
-//            case "busboy":
-//                break;
+            case "busboy":
+                Model.getInstance().getViewFactory().showWaiterTableWindow();
+                break;
         }
     }
 }
