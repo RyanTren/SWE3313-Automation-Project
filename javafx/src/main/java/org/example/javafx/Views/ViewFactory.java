@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.WaiterTableController;
 import org.example.javafx.Models.*;
+import org.example.javafx.Models.ManagerModel.*;
 
 import java.awt.*;
 
@@ -83,6 +84,50 @@ public class ViewFactory {
         loader.setController(new OrderReceiptController());
         createStage(loader);
     }
+
+    public void showByDayAnalytics(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ByDayAnalytics.fxml"));
+        loader.setController(new ByDayAnalyticsController());
+        createStage(loader);
+    }
+
+    public void showInventoryScreen(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/InventoryScreen.fxml"));
+        loader.setController(new InventoryScreenController());
+        createStage(loader);
+    }
+
+
+    public void showManagerAdminPanel(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerAdminPanel.fxml"));
+        loader.setController(new ManagerAdminPanelController());
+        createStage(loader);
+    }
+
+    public void showManagerCreateAccountInformation(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerCreateAccountInformation.fxml"));
+        loader.setController(new ManagerCreateAccountInfoController());
+        createStage(loader);
+    }
+
+    public void showManagerEmployeeActivity(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerEmployeeActivity.fxml"));
+        loader.setController(new ManagerEmployeeActivityController());
+        createStage(loader);
+    }
+
+    public void showManagerResetAccountInformation(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ManagerResetAccountInformation.fxml"));
+        loader.setController(new ManagerResetAccountInformation());
+        createStage(loader);
+    }
+
+    public void showSalesAnalytics(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/SalesAnalytics.fxml"));
+        loader.setController(new SalesAnalyticsController());
+        createStage(loader);
+    }
+
 
     private void createStage(FXMLLoader loader){
         Scene scene = null;
