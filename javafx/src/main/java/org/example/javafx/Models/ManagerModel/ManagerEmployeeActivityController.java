@@ -10,9 +10,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ManagerEmployeeActivityController implements Initializable {
-    @FXML
-    private Button logoutButton;
+    @FXML private Button logoutButton;
     @FXML private Button backButton;
+
+    @FXML private Button hostActivityButton;
+    @FXML private Button waiterActivityButton;
+//    @FXML private Button busboyActivityButton;
+//    @FXML private Button cookActivityButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -26,6 +30,16 @@ public class ManagerEmployeeActivityController implements Initializable {
         backButton.setOnAction(event -> {
             System.out.println("User went back a screen.");
             performBack();
+        });
+
+        hostActivityButton.setOnAction(event -> {
+            System.out.println("Navigating Host View...");
+            performNavToWaiter();
+        });
+
+        waiterActivityButton.setOnAction(event -> {
+            System.out.println("Navigating Waiter View...");
+            performNavToWaiter();
         });
     }
 
@@ -43,5 +57,11 @@ public class ManagerEmployeeActivityController implements Initializable {
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showManagerAdminPanel();
+    }
+
+    private void performNavToWaiter(){
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showWaiterTableWindow();
     }
 }
