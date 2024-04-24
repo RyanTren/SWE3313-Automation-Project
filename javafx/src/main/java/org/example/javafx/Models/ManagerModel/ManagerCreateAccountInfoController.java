@@ -47,9 +47,6 @@ public class ManagerCreateAccountInfoController implements Initializable {
 
     // Method to handle logout action
     private void performLogout() {
-        // Perform logout actions here
-        System.out.println("User logged out.");
-
         // You may navigate to the login screen
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
@@ -58,9 +55,6 @@ public class ManagerCreateAccountInfoController implements Initializable {
 
     // Method to handle back action
     private void performBack() {
-        // Perform back actions here
-        System.out.println("User went back a screen.");
-
         // You may navigate to the previous screen
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);

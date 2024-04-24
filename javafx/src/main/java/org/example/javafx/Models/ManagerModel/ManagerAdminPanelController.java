@@ -58,9 +58,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to handle logout action
     private void performLogout() {
-        // Perform logout actions here
-        System.out.println("User logged out.");
-
         // You may navigate to the login screen
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
@@ -69,9 +66,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to handle back action
     private void performBack() {
-        // Perform back actions here
-        System.out.println("User went back a screen.");
-
         // You may navigate to the previous screen
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
@@ -80,8 +74,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to navigate to ManagerCreateAccountOverview
     private void performAccountOverview(){
-        System.out.println("Navigating to Account Overview...");
-
         Stage stage = (Stage) accountOverviewButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showManagerCreateAccountInformation();
@@ -89,8 +81,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to navigate to ManagerEmployeeActivityController
     private void performEmployeeActivity(){
-        System.out.println("Navigating to Employee Activity...");
-
         Stage stage = (Stage) employeeActivityButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showManagerEmployeeActivity();
@@ -98,8 +88,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to navigate to InventoryScreenController
     private void performInventoryStatus(){
-        System.out.println("Navigating to Inventory Status...");
-
         Stage stage = (Stage) inventoryStatusButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showInventoryScreen();
@@ -107,8 +95,6 @@ public class ManagerAdminPanelController implements Initializable {
 
     // Method to navigate to SalesAnalyticsController
     private void performSalesAnalytics(){
-        System.out.println("Navigating to Sales Analytics...");
-
         Stage stage = (Stage) salesAnalyticsButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showSalesAnalytics();
