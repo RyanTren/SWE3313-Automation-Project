@@ -43,7 +43,6 @@ public class SidesMenuController implements Initializable {
         // Drinks Category Button Logic
         drinksCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Drinks Category");
-//            navigateToFXML("DrinksMenu.fxml");
             Stage stage = (Stage) drinksCategoryButton.getScene().getWindow();
             Model.getInstance().getViewFactory().closeStage(stage);
             Model.getInstance().getViewFactory().showDrinksMenu();
@@ -52,7 +51,6 @@ public class SidesMenuController implements Initializable {
         // Entrees Category Button Logic
         entreesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Entrees Category");
-//            navigateToFXML("EntreeMenu.fxml");
             Stage stage = (Stage) entreesCategoryButton.getScene().getWindow();
             Model.getInstance().getViewFactory().closeStage(stage);
             Model.getInstance().getViewFactory().showEntreesMenu();
@@ -61,7 +59,6 @@ public class SidesMenuController implements Initializable {
         // Starter Category Button Logic
         startersCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Starter Category");
-//            navigateToFXML("StarterMenu.fxml");
             Stage stage = (Stage) startersCategoryButton.getScene().getWindow();
             Model.getInstance().getViewFactory().closeStage(stage);
             Model.getInstance().getViewFactory().showStartersMenu();
@@ -70,7 +67,6 @@ public class SidesMenuController implements Initializable {
         // Desserts Category Button Logic
         dessertsCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Desserts Category");
-//            navigateToFXML("DessertMenu.fxml");
             Stage stage = (Stage) dessertsCategoryButton.getScene().getWindow();
             Model.getInstance().getViewFactory().closeStage(stage);
             Model.getInstance().getViewFactory().showDessertsMenu();
@@ -79,7 +75,6 @@ public class SidesMenuController implements Initializable {
         // Sides Category Button Logic
         sidesCategoryButton.setOnAction(event -> {
             System.out.println("Navigating to Sides Category");
-//            navigateToFXML("SidesMenu.fxml");
             Stage stage = (Stage) sidesCategoryButton.getScene().getWindow();
             Model.getInstance().getViewFactory().closeStage(stage);
             Model.getInstance().getViewFactory().showSidesMenu();
