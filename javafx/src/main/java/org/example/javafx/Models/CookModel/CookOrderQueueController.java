@@ -3,6 +3,7 @@ package org.example.javafx.Models.CookModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollBar;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
@@ -14,7 +15,8 @@ public class CookOrderQueueController implements Initializable {
     @FXML
     private Button logoutButton;
     @FXML
-    private Scrollbar scrollBar;
+    private ScrollBar scrollBar;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){

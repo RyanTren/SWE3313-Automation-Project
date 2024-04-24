@@ -10,8 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SalesAnalyticsController implements Initializable {
-    @FXML
-    private Button logoutButton;
+    @FXML private Button logoutButton;
     @FXML private Button backButton;
 
     @Override

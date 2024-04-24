@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.TableController;
+import org.example.javafx.Models.CookModel.CookOrderQueueController;
 import org.example.javafx.Models.ManagerModel.*;
 import org.example.javafx.Models.WaiterModel.*;
 
@@ -122,7 +123,7 @@ public class ViewFactory {
 
     public void showOrderQueue(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/CookModel/CookOrderQueue.fxml"));
-        loader.setController(new SalesAnalyticsController());
+        loader.setController(new CookOrderQueueController());
         createStage(loader);
     }
 

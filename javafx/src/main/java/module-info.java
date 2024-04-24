@@ -30,6 +30,9 @@ module org.example.javafx {
     opens org.example.javafx.Controllers to javafx.fxml;
     opens org.example.javafx.Controllers.Client to javafx.fxml;
     opens org.example.javafx.Models.ManagerModel to javafx.fxml;
+    opens org.example.javafx.Models.CookModel to javafx.fxml;
+    opens org.example.javafx.Models.BusboyModel to javafx.fxml;
+
 
 
     exports org.example.javafx;
