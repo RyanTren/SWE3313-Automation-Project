@@ -120,6 +120,12 @@ public class ViewFactory {
         createStage(loader);
     }
 
+    public void showOrderQueue(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/CookModel/CookOrderQueue.fxml"));
+        loader.setController(new SalesAnalyticsController());
+        createStage(loader);
+    }
+
 
     private void createStage(FXMLLoader loader){
         Scene scene = null;
