@@ -113,37 +113,4 @@ public class DesertsMenuController implements Initializable {
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
-
-//    private void navigateToFXML(String fxmlFileName) {
-//        FXMLLoader fxmlLoader;
-//
-//        // Add conditions based on the fxmlFileName parameter
-//        if (fxmlFileName.equals("StarterMenu.fxml")) {
-//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/StarterMenu.fxml"));
-//        } else if (fxmlFileName.equals("EntreeMenu.fxml")) {
-//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/EntreeMenu.fxml"));
-//        } else if (fxmlFileName.equals("DessertMenu.fxml")) {
-//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/DessertMenu.fxml"));
-//        } else if (fxmlFileName.equals("SidesMenu.fxml")) {
-//            fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Model/SidesMenu.fxml"));
-//        } else {
-//            // Default case or error handling
-//            throw new IllegalArgumentException("Invalid FXML file name: " + fxmlFileName);
-//        }
-//
-//        try {
-//            // Load the FXML file
-//            AnchorPane root = fxmlLoader.load();
-//
-//            // Create a new stage and set the scene
-//            Stage stage = new Stage();
-//            stage.setScene(new Scene(root));
-//
-//            // Show the stage
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
 }
