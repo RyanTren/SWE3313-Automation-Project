@@ -10,6 +10,8 @@ import org.example.javafx.Models.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.scene.paint.Color;
+
 public class TableController implements Initializable {
 
     // Add @FXML declarations for all 30 ToggleButtons
@@ -53,7 +55,7 @@ public class TableController implements Initializable {
             if (button != null) {
                 int finalI = i; // Capture the value of i in a final variable
                 button.setOnAction(event -> {
-                    onClickTable(); // Call onClickTable method when a table button is clicked
+                    onClickTable(button); // Call onClickTable method when a table button is clicked
                     String tableName = "Table " + finalI; // Use finalI here instead of i
                     System.out.println("Selected Table: " + tableName);
                 });
@@ -101,6 +103,29 @@ public class TableController implements Initializable {
         };
     }
 
+    private void onClickTable(ToggleButton tableButton) {
+        try {
+            // Set the background color of the clicked table button to yellow
+            tableButton.setStyle("-fx-background-color: #e5dd16");
+
+            // Set the text of the clicked table button to "Occupied"
+//            tableButton.setText("Occupied");
+            System.out.println("Occupied");
+
+            // You may want to disable the button after it's been clicked
+            tableButton.setDisable(true);
+
+            // Show the drinks menu using ViewFactory
+            Model.getInstance().getViewFactory().showDrinksMenu();
+
+            // Close the current stage (optional)
+            Stage currentStage = (Stage) tableButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     // Method to handle logout action
     private void performLogout() {
         // Perform logout actions here
@@ -112,16 +137,18 @@ public class TableController implements Initializable {
         Model.getInstance().getViewFactory().showLoginWindow();
     }
 
-    private void onClickTable() {
-        try {
-            // Show the drinks menu using ViewFactory
-            Model.getInstance().getViewFactory().showDrinksMenu();
-
-            // Close the current stage (optional)
-            Stage currentStage = (Stage) tableToggleButton1.getScene().getWindow();
-            currentStage.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    private void onClickTable() {
+//        try {
+//            // Show the drinks menu using ViewFactory
+//            Model.getInstance().getViewFactory().showDrinksMenu();
+//
+//            // Close the current stage (optional)
+//            Stage currentStage = (Stage) tableToggleButton1.getScene().getWindow();
+//            currentStage.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
+
+
