@@ -29,10 +29,10 @@ values ('Cameron', 'busboy', 'b1user', 'b1password', 6.5);
 
 -- cooks
 insert into jrestaurant_employees (name, role, username, password, hoursWorked)
-values ('Lily', 'cook', 'cuser1', 'c1password', 7),
+values ('Lily', 'cook', 'c1user', 'c1password', 7),
        ('Charlotte', 'cook', 'c2user', 'c2password', 10);
 
 
 -- hosts
 insert into jrestaurant_employees(name, role, username, password, hoursWorked)
-values ('Dean', 'host', 'huser1', 'h1password', 4);
+values ('Dean', 'host', 'h1user', 'h1password', 4);
