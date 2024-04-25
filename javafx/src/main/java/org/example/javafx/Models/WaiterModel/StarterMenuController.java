@@ -56,13 +56,13 @@ public class StarterMenuController implements Initializable {
             Model.getInstance().getViewFactory().showEntreesMenu();
         });
 
-        // Starter Category Button Logic
-        startersCategoryButton.setOnAction(event -> {
-            System.out.println("Navigating to Starter Category");
-            Stage stage = (Stage) startersCategoryButton.getScene().getWindow();
-            Model.getInstance().getViewFactory().closeStage(stage);
-            Model.getInstance().getViewFactory().showStartersMenu();
-        });
+//        // Starter Category Button Logic
+//        startersCategoryButton.setOnAction(event -> {
+//            System.out.println("Navigating to Starter Category");
+//            Stage stage = (Stage) startersCategoryButton.getScene().getWindow();
+//            Model.getInstance().getViewFactory().closeStage(stage);
+//            Model.getInstance().getViewFactory().showStartersMenu();
+//        });
 
         // Desserts Category Button Logic
         dessertsCategoryButton.setOnAction(event -> {

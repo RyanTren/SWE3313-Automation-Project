@@ -139,13 +139,13 @@ public class DrinksMenuController implements Initializable {
             performCheckout();
         });
 
-        // Drinks Category Button Logic
-        drinksCategoryButton.setOnAction(event -> {
-            System.out.println("Navigating to Drinks Category");
-            Stage stage = (Stage) drinksCategoryButton.getScene().getWindow();
-            Model.getInstance().getViewFactory().closeStage(stage);
-            Model.getInstance().getViewFactory().showDrinksMenu();
-        });
+//        // Drinks Category Button Logic
+//        drinksCategoryButton.setOnAction(event -> {
+//            System.out.println("Navigating to Drinks Category");
+//            Stage stage = (Stage) drinksCategoryButton.getScene().getWindow();
+//            Model.getInstance().getViewFactory().closeStage(stage);
+//            Model.getInstance().getViewFactory().showDrinksMenu();
+//        });
 
         // Entrees Category Button Logic
         entreesCategoryButton.setOnAction(event -> {

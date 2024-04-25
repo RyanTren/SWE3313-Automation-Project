@@ -72,13 +72,13 @@ public class SidesMenuController implements Initializable {
             Model.getInstance().getViewFactory().showDessertsMenu();
         });
 
-        // Sides Category Button Logic
-        sidesCategoryButton.setOnAction(event -> {
-            System.out.println("Navigating to Sides Category");
-            Stage stage = (Stage) sidesCategoryButton.getScene().getWindow();
-            Model.getInstance().getViewFactory().closeStage(stage);
-            Model.getInstance().getViewFactory().showSidesMenu();
-        });
+//        // Sides Category Button Logic
+//        sidesCategoryButton.setOnAction(event -> {
+//            System.out.println("Navigating to Sides Category");
+//            Stage stage = (Stage) sidesCategoryButton.getScene().getWindow();
+//            Model.getInstance().getViewFactory().closeStage(stage);
+//            Model.getInstance().getViewFactory().showSidesMenu();
+//        });
     }
 
     // Method to handle logout action

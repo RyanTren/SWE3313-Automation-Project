@@ -49,13 +49,13 @@ public class EntreeMenuController implements Initializable {
             Model.getInstance().getViewFactory().showDrinksMenu();
         });
 
-        // Entrees Category Button Logic
-        entreesCategoryButton.setOnAction(event -> {
-            System.out.println("Navigating to Entrees Category");
-            Stage stage = (Stage) entreesCategoryButton.getScene().getWindow();
-            Model.getInstance().getViewFactory().closeStage(stage);
-            Model.getInstance().getViewFactory().showEntreesMenu();
-        });
+//        // Entrees Category Button Logic
+//        entreesCategoryButton.setOnAction(event -> {
+//            System.out.println("Navigating to Entrees Category");
+//            Stage stage = (Stage) entreesCategoryButton.getScene().getWindow();
+//            Model.getInstance().getViewFactory().closeStage(stage);
+//            Model.getInstance().getViewFactory().showEntreesMenu();
+//        });
 
         // Starter Category Button Logic
         startersCategoryButton.setOnAction(event -> {
