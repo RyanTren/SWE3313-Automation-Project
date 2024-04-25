@@ -93,7 +93,22 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" layoutX="1607.0" layoutY="220.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
+      <Group layoutX="1607.0" layoutY="220.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
+            <Button fx:id="addQuantityButton" layoutX="187.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="subtractQuantityButton" layoutX="187.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="itemImageInsert" fitHeight="104.0" fitWidth="139.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Group>
       <Button fx:id="drinksCategoryButton" layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks">
          <effect>
             <DropShadow>
@@ -140,7 +155,7 @@
                </effect></Button>
             <Text layoutX="217.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Water" />
             <Text layoutX="219.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00" />
-            <ImageView fx:id="waterImage" fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="waterImage" fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" onMouseClicked="#handleItemClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/WaterImage.png" />
                </image>
@@ -158,7 +173,7 @@
                </effect></Button>
             <Text layoutX="218.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soda" />
             <Text layoutX="217.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3.00" />
-            <ImageView fx:id="sodaImage" fitHeight="105.0" fitWidth="55.0" layoutX="204.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="sodaImage" fitHeight="105.0" fitWidth="55.0" layoutX="204.0" layoutY="87.0" onMouseClicked="#handleItemClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/SodaImage.jpg" />
                </image>
@@ -176,7 +191,7 @@
                </effect></Button>
             <Text layoutX="217.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IPA" />
             <Text layoutX="212.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$6.75" />
-            <ImageView fx:id="ipaImage" fitHeight="127.0" fitWidth="33.0" layoutX="209.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ipaImage" fitHeight="127.0" fitWidth="33.0" layoutX="209.0" layoutY="65.0" onMouseClicked="#handleItemClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/IPAImage.png" />
                </image>
@@ -194,23 +209,13 @@
                </effect></Button>
             <Text layoutX="194.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sweet Tea" />
             <Text layoutX="206.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2.50" />
-            <ImageView fx:id="sweetTeaImage" fitHeight="130.0" fitWidth="130.0" layoutX="156.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="sweetTeaImage" fitHeight="130.0" fitWidth="130.0" layoutX="156.0" layoutY="63.0" onMouseClicked="#handleItemClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/SweetTeaImage.jpg" />
                </image>
             </ImageView>
          </children>
       </Group>
-      <Button fx:id="addQuantityButton" layoutX="1794.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button fx:id="subtractQuantityButton" layoutX="1794.0" layoutY="293.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
       <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
@@ -238,6 +243,5 @@
       <Text layoutX="1628.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash" />
       <Text layoutX="1717.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card" />
       <Text layoutX="1793.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Pay" />
-      <ImageView fx:id="itemImageInsert" fitHeight="104.0" fitWidth="139.0" layoutX="1630.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

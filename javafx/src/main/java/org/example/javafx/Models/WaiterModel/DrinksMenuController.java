@@ -64,18 +64,17 @@ package org.example.javafx.Models.WaiterModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
 //import javax.swing.text.html.ImageView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class DrinksMenuController implements Initializable {
     @FXML private Button drinksCategoryButton;
@@ -100,8 +99,7 @@ public class DrinksMenuController implements Initializable {
 
     @FXML private ImageView itemImageInsert;
 
-    // Define a map to store items and their quantities
-    private Map<javafx.scene.image.Image, Integer> cartItems = new HashMap<>();
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -117,14 +115,8 @@ public class DrinksMenuController implements Initializable {
             performBack();
         });
 
-
-
-        /*What I'm trying to do here is that, if the user click the Water button
-         *it will get added to the Order cart. If someone can fix the image transfer them please..
-         * please help me ;(
-         */
-
         // Drink Button Logic
+
         drinkOne.setOnAction(event -> {
             addItemToCart(waterImage.getImage());
         });
@@ -140,6 +132,7 @@ public class DrinksMenuController implements Initializable {
         drinkFour.setOnAction(event -> {
             addItemToCart(sweetTeaImage.getImage());
         });
+
 
 
 
@@ -190,6 +183,22 @@ public class DrinksMenuController implements Initializable {
         });
     }
 
+    @FXML
+    private void handleItemClick(MouseEvent event) {
+        ImageView imageView = (ImageView) event.getSource();
+        Image image = imageView.getImage();
+        addItemToCart(image);
+    }
+
+    //This works.... but you have to click the button region not the picture or the text
+    private void addItemToCart(javafx.scene.image.Image image) {
+        // Add item to order cart
+        System.out.println("Adding item to order cart...");
+
+        // Transfer image to display
+        itemImageInsert.setImage(image);
+    }
+
     // Method to handle logout action
     private void performLogout() {
         // Perform logout actions here
@@ -222,38 +231,5 @@ public class DrinksMenuController implements Initializable {
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
-
-    //This works.... kinda
-    private void addItemToCart(javafx.scene.image.Image image) {
-        // Add item to order cart
-        System.out.println("Adding item to order cart...");
-
-        // Transfer image to display
-        itemImageInsert.setImage(image);
-    }
-
-
-//    private void addItemToCart(javafx.scene.image.Image image) {
-//        // Check if the item is already in the cart
-//        if (cartItems.containsKey(image)) {
-//            // If yes, increment the quantity
-//            int quantity = cartItems.get(image);
-//            cartItems.put(image, quantity + 1);
-//        } else {
-//            // If not, add it to the cart with quantity 1
-//            cartItems.put(image, 1);
-//        }
-//
-//        // Update the display with the latest cart content (you need to implement this part)
-//        updateCartDisplay();
-//    }
-
-    // Method to update the display with the latest cart content
-    private void updateCartDisplay() {
-        // You need to implement this method to update the display with the latest cart content
-        // This might involve updating a UI component with the cart items and quantities
-        // For example, you could update a TableView, a ListView, or any other UI component to display the cart content
-    }
-
 }
 
