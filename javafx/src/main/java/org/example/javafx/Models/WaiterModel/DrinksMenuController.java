@@ -63,8 +63,10 @@ package org.example.javafx.Models.WaiterModel;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
@@ -75,6 +77,10 @@ import javafx.scene.input.MouseEvent;
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
 
 public class DrinksMenuController implements Initializable {
     @FXML private Button drinksCategoryButton;
@@ -97,8 +103,8 @@ public class DrinksMenuController implements Initializable {
     @FXML private ImageView ipaImage;
     @FXML private ImageView sweetTeaImage;
 
+    @FXML private VBox cartContainer;
     @FXML private ImageView itemImageInsert;
-
     @FXML private Button addQuantityButton;
     @FXML private Button subtractQuantityButton;
     private int quantity = 0; // Initial quantity
@@ -134,6 +140,20 @@ public class DrinksMenuController implements Initializable {
         drinkFour.setOnAction(event -> {
             addItemToCart(sweetTeaImage.getImage());
         });
+
+//        // Add Quantity Button Logic
+//        addQuantityButton.setOnAction(event -> {
+//            quantity++;
+//            updateQuantityLabel();
+//        });
+//
+//        // Subtract Quantity Button Logic
+//        subtractQuantityButton.setOnAction(event -> {
+//            if (quantity > 0) {
+//                quantity--;
+//                updateQuantityLabel();
+//            }
+//        });
 
         // Add Quantity Button Logic
         addQuantityButton.setOnAction(event -> {
@@ -204,14 +224,98 @@ public class DrinksMenuController implements Initializable {
         addItemToCart(image);
     }
 
-    //This works.... but you have to click the button region not the picture or the text
-    private void addItemToCart(javafx.scene.image.Image image) {
-        // Add item to order cart
-        System.out.println("Adding item to order cart...");
 
-        // Transfer image to display
-        itemImageInsert.setImage(image);
+//    //This works.... but you have to click the button region not the picture or the text
+//    private void addItemToCart(javafx.scene.image.Image image) {
+//        // Add item to order cart
+//        System.out.println("Adding item to order cart...");
+//
+//        // Transfer image to display
+//        itemImageInsert.setImage(image);
+//    }
+
+    private Group createItemGroup(Image image) {
+        // Create UI elements for the item
+        ImageView itemImageView = new ImageView(image);
+        itemImageView.setFitWidth(139);
+        itemImageView.setFitHeight(104);
+
+        // Create buttons for quantity control
+        Button addButton = new Button("+");
+        Button subtractButton = new Button("-");
+
+        // Add event handlers for quantity buttons
+        addButton.setOnAction(event -> {
+            quantity++;
+            updateQuantityLabel();
+        });
+        subtractButton.setOnAction(event -> {
+            if (quantity > 0) {
+                quantity--;
+                updateQuantityLabel();
+            }
+        });
+
+        // Create a Group to hold all UI elements
+        Group group = new Group();
+        group.getChildren().addAll(itemImageView, addButton, subtractButton);
+
+        return group;
     }
+
+    private void addItemToCart(Image image) {
+        // Check if the number of children in cartContainer is less than 4
+        if (cartContainer.getChildren().size() < 4) {
+            // Create a Group for the item container
+            Group group = new Group();
+
+            // Create a Rectangle to serve as the background
+            Rectangle backgroundRect = new Rectangle(236, 131);
+            backgroundRect.setFill(Color.web("#d9d9d9"));
+            backgroundRect.setArcWidth(20);
+            backgroundRect.setArcHeight(20);
+
+            // Create Add and Subtract Buttons
+            Button addButton = new Button("+");
+            addButton.setLayoutX(187);
+            addButton.setLayoutY(17);
+            addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
+            addButton.setTextFill(Color.WHITE);
+            addButton.setOnAction(event -> {
+                quantity++;
+                updateQuantityLabel();
+            });
+
+            Button subtractButton = new Button("-");
+            subtractButton.setLayoutX(187);
+            subtractButton.setLayoutY(73);
+            subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
+            subtractButton.setTextFill(Color.WHITE);
+            subtractButton.setOnAction(event -> {
+                if (quantity > 0) {
+                    quantity--;
+                    updateQuantityLabel();
+                }
+            });
+
+            // Create ImageView for the item
+            ImageView itemImageView = new ImageView(image);
+            itemImageView.setLayoutX(23);
+            itemImageView.setLayoutY(14);
+            itemImageView.setFitWidth(139);
+            itemImageView.setFitHeight(104);
+
+            // Add all elements to the Group
+            group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView);
+
+            // Add the Group to the cart container
+            cartContainer.getChildren().add(group);
+        } else {
+            // Notify the user that the maximum limit has been reached
+            System.out.println("Maximum limit reached. You can only add up to 4 items to the cart.");
+        }
+    }
+
 
     // Method to handle logout action
     private void performLogout() {

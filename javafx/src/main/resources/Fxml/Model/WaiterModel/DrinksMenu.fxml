@@ -13,6 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.layout.VBox?>
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" width="1927.0">
@@ -93,22 +94,44 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Group layoutX="1607.0" layoutY="220.0">
+      <!-- Cart container VBox -->
+      <VBox fx:id="cartContainer" spacing="10" layoutX="1607.0" layoutY="220.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
-            <Button fx:id="addQuantityButton" layoutX="187.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="subtractQuantityButton" layoutX="187.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <ImageView fx:id="itemImageInsert" fitHeight="104.0" fitWidth="139.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <!-- Group representing item container -->
+            <Group>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
+                  <Button fx:id="addQuantityButton" layoutX="187.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="subtractQuantityButton" layoutX="187.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="itemImageInsert" fitHeight="104.0" fitWidth="139.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Group>
          </children>
-      </Group>
+      </VBox>
+<!--      <Group layoutX="1607.0" layoutY="220.0">-->
+<!--         <children>-->
+<!--            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />-->
+<!--            <Button fx:id="addQuantityButton" layoutX="187.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">-->
+<!--               <font>-->
+<!--                  <Font size="19.0" />-->
+<!--               </font>-->
+<!--            </Button>-->
+<!--            <Button fx:id="subtractQuantityButton" layoutX="187.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">-->
+<!--               <font>-->
+<!--                  <Font size="19.0" />-->
+<!--               </font>-->
+<!--            </Button>-->
+<!--            <ImageView fx:id="itemImageInsert" fitHeight="104.0" fitWidth="139.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />-->
+<!--         </children>-->
+<!--      </Group>-->
       <Button fx:id="drinksCategoryButton" layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks">
          <effect>
             <DropShadow>
