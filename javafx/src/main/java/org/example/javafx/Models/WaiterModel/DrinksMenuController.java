@@ -99,7 +99,9 @@ public class DrinksMenuController implements Initializable {
 
     @FXML private ImageView itemImageInsert;
 
-
+    @FXML private Button addQuantityButton;
+    @FXML private Button subtractQuantityButton;
+    private int quantity = 0; // Initial quantity
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -133,7 +135,19 @@ public class DrinksMenuController implements Initializable {
             addItemToCart(sweetTeaImage.getImage());
         });
 
+        // Add Quantity Button Logic
+        addQuantityButton.setOnAction(event -> {
+            quantity++;
+            updateQuantityLabel();
+        });
 
+        // Subtract Quantity Button Logic
+        subtractQuantityButton.setOnAction(event -> {
+            if (quantity > 0) {
+                quantity--;
+                updateQuantityLabel();
+            }
+        });
 
 
         //Checkout Button Logic
@@ -220,6 +234,13 @@ public class DrinksMenuController implements Initializable {
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showTableWindow();
     }
+
+    // Method to update the quantity label
+    private void updateQuantityLabel() {
+        // Update UI to display the current quantity
+        System.out.println("Quantity: " + quantity); // For testing, you can replace this with actual UI update code
+    }
+
 
     // Method to handle checkout action
     private void performCheckout(){
