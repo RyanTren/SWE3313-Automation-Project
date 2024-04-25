@@ -47,7 +47,9 @@ public class DrinksMenuController implements Initializable {
     @FXML private ImageView itemImageInsert;
     @FXML private Button addQuantityButton;
     @FXML private Button subtractQuantityButton;
-    private int quantity = 0; // Initial quantity
+    private int itemQuantity = -1; // Initial quantity
+    private int quantity = 0; //integer for amount of vbox's
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -97,14 +99,14 @@ public class DrinksMenuController implements Initializable {
 
         // Add Quantity Button Logic
         addQuantityButton.setOnAction(event -> {
-            quantity++;
+            itemQuantity++;
             updateQuantityLabel();
         });
 
         // Subtract Quantity Button Logic
         subtractQuantityButton.setOnAction(event -> {
-            if (quantity > 0) {
-                quantity--;
+            if (itemQuantity > 0) {
+                itemQuantity--;
                 updateQuantityLabel();
             }
         });
@@ -186,12 +188,12 @@ public class DrinksMenuController implements Initializable {
 
         // Add event handlers for quantity buttons
         addButton.setOnAction(event -> {
-            quantity++;
+            itemQuantity++;
             updateQuantityLabel();
         });
         subtractButton.setOnAction(event -> {
-            if (quantity > 0) {
-                quantity--;
+            if (itemQuantity > 0) {
+                itemQuantity--;
                 updateQuantityLabel();
             }
         });
@@ -202,70 +204,17 @@ public class DrinksMenuController implements Initializable {
 
         return group;
     }
-
-//    private void addItemToCart(Image image) {
-//        // Check if the number of children in cartContainer is less than 4
-//        if (cartContainer.getChildren().size() < 4) {
-//            // Create a Group for the item container
-//            Group group = new Group();
-//
-//            // Create a Rectangle to serve as the background
-//            Rectangle backgroundRect = new Rectangle(236, 131);
-//            backgroundRect.setFill(Color.web("#d9d9d9"));
-//            backgroundRect.setArcWidth(20);
-//            backgroundRect.setArcHeight(20);
-//
-//            // Create Add Buttons
-//            Button addButton = new Button("+");
-//            addButton.setLayoutX(187);
-//            addButton.setLayoutY(17);
-//            addButton.setPrefWidth(39.0);
-//            addButton.setPrefHeight(40.0);
-//            addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
-//            addButton.setTextFill(Color.WHITE);
-//            addButton.setOnAction(event -> {
-//                quantity++;
-//                updateQuantityLabel();
-//            });
-//
-//            // Create Subtract Buttons
-//            Button subtractButton = new Button("-");
-//            subtractButton.setLayoutX(187);
-//            subtractButton.setLayoutY(73);
-//            subtractButton.setPrefWidth(39.0);
-//            subtractButton.setPrefHeight(40.0);
-//            subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
-//            subtractButton.setTextFill(Color.WHITE);
-//            subtractButton.setOnAction(event -> {
-//                if (quantity > 0) {
-//                    quantity--;
-//                    updateQuantityLabel();
-//                }
-//            });
-//
-//            // Create ImageView for the item
-//            ImageView itemImageView = new ImageView(image);
-//            itemImageView.setLayoutX(23);
-//            itemImageView.setLayoutY(14);
-//            itemImageView.setFitWidth(139);
-//            itemImageView.setFitHeight(104);
-//
-//            // Add all elements to the Group
-//            group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView);
-//
-//            // Add the Group to the cart container
-//            cartContainer.getChildren().add(group);
-//        } else {
-//            // Notify the user that the maximum limit has been reached
-//            System.out.println("Maximum limit reached. You can only add up to 4 items to the cart.");
-//        }
-//    }
-
+    
     private void addItemToCart(Image image) {
+
+//            itemImageInsert.setImage(image);
+
         // Check if the number of children in cartContainer is less than 4
         if (cartContainer.getChildren().size() < 4) {
             // Create a Group for the item container
             Group group = new Group();
+
+            itemImageInsert.setImage(image);
 
             // Create a Rectangle to serve as the background
             Rectangle backgroundRect = new Rectangle(236, 131);
@@ -284,7 +233,7 @@ public class DrinksMenuController implements Initializable {
             addButton.setTextFill(Color.WHITE);
 
             addButton.setOnAction(event -> {
-                quantity++;
+                itemQuantity++;
                 updateQuantityLabel();
             });
 
@@ -296,9 +245,10 @@ public class DrinksMenuController implements Initializable {
             subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
             subtractButton.setFont(Font.font(19));
             subtractButton.setTextFill(Color.WHITE);
+
             subtractButton.setOnAction(event -> {
-                if (quantity > 0) {
-                    quantity--;
+                if (itemQuantity > 0) {
+                    itemQuantity--;
                     updateQuantityLabel();
                 }
             });
@@ -316,9 +266,10 @@ public class DrinksMenuController implements Initializable {
 
             // Add the Group to the cart container
             cartContainer.getChildren().add(group);
-        } else {
+        }
+        else {
             // Notify the user that the maximum limit has been reached
-            System.out.println("Maximum limit reached. You can only add up to 4 items to the cart.");
+            System.out.println("Maximum limit reached. You can only add up to 4 different drinks to the cart.");
         }
     }
 
@@ -348,7 +299,7 @@ public class DrinksMenuController implements Initializable {
     // Method to update the quantity label
     private void updateQuantityLabel() {
         // Update UI to display the current quantity
-        System.out.println(STR."Quantity: \{quantity}"); // For testing, you can replace this with actual UI update code
+        System.out.println(STR."Different Drink Quantity: \{quantity}"); // For testing, you can replace this with actual UI update code
     }
 
 
