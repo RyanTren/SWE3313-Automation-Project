@@ -7,6 +7,7 @@ import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
@@ -202,6 +203,64 @@ public class DrinksMenuController implements Initializable {
         return group;
     }
 
+//    private void addItemToCart(Image image) {
+//        // Check if the number of children in cartContainer is less than 4
+//        if (cartContainer.getChildren().size() < 4) {
+//            // Create a Group for the item container
+//            Group group = new Group();
+//
+//            // Create a Rectangle to serve as the background
+//            Rectangle backgroundRect = new Rectangle(236, 131);
+//            backgroundRect.setFill(Color.web("#d9d9d9"));
+//            backgroundRect.setArcWidth(20);
+//            backgroundRect.setArcHeight(20);
+//
+//            // Create Add Buttons
+//            Button addButton = new Button("+");
+//            addButton.setLayoutX(187);
+//            addButton.setLayoutY(17);
+//            addButton.setPrefWidth(39.0);
+//            addButton.setPrefHeight(40.0);
+//            addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
+//            addButton.setTextFill(Color.WHITE);
+//            addButton.setOnAction(event -> {
+//                quantity++;
+//                updateQuantityLabel();
+//            });
+//
+//            // Create Subtract Buttons
+//            Button subtractButton = new Button("-");
+//            subtractButton.setLayoutX(187);
+//            subtractButton.setLayoutY(73);
+//            subtractButton.setPrefWidth(39.0);
+//            subtractButton.setPrefHeight(40.0);
+//            subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
+//            subtractButton.setTextFill(Color.WHITE);
+//            subtractButton.setOnAction(event -> {
+//                if (quantity > 0) {
+//                    quantity--;
+//                    updateQuantityLabel();
+//                }
+//            });
+//
+//            // Create ImageView for the item
+//            ImageView itemImageView = new ImageView(image);
+//            itemImageView.setLayoutX(23);
+//            itemImageView.setLayoutY(14);
+//            itemImageView.setFitWidth(139);
+//            itemImageView.setFitHeight(104);
+//
+//            // Add all elements to the Group
+//            group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView);
+//
+//            // Add the Group to the cart container
+//            cartContainer.getChildren().add(group);
+//        } else {
+//            // Notify the user that the maximum limit has been reached
+//            System.out.println("Maximum limit reached. You can only add up to 4 items to the cart.");
+//        }
+//    }
+
     private void addItemToCart(Image image) {
         // Check if the number of children in cartContainer is less than 4
         if (cartContainer.getChildren().size() < 4) {
@@ -218,8 +277,12 @@ public class DrinksMenuController implements Initializable {
             Button addButton = new Button("+");
             addButton.setLayoutX(187);
             addButton.setLayoutY(17);
+            addButton.setPrefWidth(39.0);
+            addButton.setPrefHeight(40.0);
             addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
+            addButton.setFont(Font.font(19));
             addButton.setTextFill(Color.WHITE);
+
             addButton.setOnAction(event -> {
                 quantity++;
                 updateQuantityLabel();
@@ -228,7 +291,10 @@ public class DrinksMenuController implements Initializable {
             Button subtractButton = new Button("-");
             subtractButton.setLayoutX(187);
             subtractButton.setLayoutY(73);
+            subtractButton.setPrefWidth(39.0);
+            subtractButton.setPrefHeight(40.0);
             subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
+            subtractButton.setFont(Font.font(19));
             subtractButton.setTextFill(Color.WHITE);
             subtractButton.setOnAction(event -> {
                 if (quantity > 0) {
@@ -242,7 +308,8 @@ public class DrinksMenuController implements Initializable {
             itemImageView.setLayoutX(23);
             itemImageView.setLayoutY(14);
             itemImageView.setFitWidth(139);
-            itemImageView.setFitHeight(104);
+            itemImageView.setFitHeight(104); // Added fitHeight
+            itemImageView.setPreserveRatio(true); // Added to preserve aspect ratio
 
             // Add all elements to the Group
             group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView);
@@ -254,6 +321,7 @@ public class DrinksMenuController implements Initializable {
             System.out.println("Maximum limit reached. You can only add up to 4 items to the cart.");
         }
     }
+
 
     // Method to handle logout action
     private void performLogout() {
