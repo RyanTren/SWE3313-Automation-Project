@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -96,73 +95,39 @@
                   <Group>
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                        <Text layoutX="8.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca-Cola" />
+                        <Text layoutX="8.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regular Coke" />
+                        <Text layoutX="880.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 Bottles" />
+                        <Text layoutX="906.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20 oz." />
                      </children>
                   </Group>
                   <Group layoutY="66.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                        <Text layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IPA" />
+                        <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beer" />
+                        <Text layoutX="892.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Bottles" />
+                        <Text layoutX="908.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 oz." />
                      </children>
                   </Group>
                   <Group layoutY="132.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                        <Text layoutX="5.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lipton's" />
+                        <Text layoutX="5.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sweet Tea" />
+                        <Text layoutX="882.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20 Bottles" />
+                        <Text layoutX="903.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.9 oz." />
                      </children>
                   </Group>
                   <Group layoutY="198.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
+                        <Text layoutX="4.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curly's" />
+                        <Text layoutX="4.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
+                        <Text layoutX="897.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 bags" />
+                        <Text layoutX="902.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16 oz." />
                      </children>
                   </Group>
-               </children>
-            </Group>
-            <Group layoutY="263.0">
-               <children>
-                  <Group>
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-                  <Group layoutY="66.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-                  <Group layoutY="132.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-                  <Group layoutY="198.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-               </children>
-            </Group>
-            <Group layoutY="521.0">
-               <children>
-                  <Group>
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-                  <Group layoutY="66.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
-                        <TextField layoutX="8.0" layoutY="13.0" opacity="0.0" prefHeight="25.0" prefWidth="926.0" />
-                     </children>
-                  </Group>
-                  <Group layoutY="132.0" />
-                  <Group layoutY="198.0" />
                </children>
             </Group>
          </children>
@@ -174,5 +139,67 @@
          </font>
       </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Group layoutX="804.0" layoutY="492.0">
+         <children>
+            <Group>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="8.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martin's" />
+                  <Text layoutX="8.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Potato Rolls" />
+                  <Text layoutX="904.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8 bags" />
+                  <Text layoutX="906.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 oz." />
+               </children>
+            </Group>
+            <Group layoutY="66.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made" />
+                  <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sausages" />
+                  <Text layoutX="886.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 bottles" />
+                  <Text layoutX="908.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20 oz." />
+               </children>
+            </Group>
+            <Group layoutY="132.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="5.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Annie's" />
+                  <Text layoutX="5.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Macaroni and Cheese" />
+                  <Text layoutX="882.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 boxes" />
+                  <Text layoutX="903.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6 oz." />
+               </children>
+            </Group>
+            <Group layoutY="198.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="4.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lea Lana's" />
+                  <Text layoutX="4.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Pudding" />
+                  <Text layoutX="897.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19 Boxes" />
+                  <Text layoutX="905.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="32 oz." />
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Group layoutX="804.0" layoutY="752.0">
+         <children>
+            <Group>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edcfcf" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="8.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef Pierre" />
+                  <Text layoutX="8.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate French Silk" />
+                  <Text layoutX="907.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Box" />
+                  <Text layoutX="906.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40 oz." />
+               </children>
+            </Group>
+            <Group layoutY="66.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc3c3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="949.0" />
+                  <Text layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heinz" />
+                  <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketchup Packet" />
+                  <Text layoutX="877.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150 Packets" />
+                  <Text layoutX="908.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.3 oz." />
+               </children>
+            </Group>
+         </children>
+      </Group>
     </children>
 </AnchorPane>
