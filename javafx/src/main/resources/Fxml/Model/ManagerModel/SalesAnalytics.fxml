@@ -159,7 +159,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="1715.0" layoutY="977.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" style="-fx-background-color: #CAA8A8; -fx-background-radius: 5;" text="Next">
+      <Button fx:id="nextButton" layoutX="1715.0" layoutY="977.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="155.0" style="-fx-background-color: #CAA8A8; -fx-background-radius: 5;" text="Next">
          <font>
             <Font size="27.0" />
          </font>

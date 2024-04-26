@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 public class SalesAnalyticsController implements Initializable {
     @FXML private Button logoutButton;
     @FXML private Button backButton;
+    @FXML private Button nextButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -25,6 +26,12 @@ public class SalesAnalyticsController implements Initializable {
         backButton.setOnAction(event -> {
             System.out.println("User went back a screen.");
             performBack();
+        });
+
+        // Next Button Logic
+        nextButton.setOnAction(event -> {
+            System.out.println("Navigating to By-Day Analytics");
+            performNext();
         });
     }
 
@@ -42,5 +49,13 @@ public class SalesAnalyticsController implements Initializable {
         Stage stage = (Stage) backButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showManagerAdminPanel();
+    }
+
+    // Method to handle next action
+    private void performNext() {
+        // You may navigate to the previous screen
+        Stage stage = (Stage) nextButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showByDayAnalytics();
     }
 }
