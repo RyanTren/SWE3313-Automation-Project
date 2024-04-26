@@ -114,20 +114,52 @@ public class TableController implements Initializable {
         };
     }
 
+//    private void onClickTable(ToggleButton tableButton) {
+//        try {
+//            // Set the background color of the clicked table button to yellow
+//            tableButton.setStyle("-fx-background-color: #e5dd16");
+//
+//            // Set the text of the clicked table button to "Occupied"
+////            tableButton.setText("Occupied");
+//            System.out.println("Occupied");
+//
+//            // You may want to disable the button after it's been clicked
+//            tableButton.setDisable(true);
+//
+//            // Show the drinks menu using ViewFactory
+//            Model.getInstance().getViewFactory().showDrinksMenu();
+//
+//            // Close the current stage (optional)
+//            Stage currentStage = (Stage) tableButton.getScene().getWindow();
+//            currentStage.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     private void onClickTable(ToggleButton tableButton) {
         try {
             // Set the background color of the clicked table button to yellow
             tableButton.setStyle("-fx-background-color: #e5dd16");
 
             // Set the text of the clicked table button to "Occupied"
-//            tableButton.setText("Occupied");
+            // tableButton.setText("Occupied");
             System.out.println("Occupied");
 
             // You may want to disable the button after it's been clicked
             tableButton.setDisable(true);
 
-            // Show the drinks menu using ViewFactory
-            Model.getInstance().getViewFactory().showDrinksMenu();
+            // Determine the user's role
+            String userRole = Model.getInstance().getCurrentUserRole();
+
+            // Redirect based on the user's role
+            if (userRole != null && userRole.equals("busboy")) {
+                // Redirect to TableConditionsController
+                Model.getInstance().getViewFactory().showTableConditions();
+            } else {
+                // Show the drinks menu for other roles
+                Model.getInstance().getViewFactory().showDrinksMenu();
+            }
 
             // Close the current stage (optional)
             Stage currentStage = (Stage) tableButton.getScene().getWindow();
@@ -136,6 +168,7 @@ public class TableController implements Initializable {
             e.printStackTrace();
         }
     }
+
 
     // Method to handle logout action
     private void performLogout() {

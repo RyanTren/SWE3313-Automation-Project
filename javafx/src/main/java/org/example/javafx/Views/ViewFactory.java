@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 import org.example.javafx.Controllers.Client.TableController;
+import org.example.javafx.Models.BusboyModel.TableConditionsController;
 import org.example.javafx.Models.CookModel.CookOrderQueueController;
 import org.example.javafx.Models.ManagerModel.*;
 import org.example.javafx.Models.WaiterModel.*;
@@ -39,6 +40,13 @@ public class ViewFactory {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Table.fxml"));
         // Set the controller programmatically
         loader.setController(new TableController());
+        createStage(loader);
+    }
+
+    public void showTableConditions(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/BusboyModel/TableConditions.fxml"));
+        // Set the controller programmatically
+        loader.setController(new TableConditionsController());
         createStage(loader);
     }
 
