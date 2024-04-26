@@ -17,7 +17,13 @@ public class CookOrderQueueController implements Initializable {
     @FXML
     private ScrollBar scrollBar;
 
-
+    @FXML
+    private Button readyButtonOne;
+    @FXML
+    private Button readyButtonTwo;
+    @FXML
+    private Button readyButtonThree;
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         // Logout Button Logic
