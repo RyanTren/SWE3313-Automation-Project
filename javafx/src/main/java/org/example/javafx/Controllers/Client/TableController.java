@@ -3,6 +3,7 @@ package org.example.javafx.Controllers.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
@@ -47,8 +48,18 @@ public class TableController implements Initializable {
     @FXML private ToggleButton tableToggleButton30;
     @FXML private Button logoutButton;
 
+    @FXML private Label roleName;
+
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Set roleName label text based on current user's role
+        String userRole = Model.getInstance().getCurrentUserRole();
+        if (userRole != null) {
+            roleName.setText(userRole);
+        } else {
+            roleName.setText("Role Not Found");
+        }
+
         // Loop through all ToggleButtons and add listeners
         for (int i = 1; i <= 30; i++) {
             ToggleButton button = getToggleButtonById("tableToggleButton" + i);

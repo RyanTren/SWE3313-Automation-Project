@@ -65,6 +65,7 @@ public class LoginController implements Initializable {
         Model.getInstance().getViewFactory().closeStage(stage);
         switch (currentUser.role) {
             case "waiter", "host", "busboy":
+                Model.getInstance().setCurrentUser(currentUser);
                 Model.getInstance().getViewFactory().showTableWindow();
                 break;
             case "manager":
