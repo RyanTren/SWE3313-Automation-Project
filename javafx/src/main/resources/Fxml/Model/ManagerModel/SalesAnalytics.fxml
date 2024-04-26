@@ -56,7 +56,7 @@
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#e8e8e8" height="919.0" layoutX="22.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1876.0" />
       <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="897.0" layoutX="915.0" layoutY="151.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="973.0" />
-      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="658.0" layoutX="37.0" layoutY="279.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="859.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="658.0" layoutX="42.0" layoutY="279.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="859.0" />
       <Text layoutX="241.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analytics for J's Restaurant">
          <font>
             <Font size="42.0" />
@@ -110,9 +110,9 @@
             </DropShadow>
          </effect>
       </Rectangle>
-      <Text fill="WHITE" layoutX="708.0" layoutY="728.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table Served #">
+      <Text fill="WHITE" layoutX="729.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="350" wrappingWidth="79.70947265624997">
          <font>
-            <Font size="20.0" />
+            <Font size="49.0" />
          </font>
       </Text>
       <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="163.0" layoutX="939.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="925.0" />
@@ -139,22 +139,22 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="1782.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+      <Text layoutX="1782.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$15,520">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="1782.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+      <Text layoutX="1798.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$5,200">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="1792.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+      <Text layoutX="1792.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$10,119">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="1792.0" layoutY="912.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+      <Text layoutX="1792.0" layoutY="912.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2,000">
          <font>
             <Font size="18.0" />
          </font>
