@@ -69,6 +69,7 @@ public class LoginController implements Initializable {
                 Model.getInstance().getViewFactory().showTableWindow();
                 break;
             case "manager":
+                Model.getInstance().setCurrentUser(currentUser);
                 Model.getInstance().getViewFactory().showManagerAdminPanel();
                 break;
             case "cook":
