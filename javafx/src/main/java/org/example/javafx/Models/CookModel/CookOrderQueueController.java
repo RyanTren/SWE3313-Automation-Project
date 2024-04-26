@@ -2,8 +2,10 @@ package org.example.javafx.Models.CookModel;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.javafx.Models.Model;
 
@@ -23,6 +25,8 @@ public class CookOrderQueueController implements Initializable {
     private Button readyButtonTwo;
     @FXML
     private Button readyButtonThree;
+
+    @FXML private AnchorPane anchorPane;
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -32,6 +36,23 @@ public class CookOrderQueueController implements Initializable {
             performLogout();
         });
 
+        // Ready Button One Logic
+        readyButtonOne.setOnAction(event -> {
+            System.out.println("Order One is ready!");
+            removeGroup((Group) readyButtonOne.getParent());
+        });
+
+        // Ready Button Two Logic
+        readyButtonTwo.setOnAction(event -> {
+            System.out.println("Order Two is ready!");
+            removeGroup((Group) readyButtonTwo.getParent());
+        });
+
+        // Ready Button Three Logic
+        readyButtonThree.setOnAction(event -> {
+            System.out.println("Order Three is ready!");
+            removeGroup((Group) readyButtonThree.getParent());
+        });
     }
 
     // Method to handle logout action
@@ -40,5 +61,10 @@ public class CookOrderQueueController implements Initializable {
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showLoginWindow();
+    }
+
+    // Method to remove a group from the AnchorPane
+    private void removeGroup(Group group) {
+        anchorPane.getChildren().remove(group);
     }
 }
