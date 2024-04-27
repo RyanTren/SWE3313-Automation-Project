@@ -25,6 +25,7 @@ module org.example.javafx {
     requires io.github.cdimascio.dotenv.java;
     requires norm;
     requires java.persistence;
+    requires json.simple;
 
     opens org.example.javafx.Models to javafx.fxml;
     opens org.example.javafx.Controllers to javafx.fxml;

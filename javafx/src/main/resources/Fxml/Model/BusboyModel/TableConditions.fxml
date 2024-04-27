@@ -19,7 +19,7 @@
                 <Image url="@../../../assets/J's Restaurant Logo.png" />
             </image>
         </ImageView>
-        <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Welcome, Busboy">
+        <Button fx:id="nameLabelButton" layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Welcome, Busboy">
             <effect>
                 <DropShadow>
                     <color>

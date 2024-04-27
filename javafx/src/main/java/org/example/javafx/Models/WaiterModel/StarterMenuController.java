@@ -4,21 +4,30 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.example.database.JSTable;
 import org.example.javafx.Models.Model;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StarterMenuController implements Initializable {
-    @FXML private Button drinksCategoryButton;
-    @FXML private Button entreesCategoryButton;
-    @FXML private Button startersCategoryButton;
-    @FXML private Button dessertsCategoryButton;
-    @FXML private Button sidesCategoryButton;
+    @FXML
+    private Button drinksCategoryButton;
+    @FXML
+    private Button entreesCategoryButton;
+    @FXML
+    private Button startersCategoryButton;
+    @FXML
+    private Button dessertsCategoryButton;
+    @FXML
+    private Button sidesCategoryButton;
 
-    @FXML private Button logoutButton;
-    @FXML private Button backButton;
-    @FXML private Button checkoutButton;
+    @FXML
+    private Button logoutButton;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button checkoutButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -104,9 +113,14 @@ public class StarterMenuController implements Initializable {
     }
 
     // Method to handle checkout action
-    private void performCheckout(){
+    private void performCheckout() {
         //Perform checkout actions here
-        System.out.println("Getting Customer Receipt...");
+        JSTable jt = JSTable.get(Model.getInstance().getCurrentTableID());
+        if (jt != null) {
+            jt.status = JSTable.TABLE_STATUS.FINISHED.name();
+            jt.clean = false;
+            jt.save();
+        }
 
         //Navigate to OrderReceiptController/OrderReceipt.fxml
         Stage stage = (Stage) checkoutButton.getScene().getWindow();

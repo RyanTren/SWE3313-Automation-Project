@@ -4,17 +4,26 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.example.database.Employee;
 import org.example.javafx.Models.Model;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TableConditionsController implements Initializable {
-    @FXML private Button logoutButton;
-    @FXML private Button backButton;
+    @FXML
+    private Button logoutButton;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button nameLabelButton;
+
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Employee user = Model.getInstance().getCurrentUser();
+        nameLabelButton.setText(String.format("Welcome, %s", user.name));
+        nameLabelButton.setDisable(true);
         // Logout Button Logic
         logoutButton.setOnAction(event -> {
             System.out.println("Logging out!");

@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import org.example.database.JSTable;
 import org.example.javafx.Models.Model;
 
 //import javax.swing.text.html.ImageView;
@@ -23,30 +24,50 @@ import javafx.scene.shape.Rectangle;
 
 
 public class DrinksMenuController implements Initializable {
-    @FXML private Button drinksCategoryButton;
-    @FXML private Button entreesCategoryButton;
-    @FXML private Button startersCategoryButton;
-    @FXML private Button dessertsCategoryButton;
-    @FXML private Button sidesCategoryButton;
+    @FXML
+    private Button drinksCategoryButton;
+    @FXML
+    private Button entreesCategoryButton;
+    @FXML
+    private Button startersCategoryButton;
+    @FXML
+    private Button dessertsCategoryButton;
+    @FXML
+    private Button sidesCategoryButton;
 
-    @FXML private Button logoutButton;
-    @FXML private Button backButton;
-    @FXML private Button checkoutButton;
+    @FXML
+    private Button logoutButton;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button checkoutButton;
 
-    @FXML private Button drinkOne;
-    @FXML private Button drinkTwo;
-    @FXML private Button drinkThree;
-    @FXML private Button drinkFour;
+    @FXML
+    private Button drinkOne;
+    @FXML
+    private Button drinkTwo;
+    @FXML
+    private Button drinkThree;
+    @FXML
+    private Button drinkFour;
 
-    @FXML private ImageView waterImage;
-    @FXML private ImageView sodaImage;
-    @FXML private ImageView ipaImage;
-    @FXML private ImageView sweetTeaImage;
+    @FXML
+    private ImageView waterImage;
+    @FXML
+    private ImageView sodaImage;
+    @FXML
+    private ImageView ipaImage;
+    @FXML
+    private ImageView sweetTeaImage;
 
-    @FXML private VBox cartContainer;
-    @FXML private ImageView itemImageInsert;
-    @FXML private Button addQuantityButton;
-    @FXML private Button subtractQuantityButton;
+    @FXML
+    private VBox cartContainer;
+    @FXML
+    private ImageView itemImageInsert;
+    @FXML
+    private Button addQuantityButton;
+    @FXML
+    private Button subtractQuantityButton;
     private int itemQuantity = -1; // Initial quantity
     private int quantity = 0; //integer for amount of vbox's
 
@@ -204,7 +225,7 @@ public class DrinksMenuController implements Initializable {
 
         return group;
     }
-    
+
     private void addItemToCart(Image image) {
 
 //            itemImageInsert.setImage(image);
@@ -266,8 +287,7 @@ public class DrinksMenuController implements Initializable {
 
             // Add the Group to the cart container
             cartContainer.getChildren().add(group);
-        }
-        else {
+        } else {
             // Notify the user that the maximum limit has been reached
             System.out.println("Maximum limit reached. You can only add up to 4 different drinks to the cart.");
         }
@@ -304,14 +324,18 @@ public class DrinksMenuController implements Initializable {
 
 
     // Method to handle checkout action
-    private void performCheckout(){
+    private void performCheckout() {
         //Perform checkout actions here
-        System.out.println("Getting Customer Receipt...");
-
+        System.out.println(STR."Getting Customer Receipt for Table \{Model.getInstance().getCurrentTableID()}");
+        JSTable jt = JSTable.get(Model.getInstance().getCurrentTableID());
+        if (jt != null) {
+            jt.status = JSTable.TABLE_STATUS.FINISHED.name();
+            jt.clean = false;
+            jt.save();
+        }
         //Navigate to OrderReceiptController/OrderReceipt.fxml
         Stage stage = (Stage) checkoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 }
-

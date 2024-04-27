@@ -7,6 +7,6 @@ services:
       - 3306:3306
     volumes:
       - jsresturant_db_data:/var/lib/mysql # directory inside the container where MySQL by default its data files.
-      - ./db_scripts:/docker-entrypoint-initdb.d # initialize the database using any scripts found scripts/sql
+      - ./:/docker-entrypoint-initdb.d # initialize the database using any scripts found scripts/sql
 volumes:
   jsresturant_db_data:

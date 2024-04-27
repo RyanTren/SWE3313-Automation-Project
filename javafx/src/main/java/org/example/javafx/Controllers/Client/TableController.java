@@ -6,58 +6,106 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
+import org.example.database.Employee;
+import org.example.database.JSTable;
 import org.example.javafx.Models.Model;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
-
-import javafx.scene.paint.Color;
 
 public class TableController implements Initializable {
 
     // Add @FXML declarations for all 30 ToggleButtons
-    @FXML private ToggleButton tableToggleButton1;
-    @FXML private ToggleButton tableToggleButton2;
-    @FXML private ToggleButton tableToggleButton3;
-    @FXML private ToggleButton tableToggleButton4;
-    @FXML private ToggleButton tableToggleButton5;
-    @FXML private ToggleButton tableToggleButton6;
-    @FXML private ToggleButton tableToggleButton7;
-    @FXML private ToggleButton tableToggleButton8;
-    @FXML private ToggleButton tableToggleButton9;
-    @FXML private ToggleButton tableToggleButton10;
-    @FXML private ToggleButton tableToggleButton11;
-    @FXML private ToggleButton tableToggleButton12;
-    @FXML private ToggleButton tableToggleButton13;
-    @FXML private ToggleButton tableToggleButton14;
-    @FXML private ToggleButton tableToggleButton15;
-    @FXML private ToggleButton tableToggleButton16;
-    @FXML private ToggleButton tableToggleButton17;
-    @FXML private ToggleButton tableToggleButton18;
-    @FXML private ToggleButton tableToggleButton19;
-    @FXML private ToggleButton tableToggleButton20;
-    @FXML private ToggleButton tableToggleButton21;
-    @FXML private ToggleButton tableToggleButton22;
-    @FXML private ToggleButton tableToggleButton23;
-    @FXML private ToggleButton tableToggleButton24;
-    @FXML private ToggleButton tableToggleButton25;
-    @FXML private ToggleButton tableToggleButton26;
-    @FXML private ToggleButton tableToggleButton27;
-    @FXML private ToggleButton tableToggleButton28;
-    @FXML private ToggleButton tableToggleButton29;
-    @FXML private ToggleButton tableToggleButton30;
-    @FXML private Button logoutButton;
+    @FXML
+    private ToggleButton tableToggleButton1;
+    @FXML
+    private ToggleButton tableToggleButton2;
+    @FXML
+    private ToggleButton tableToggleButton3;
+    @FXML
+    private ToggleButton tableToggleButton4;
+    @FXML
+    private ToggleButton tableToggleButton5;
+    @FXML
+    private ToggleButton tableToggleButton6;
+    @FXML
+    private ToggleButton tableToggleButton7;
+    @FXML
+    private ToggleButton tableToggleButton8;
+    @FXML
+    private ToggleButton tableToggleButton9;
+    @FXML
+    private ToggleButton tableToggleButton10;
+    @FXML
+    private ToggleButton tableToggleButton11;
+    @FXML
+    private ToggleButton tableToggleButton12;
+    @FXML
+    private ToggleButton tableToggleButton13;
+    @FXML
+    private ToggleButton tableToggleButton14;
+    @FXML
+    private ToggleButton tableToggleButton15;
+    @FXML
+    private ToggleButton tableToggleButton16;
+    @FXML
+    private ToggleButton tableToggleButton17;
+    @FXML
+    private ToggleButton tableToggleButton18;
+    @FXML
+    private ToggleButton tableToggleButton19;
+    @FXML
+    private ToggleButton tableToggleButton20;
+    @FXML
+    private ToggleButton tableToggleButton21;
+    @FXML
+    private ToggleButton tableToggleButton22;
+    @FXML
+    private ToggleButton tableToggleButton23;
+    @FXML
+    private ToggleButton tableToggleButton24;
+    @FXML
+    private ToggleButton tableToggleButton25;
+    @FXML
+    private ToggleButton tableToggleButton26;
+    @FXML
+    private ToggleButton tableToggleButton27;
+    @FXML
+    private ToggleButton tableToggleButton28;
+    @FXML
+    private ToggleButton tableToggleButton29;
+    @FXML
+    private ToggleButton tableToggleButton30;
+    @FXML
+    private Button logoutButton;
 
-    @FXML private Label roleName;
+    @FXML
+    private Label roleName;
+
+    public enum TABLE_STATUS {
+        OCCUPIED("-fx-background-color: #e5dd16"),
+        AVAILABLE("-fx-background-color: #59BC63"),
+        FINISHED("-fx-background-color: #d21f1f");
+
+        public final String style;
+
+        private TABLE_STATUS(String style) {
+            this.style = style;
+        }
+
+    }
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ArrayList<JSTable> restaurantTables = JSTable.getAllTables();
         // Set roleName label text based on current user's role
-        String userRole = Model.getInstance().getCurrentUserRole();
-        if (userRole != null) {
-            roleName.setText(userRole);
+        Employee user = Model.getInstance().getCurrentUser();
+        if (user != null) {
+            roleName.setText(user.name);
         } else {
-            roleName.setText("Role Not Found");
+            roleName.setText("Welcome back");
         }
 
         // Loop through all ToggleButtons and add listeners
@@ -65,6 +113,21 @@ public class TableController implements Initializable {
             ToggleButton button = getToggleButtonById("tableToggleButton" + i);
             if (button != null) {
                 int finalI = i; // Capture the value of i in a final variable
+                // apply status stored in db
+                JSTable t = restaurantTables.get(i - 1);
+                boolean tableOccupied = t.status.equalsIgnoreCase(TABLE_STATUS.OCCUPIED.name());
+                boolean tableFinished = t.status.equalsIgnoreCase(TABLE_STATUS.FINISHED.name());
+                boolean tableAvailable = t.status.equalsIgnoreCase(TABLE_STATUS.AVAILABLE.name());
+
+                if (!Model.getInstance().getCurrentUser().role.equalsIgnoreCase("busboy")) {
+                    // only "available" tables are clickable
+                    button.setDisable(tableOccupied || tableFinished);
+                } else {
+                    // bus boy can only click finished tables
+                    button.setDisable(tableAvailable || tableOccupied);
+
+                }
+                button.setStyle(TABLE_STATUS.valueOf(t.status.toUpperCase()).style);
                 button.setOnAction(event -> {
                     onClickTable(button); // Call onClickTable method when a table button is clicked
                     String tableName = "Table " + finalI; // Use finalI here instead of i
@@ -140,20 +203,26 @@ public class TableController implements Initializable {
     private void onClickTable(ToggleButton tableButton) {
         try {
             // Set the background color of the clicked table button to yellow
-            tableButton.setStyle("-fx-background-color: #e5dd16");
+            tableButton.setStyle(TABLE_STATUS.OCCUPIED.style);
 
-            // Set the text of the clicked table button to "Occupied"
-            // tableButton.setText("Occupied");
-            System.out.println("Occupied");
+            // update table status in DB
+            int tableID = Integer.parseInt(tableButton.getText().split(" ")[1]);
+            JSTable jt = JSTable.get(tableID);
+            if (jt != null) {
+                jt.status = TABLE_STATUS.OCCUPIED.name();
+                jt.clean = false;
+                jt.save();
+            }
 
             // You may want to disable the button after it's been clicked
             tableButton.setDisable(true);
+            Model.getInstance().setCurrentTableID(tableID);
 
             // Determine the user's role
-            String userRole = Model.getInstance().getCurrentUserRole();
+            Employee user = Model.getInstance().getCurrentUser();
 
             // Redirect based on the user's role
-            if (userRole != null && userRole.equals("busboy")) {
+            if (user != null && user.role.equalsIgnoreCase("busboy")) {
                 // Redirect to TableConditionsController
                 Model.getInstance().getViewFactory().showTableConditions();
             } else {
@@ -194,5 +263,3 @@ public class TableController implements Initializable {
 //        }
 //    }
 }
-
-

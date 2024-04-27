@@ -79,7 +79,6 @@ public class Employee {
         }
     }
 
-
     public static void main(String[] args) {
         Employee j = new Employee("John Paul", "manager", "jpaull", "strongpassword");
         j.insert();

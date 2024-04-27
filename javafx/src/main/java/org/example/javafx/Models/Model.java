@@ -40,14 +40,15 @@ public class Model {
 
     private static Model instance = new Model();
     private Employee currentUser;
+    private int currentTableID;
 
-    private Model(){
+    private Model() {
         this.viewFactory = new ViewFactory();
     }
 
     //Checks to make sure the Model is created links back to App.java and ViewFactory.java
-    public static synchronized Model getInstance(){
-        if(model == null){
+    public static synchronized Model getInstance() {
+        if (model == null) {
             model = new Model();
         }
         return model;
@@ -61,13 +62,14 @@ public class Model {
     public void setCurrentUser(Employee user) {
         currentUser = user;
     }
+    public void setCurrentTableID(int id) {
+        currentTableID = id;
+    }
 
-    public String getCurrentUserRole() {
-        if (currentUser != null) {
-            return currentUser.role;
-        } else {
-            return null;
-        }
+    public int getCurrentTableID() {return currentTableID;}
+
+    public Employee getCurrentUser() {
+        return currentUser;
     }
 }
 

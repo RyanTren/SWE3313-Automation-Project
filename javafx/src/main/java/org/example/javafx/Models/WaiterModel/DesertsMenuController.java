@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.example.database.JSTable;
 import org.example.javafx.Models.Model;
 
 import java.net.URL;
@@ -106,7 +107,12 @@ public class DesertsMenuController implements Initializable {
     // Method to handle checkout action
     private void performCheckout(){
         //Perform checkout actions here
-        System.out.println("Getting Customer Receipt...");
+        JSTable jt = JSTable.get(Model.getInstance().getCurrentTableID());
+        if (jt != null) {
+            jt.status = JSTable.TABLE_STATUS.FINISHED.name();
+            jt.clean = false;
+            jt.save();
+        }
 
         //Navigate to OrderReceiptController/OrderReceipt.fxml
         Stage stage = (Stage) checkoutButton.getScene().getWindow();
