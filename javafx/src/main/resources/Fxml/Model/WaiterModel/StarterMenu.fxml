@@ -243,6 +243,6 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <VBox fx:id="cartContainer" layoutX="1607.0" layoutY="220.0" />
+      <VBox fx:id="cartContainer" layoutX="1607.0" layoutY="220.0" spacing="10.0" />
     </children>
 </AnchorPane>

@@ -346,7 +346,7 @@ public class StarterMenuController implements Initializable {
         Group g = (Group) ((Button) event.getSource()).getParent();
 
         Label qLabel = (Label) g.getChildren().getLast();
-        ImageView imageView = (ImageView) g.getChildren().get(g.getChildren().size() - 2);
+        ImageView imageView = (ImageView) g.getChildren().get(g.getChildren().size() - 4);
 
         MENU_ITEM mui = getMenuItem(imageView.getId());
         addItemToCart(mui, direction);
