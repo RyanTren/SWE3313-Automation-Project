@@ -66,7 +66,7 @@ public class StarterMenuController implements Initializable {
     private enum MENU_ITEM {
         CORNBREAD("cornbread", "cornbreadImage", 3.00f),
         LOAF("white bread loaf", "loafImage", 5.00f),
-        POTATOBUN("martin's potato bun", "martinImage", 6.50f),
+        POTATOBUN("martins potato bun", "martinImage", 6.50f),
         WINGS("smoked wings", "wingImage", 10.50f);
 
         private final String name, id;
