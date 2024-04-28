@@ -42,13 +42,13 @@ Assuming you have the following folder structure (note the 2 .idea hidden folder
  - Click Open on the Welcome screen & open the root project folder (the one with everything as shown above)
  - do not open just the javafx folder
 
-   ### 3. Download Docker Desktop & Run Docker in Terminal
+### 3. Download Docker Desktop & Run Docker in Terminal
 
    <a href="https://www.docker.com/products/docker-desktop/">Link to Download</a>
 
    After Installing, run these commands in you IDE's terminal: docker compose up -d (creates & starts the container contianing the mySQL DB), docker compose down --volumes (stops & removes the container contianing the mySQL DB)
 
-   ### 4. Run App.java
+### 4. Run App.java
 
    Make sure you set your SDK to Oracle 22, that is the version our project is currently running.
 
