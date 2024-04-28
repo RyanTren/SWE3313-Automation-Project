@@ -27,8 +27,6 @@ public class LoginController implements Initializable {
     @FXML
     private Label errorLabel;
 
-    private static Employee currentUser;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loginButton.setOnAction(event -> {
@@ -49,10 +47,10 @@ public class LoginController implements Initializable {
 
         // Check if entered username and password match the valid credentials
         Employee user = Employee.getByUsername(enteredUsername);
-        System.out.println(user + " is logging in!");
+        System.out.println(STR."\{user} is logging in!");
         if (user != null) {
             if (user.password.equalsIgnoreCase(enteredPassword)) {
-                currentUser = user;
+                Model.getInstance().setCurrentUser(user);
                 return true;
             }
         }
@@ -63,13 +61,12 @@ public class LoginController implements Initializable {
     private void onLogin() {
         Stage stage = (Stage) errorLabel.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        switch (currentUser.role) {
+        Employee user = Model.getInstance().getCurrentUser();
+        switch (user.role) {
             case "waiter", "host", "busboy":
-                Model.getInstance().setCurrentUser(currentUser);
                 Model.getInstance().getViewFactory().showTableWindow();
                 break;
             case "manager":
-                Model.getInstance().setCurrentUser(currentUser);
                 Model.getInstance().getViewFactory().showManagerAdminPanel();
                 break;
             case "cook":

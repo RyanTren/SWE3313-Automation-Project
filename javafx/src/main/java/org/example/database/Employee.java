@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigInteger;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -51,32 +54,51 @@ public class Employee {
 
     public static Employee get(int id) {
         Database db = new DatabaseConnection().getConnection();
-        String statement = String.format("SELECT * from %s where id=? LIMIT 1", TABLE_NAME);
-        try {
-            List<HashMap> results = db.sql(statement, id).results(HashMap.class);
-            HashMap row = results.getFirst();
-            Employee e = new Employee(row.get("name").toString(), row.get("role").toString(),
-                    row.get("username").toString(), row.get("password").toString());
-            e.hoursWorked = (float) row.get("hoursWorked");
-            return e;
-        } catch (IndexOutOfBoundsException | NoSuchElementException ex) {
-            return null;
+        String sql = String.format("SELECT * from %s where id=%d LIMIT 1", TABLE_NAME, id);
+        try (Statement statement = db.getConnection().createStatement()) {
+            ResultSet rs = statement.executeQuery(sql);
+            // query produced no results
+            if (!rs.next()) return null;
+
+            Employee o = new Employee();
+            do {
+                o.id = BigInteger.valueOf(rs.getInt("id"));
+                o.role = rs.getString("role");
+                o.name = rs.getString("name");
+                o.password = rs.getString("password");
+                o.username = rs.getString("employee_id");
+                o.hoursWorked = rs.getFloat("hoursWorked");
+            } while (rs.next());
+            return o;
+        } catch (SQLException sqlException) {
+            System.err.println(sqlException);
         }
+        return null;
     }
 
     public static Employee getByUsername(String username) {
         Database db = new DatabaseConnection().getConnection();
-        String statement = String.format("SELECT * from %s where username=? LIMIT 1", TABLE_NAME);
-        try {
-            List<HashMap> results = db.sql(statement, username).results(HashMap.class);
-            HashMap row = results.getFirst();
-            Employee e = new Employee(row.get("name").toString(), row.get("role").toString(),
-                    row.get("username").toString(), row.get("password").toString());
-            e.hoursWorked = (float) row.get("hoursWorked");
-            return e;
-        } catch (IndexOutOfBoundsException | NoSuchElementException ex) {
-            return null;
+        String sql = String.format("SELECT * from %s where username = '%s' LIMIT 1", TABLE_NAME, username);
+        System.out.println(sql);
+        try (Statement statement = db.getConnection().createStatement()) {
+            ResultSet rs = statement.executeQuery(sql);
+            // query produced no results
+            if (!rs.next()) return null;
+
+            Employee o = new Employee();
+            do {
+                o.id = BigInteger.valueOf(rs.getInt("id"));
+                o.role = rs.getString("role");
+                o.name = rs.getString("name");
+                o.password = rs.getString("password");
+                o.username = rs.getString("username");
+                o.hoursWorked = rs.getFloat("hoursWorked");
+            } while (rs.next());
+            return o;
+        } catch (SQLException sqlException) {
+            System.err.println(sqlException);
         }
+        return null;
     }
 
     public static void main(String[] args) {

@@ -1,19 +1,18 @@
-package org.example.database;
+package org.example.javafx.Models;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.Collections;
 import java.util.Map;
 
 public class OrderJSONObject extends JSONObject {
-    public JSONArray drinks, entrees, desserts, starters;
+    public JSONObject drinks, entrees, desserts, starters;
 
     public OrderJSONObject() {
-        drinks = new JSONArray();
-        starters = new JSONArray();
-        entrees = new JSONArray();
-        desserts = new JSONArray();
+        drinks = new JSONObject();
+        starters = new JSONObject();
+        entrees = new JSONObject();
+        desserts = new JSONObject();
         put("drinks", drinks);
         put("starters", starters);
         put("entrees", entrees);
@@ -22,7 +21,7 @@ public class OrderJSONObject extends JSONObject {
 
     public static void main(String[] args) {
         OrderJSONObject order = new OrderJSONObject();
-        order.drinks.add(Map.of("water", 1));
+        order.drinks.put("water", 1);
         System.out.println(order);
     }
 }

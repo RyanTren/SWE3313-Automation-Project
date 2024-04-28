@@ -91,7 +91,7 @@ public class TableController implements Initializable {
 
         public final String style;
 
-        private TABLE_STATUS(String style) {
+        TABLE_STATUS(String style) {
             this.style = style;
         }
 

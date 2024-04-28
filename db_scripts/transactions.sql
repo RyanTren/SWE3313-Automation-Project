@@ -4,18 +4,17 @@ create table jrestaurant_transactions
 (
     transaction_id      int
         auto_increment PRIMARY KEY,
-    date_of_transaction date,
-    transaction_amount  decimal(10, 2),
-    employee_id         int,
-    table_number        int,
-    FOREIGN KEY
-        (employee_id) REFERENCES jrestaurant_employees
-        (id)
+    date_of_transaction datetime default current_timestamp,
+    transaction_amount  decimal(10, 2) not null,
+    employee_id         int            not null,
+    table_number        int            not null,
+    FOREIGN KEY (employee_id) REFERENCES jrestaurant_employees (id),
+    FOREIGN KEY (table_number) REFERENCES jsrestaurant.jrestaurant_tables (id)
 );
 
 
 -- inserting some data into the table
 insert into jrestaurant_transactions
-    (date_of_transaction, transaction_amount, employee_id, table_number)
-values ('2024-04-01', 252.70, 3, 5),
-       ('2024-04-02', 75.50, 2, 7);
+    (transaction_amount, employee_id, table_number)
+values (252.70, 3, 5),
+       (75.50, 2, 7);

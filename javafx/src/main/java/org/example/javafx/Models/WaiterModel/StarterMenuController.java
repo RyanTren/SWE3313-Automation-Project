@@ -115,12 +115,7 @@ public class StarterMenuController implements Initializable {
     // Method to handle checkout action
     private void performCheckout() {
         //Perform checkout actions here
-        JSTable jt = JSTable.get(Model.getInstance().getCurrentTableID());
-        if (jt != null) {
-            jt.status = JSTable.TABLE_STATUS.FINISHED.name();
-            jt.clean = false;
-            jt.save();
-        }
+        Model.getInstance().setSelectedTableStatus(JSTable.TABLE_STATUS.FINISHED.name(), false);
 
         //Navigate to OrderReceiptController/OrderReceipt.fxml
         Stage stage = (Stage) checkoutButton.getScene().getWindow();

@@ -1,31 +1,38 @@
 package org.example.javafx.Models.WaiterModel;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import org.example.database.JSTable;
+import org.example.database.Order;
+import org.example.database.Transaction;
 import org.example.javafx.Models.Model;
 
 //import javax.swing.text.html.ImageView;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import org.example.javafx.Models.OrderJSONObject;
+import org.json.simple.JSONObject;
 
 
 public class DrinksMenuController implements Initializable {
-    @FXML
-    private Button drinksCategoryButton;
     @FXML
     private Button entreesCategoryButton;
     @FXML
@@ -52,25 +59,31 @@ public class DrinksMenuController implements Initializable {
     private Button drinkFour;
 
     @FXML
-    private ImageView waterImage;
-    @FXML
-    private ImageView sodaImage;
-    @FXML
-    private ImageView ipaImage;
-    @FXML
-    private ImageView sweetTeaImage;
-
-    @FXML
     private VBox cartContainer;
     @FXML
-    private ImageView itemImageInsert;
-    @FXML
-    private Button addQuantityButton;
-    @FXML
-    private Button subtractQuantityButton;
-    private int itemQuantity = -1; // Initial quantity
-    private int quantity = 0; //integer for amount of vbox's
+    private Text subtotalValueLabel, taxValueLabel, totalValueLabel;
 
+    public static final float TAX_RATE = 0.1f; // 10% tax
+
+    private enum MENU_ITEM {
+        WATER("water", "waterImage", 0),
+        SODA("soda", "sodaImage", 3),
+        IPA("ipa", "ipaImage", 6.75f),
+        SWEET_TEA("sweet tea", "sweetTeaImage", 2.50f);
+
+        private final String name, id;
+        private final float price;
+
+        MENU_ITEM(String name, String id, float price) {
+            this.name = name.toLowerCase();
+            this.id = id;
+            this.price = price;
+        }
+
+        String getName() {
+            return this.name;
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -87,51 +100,10 @@ public class DrinksMenuController implements Initializable {
         });
 
         // Drink Button Logic
-
-        drinkOne.setOnAction(event -> {
-            addItemToCart(waterImage.getImage());
-        });
-
-        drinkTwo.setOnAction(event -> {
-            addItemToCart(sodaImage.getImage());
-        });
-
-        drinkThree.setOnAction(event -> {
-            addItemToCart(ipaImage.getImage());
-        });
-
-        drinkFour.setOnAction(event -> {
-            addItemToCart(sweetTeaImage.getImage());
-        });
-
-//        // Add Quantity Button Logic
-//        addQuantityButton.setOnAction(event -> {
-//            quantity++;
-//            updateQuantityLabel();
-//        });
-//
-//        // Subtract Quantity Button Logic
-//        subtractQuantityButton.setOnAction(event -> {
-//            if (quantity > 0) {
-//                quantity--;
-//                updateQuantityLabel();
-//            }
-//        });
-
-        // Add Quantity Button Logic
-        addQuantityButton.setOnAction(event -> {
-            itemQuantity++;
-            updateQuantityLabel();
-        });
-
-        // Subtract Quantity Button Logic
-        subtractQuantityButton.setOnAction(event -> {
-            if (itemQuantity > 0) {
-                itemQuantity--;
-                updateQuantityLabel();
-            }
-        });
-
+        drinkOne.setOnAction(this::handleItemClick);
+        drinkTwo.setOnAction(this::handleItemClick);
+        drinkThree.setOnAction(this::handleItemClick);
+        drinkFour.setOnAction(this::handleItemClick);
 
         //Checkout Button Logic
         checkoutButton.setOnAction(event -> {
@@ -139,13 +111,6 @@ public class DrinksMenuController implements Initializable {
             performCheckout();
         });
 
-//        // Drinks Category Button Logic
-//        drinksCategoryButton.setOnAction(event -> {
-//            System.out.println("Navigating to Drinks Category");
-//            Stage stage = (Stage) drinksCategoryButton.getScene().getWindow();
-//            Model.getInstance().getViewFactory().closeStage(stage);
-//            Model.getInstance().getViewFactory().showDrinksMenu();
-//        });
 
         // Entrees Category Button Logic
         entreesCategoryButton.setOnAction(event -> {
@@ -180,117 +145,170 @@ public class DrinksMenuController implements Initializable {
         });
     }
 
-    @FXML
-    private void handleItemClick(MouseEvent event) {
-        ImageView imageView = (ImageView) event.getSource();
+    private void handleItemClick(ActionEvent event) {
+        Group g = (Group) ((Button) event.getSource()).getParent();
+        ImageView imageView = (ImageView) g.getChildren().getLast();
         Image image = imageView.getImage();
-        addItemToCart(image);
-    }
 
-
-//    //This works.... but you have to click the button region not the picture or the text
-//    private void addItemToCart(javafx.scene.image.Image image) {
-//        // Add item to order cart
-//        System.out.println("Adding item to order cart...");
-//
-//        // Transfer image to display
-//        itemImageInsert.setImage(image);
-//    }
-
-    private Group createItemGroup(Image image) {
-        // Create UI elements for the item
-        ImageView itemImageView = new ImageView(image);
-        itemImageView.setFitWidth(139);
-        itemImageView.setFitHeight(104);
-
-        // Create buttons for quantity control
-        Button addButton = new Button("+");
-        Button subtractButton = new Button("-");
-
-        // Add event handlers for quantity buttons
-        addButton.setOnAction(event -> {
-            itemQuantity++;
-            updateQuantityLabel();
-        });
-        subtractButton.setOnAction(event -> {
-            if (itemQuantity > 0) {
-                itemQuantity--;
-                updateQuantityLabel();
-            }
-        });
-
-        // Create a Group to hold all UI elements
-        Group group = new Group();
-        group.getChildren().addAll(itemImageView, addButton, subtractButton);
-
-        return group;
-    }
-
-    private void addItemToCart(Image image) {
-
-//            itemImageInsert.setImage(image);
-
-        // Check if the number of children in cartContainer is less than 4
-        if (cartContainer.getChildren().size() < 4) {
-            // Create a Group for the item container
-            Group group = new Group();
-
-            itemImageInsert.setImage(image);
-
-            // Create a Rectangle to serve as the background
-            Rectangle backgroundRect = new Rectangle(236, 131);
-            backgroundRect.setFill(Color.web("#d9d9d9"));
-            backgroundRect.setArcWidth(20);
-            backgroundRect.setArcHeight(20);
-
-            // Create Add and Subtract Buttons
-            Button addButton = new Button("+");
-            addButton.setLayoutX(187);
-            addButton.setLayoutY(17);
-            addButton.setPrefWidth(39.0);
-            addButton.setPrefHeight(40.0);
-            addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
-            addButton.setFont(Font.font(19));
-            addButton.setTextFill(Color.WHITE);
-
-            addButton.setOnAction(event -> {
-                itemQuantity++;
-                updateQuantityLabel();
-            });
-
-            Button subtractButton = new Button("-");
-            subtractButton.setLayoutX(187);
-            subtractButton.setLayoutY(73);
-            subtractButton.setPrefWidth(39.0);
-            subtractButton.setPrefHeight(40.0);
-            subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
-            subtractButton.setFont(Font.font(19));
-            subtractButton.setTextFill(Color.WHITE);
-
-            subtractButton.setOnAction(event -> {
-                if (itemQuantity > 0) {
-                    itemQuantity--;
-                    updateQuantityLabel();
-                }
-            });
-
-            // Create ImageView for the item
-            ImageView itemImageView = new ImageView(image);
-            itemImageView.setLayoutX(23);
-            itemImageView.setLayoutY(14);
-            itemImageView.setFitWidth(139);
-            itemImageView.setFitHeight(104); // Added fitHeight
-            itemImageView.setPreserveRatio(true); // Added to preserve aspect ratio
-
-            // Add all elements to the Group
-            group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView);
-
-            // Add the Group to the cart container
-            cartContainer.getChildren().add(group);
-        } else {
-            // Notify the user that the maximum limit has been reached
-            System.out.println("Maximum limit reached. You can only add up to 4 different drinks to the cart.");
+        switch (imageView.getId()) {
+            case "waterImage":
+                addItemToCart(MENU_ITEM.WATER);
+                updateUI(image, imageView.getId());
+                break;
+            case "sodaImage":
+                addItemToCart(MENU_ITEM.SODA);
+                updateUI(image, imageView.getId());
+                break;
+            case "ipaImage":
+                addItemToCart(MENU_ITEM.IPA);
+                updateUI(image, imageView.getId());
+                break;
+            case "sweetTeaImage":
+                addItemToCart(MENU_ITEM.SWEET_TEA);
+                updateUI(image, imageView.getId());
+                break;
         }
+    }
+
+    private MENU_ITEM getMenuItem(String id) {
+        for (MENU_ITEM i : MENU_ITEM.values()) {
+            if (i.id.equalsIgnoreCase(id) || i.getName().equalsIgnoreCase(id)) {
+                return i;
+            }
+        }
+        return null;
+    }
+
+    private void updateUI(Image image, String imageID) {
+        // if an item is already in cart, don't add it again
+        // just update its quantity label
+        if (!cartContainer.getChildren().isEmpty()) {
+            for (Node n : cartContainer.getChildren()) {
+                Group g = (Group) n;
+                // Get 2nd to last item added to the group
+                // group.getChildren().addAll(..., itemImageView, quantityLabel);
+                ImageView itemImageView = (ImageView) g.getChildren().get(g.getChildren().size() - 2);
+                if (itemImageView.getId().equalsIgnoreCase(imageID)) {
+                    // get quantity from cart & update label
+                    MENU_ITEM mui = getMenuItem(imageID);
+                    int quantity = (int) Model.getInstance().currentOrder.drinks.get(mui.getName());
+                    Label qLabel = (Label) g.getChildren().getLast();
+                    qLabel.setText(String.valueOf(quantity));
+
+                    return; // item is already in cart so don't add another group
+                }
+            }
+        }
+
+        // Create a Group for the item container
+        Group group = new Group();
+
+        // Create a Rectangle to serve as the background
+        Rectangle backgroundRect = new Rectangle(236, 131);
+        backgroundRect.setFill(Color.web("#d9d9d9"));
+        backgroundRect.setArcWidth(20);
+        backgroundRect.setArcHeight(20);
+
+        Label quantityLabel = new Label(String.valueOf(1));
+        quantityLabel.setTextAlignment(TextAlignment.CENTER);
+        quantityLabel.setFont(new Font(15));
+        quantityLabel.setLayoutX(140);
+        quantityLabel.setLayoutY(57);
+
+        // Create Add and Subtract Buttons
+        Button addButton = new Button("+");
+        addButton.setLayoutX(187);
+        addButton.setLayoutY(17);
+        addButton.setPrefWidth(39.0);
+        addButton.setPrefHeight(40.0);
+        addButton.setStyle("-fx-background-color: #3BB138; -fx-background-radius: 25;");
+        addButton.setFont(Font.font(19));
+        addButton.setTextFill(Color.WHITE);
+
+        addButton.setOnAction(event -> {
+            updateQuantityLabel(event, "add");
+        });
+
+        Button subtractButton = new Button("-");
+        subtractButton.setLayoutX(187);
+        subtractButton.setLayoutY(73);
+        subtractButton.setPrefWidth(39.0);
+        subtractButton.setPrefHeight(40.0);
+        subtractButton.setStyle("-fx-background-color: #D2C01D; -fx-background-radius: 25;");
+        subtractButton.setFont(Font.font(19));
+        subtractButton.setTextFill(Color.WHITE);
+
+        subtractButton.setOnAction(event -> {
+            updateQuantityLabel(event, "sub");
+        });
+
+        // Create ImageView for the item
+        ImageView itemImageView = new ImageView(image);
+        itemImageView.setId(imageID);
+        itemImageView.setLayoutX(23);
+        itemImageView.setLayoutY(14);
+        itemImageView.setFitWidth(139);
+        itemImageView.setFitHeight(104); // Added fitHeight
+        itemImageView.setPreserveRatio(true); // Added to preserve aspect ratio
+
+        // Add all elements to the Group
+        group.getChildren().addAll(backgroundRect, addButton, subtractButton, itemImageView, quantityLabel);
+
+        // Add the Group to the cart container
+        cartContainer.getChildren().add(group);
+    }
+
+    private void addItemToCart(MENU_ITEM item) {
+        addItemToCart(item, "add");
+    }
+
+    private void addItemToCart(MENU_ITEM item, String direction) {
+        OrderJSONObject cart = Model.getInstance().getCurrentOrder();
+        if (cart.drinks.containsKey(item.getName())) {
+            // System.out.println("Item already in order. Updating quantity");
+            Integer quantity = (Integer) cart.drinks.get(item.getName());
+            if (direction.equalsIgnoreCase("add")) {
+                cart.drinks.put(item.getName(), quantity + 1);
+            } else {
+                if (quantity > 0) {
+                    cart.drinks.put(item.getName(), quantity - 1);
+                }
+            }
+        } else {
+            // System.out.println("Adding new item to order");
+            cart.drinks.put(STR."\{item.getName()}", 1);
+        }
+        // update current order with everything now in cart
+        Model.getInstance().currentOrder = cart;
+        // calculate total, taxes, etc...
+        updateTransaction();
+    }
+
+    private void updateTransaction() {
+        float subtotal = 0;
+        float taxes = 0;
+        float total = 0;
+        OrderJSONObject cart = Model.getInstance().currentOrder;
+
+        Set keys = cart.keySet();
+        for (Object k : keys) {
+            JSONObject category = (JSONObject) cart.get(k);
+            Set categoryKey = category.keySet();
+            for (Object itemName : categoryKey) {
+                Integer itemQuantity = (Integer) category.get(itemName);
+                MENU_ITEM mui = getMenuItem(itemName.toString());
+                if (mui != null) {
+                    subtotal += (mui.price * itemQuantity);
+                    taxes += (subtotal * TAX_RATE);
+                    total += (subtotal + taxes);
+                }
+            }
+        }
+        subtotalValueLabel.setText(String.format("%.2f", subtotal));
+        taxValueLabel.setText(String.format("%.2f", taxes));
+        totalValueLabel.setText(String.format("%.2f", total));
+        Transaction transaction = Model.getInstance().getCurrentTransaction();
+        transaction.transaction_amount = total;
     }
 
 
@@ -317,9 +335,17 @@ public class DrinksMenuController implements Initializable {
     }
 
     // Method to update the quantity label
-    private void updateQuantityLabel() {
+    private void updateQuantityLabel(ActionEvent event, String direction) {
         // Update UI to display the current quantity
-        System.out.println(STR."Different Drink Quantity: \{quantity}"); // For testing, you can replace this with actual UI update code
+        Group g = (Group) ((Button) event.getSource()).getParent();
+
+        Label qLabel = (Label) g.getChildren().getLast();
+        ImageView imageView = (ImageView) g.getChildren().get(g.getChildren().size() - 2);
+
+        MENU_ITEM mui = getMenuItem(imageView.getId());
+        addItemToCart(mui, direction);
+        int quantity = (int) Model.getInstance().currentOrder.drinks.get(mui.getName());
+        qLabel.setText(String.valueOf(quantity));
     }
 
 
@@ -327,12 +353,17 @@ public class DrinksMenuController implements Initializable {
     private void performCheckout() {
         //Perform checkout actions here
         System.out.println(STR."Getting Customer Receipt for Table \{Model.getInstance().getCurrentTableID()}");
-        JSTable jt = JSTable.get(Model.getInstance().getCurrentTableID());
-        if (jt != null) {
-            jt.status = JSTable.TABLE_STATUS.FINISHED.name();
-            jt.clean = false;
-            jt.save();
-        }
+        Transaction transaction = Model.getInstance().getCurrentTransaction();
+        OrderJSONObject cart = Model.getInstance().getCurrentOrder();
+        transaction.save();
+        Order o = new Order(cart, transaction.id);
+        o.save();
+
+        // reset everything
+        Model.getInstance().currentOrder = null;
+        Model.getInstance().currentTransaction = null;
+        Model.getInstance().setSelectedTableStatus(JSTable.TABLE_STATUS.FINISHED.name(), false);
+
         //Navigate to OrderReceiptController/OrderReceipt.fxml
         Stage stage = (Stage) checkoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
