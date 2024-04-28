@@ -52,11 +52,11 @@ data rather than calculating it.
 
 
 ## Project Plan Video Presentation
- * [Click here](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be) - YouTube
+ * [Click here](video link goes here) - YouTube
 
 ## Requirements 
 * [Requirements Introduction](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Requirements/Intro%20to%20SWE%20Requirements%20Doc.pdf)
-* [Requirements Video Presentation](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be)
+* [Requirements Video Presentation](video link goes here)
 
 ## User Interface Design
 * __[User Interface Design Information](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Prototype/SWE3313%20-%20Group_1_Prototype_1.pdf)__
@@ -64,7 +64,7 @@ data rather than calculating it.
 
 ## Technical Design
 * __[Technical Design Information](redirect github sublink here (.md file))__
-* __[Technical Design Presentation](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be)__
+* __[Technical Design Presentation](video link goes here)__
 
 ## Implementation - Final Project
 * __[Final Implementation](https://github.com/RyanTren/SWE3313-Automation-Project/tree/fmxl-test)__
