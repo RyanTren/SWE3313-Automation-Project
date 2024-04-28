@@ -55,11 +55,11 @@ data rather than calculating it.
  * [Click here](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be) - YouTube
 
 ## Requirements 
-* [Requirements Introduction](redirect github sublink here (.md file))
+* [Requirements Introduction](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Requirements/Intro%20to%20SWE%20Requirements%20Doc.pdf)
 * [Requirements Video Presentation](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be)
 
 ## User Interface Design
-* __[User Interface Design Information](redirect github sublink here (.md file))__
+* __[User Interface Design Information](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Prototype/SWE3313%20-%20Group_1_Prototype_1.pdf)__
 * __[User Interface Design Video Presentation](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be)__
 
 ## Technical Design
