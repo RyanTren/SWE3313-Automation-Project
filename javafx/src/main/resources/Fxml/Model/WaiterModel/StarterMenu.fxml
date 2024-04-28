@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
@@ -93,7 +94,6 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="131.0" layoutX="1607.0" layoutY="220.0" stroke="#d9d9d9" strokeType="INSIDE" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="236.0" />
         <Button fx:id="drinksCategoryButton" layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks">
             <effect>
                 <DropShadow>
@@ -131,7 +131,7 @@
             </effect></Button>
         <Group layoutX="334.0" layoutY="362.0">
             <children>
-                <Button fx:id="drinkOne" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                <Button fx:id="starterOne" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                     <effect>
                         <DropShadow>
                             <color>
@@ -140,7 +140,7 @@
                     </effect></Button>
                 <Text layoutX="205.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cornbread" />
                 <Text layoutX="219.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3.00" />
-                <ImageView fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="cornbreadImage" fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../assets/CornbreadImage.png" />
                     </image>
@@ -149,7 +149,7 @@
         </Group>
         <Group layoutX="837.0" layoutY="362.0">
             <children>
-                <Button fx:id="drinkTwo" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                <Button fx:id="starterTwo" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                     <effect>
                         <DropShadow>
                             <color>
@@ -158,7 +158,7 @@
                     </effect></Button>
                 <Text layoutX="186.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="White Bread Loaf" />
                 <Text layoutX="217.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$5.00" />
-                <ImageView fitHeight="103.0" fitWidth="109.0" layoutX="181.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="loafImage" fitHeight="103.0" fitWidth="109.0" layoutX="181.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../assets/WhiteBreadLoafImage.png" />
                     </image>
@@ -167,7 +167,7 @@
         </Group>
         <Group layoutX="334.0" layoutY="653.0">
             <children>
-                <Button fx:id="drinkThree" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                <Button fx:id="starterThree" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                     <effect>
                         <DropShadow>
                             <color>
@@ -176,7 +176,7 @@
                     </effect></Button>
                 <Text layoutX="173.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martin's Potato Bun" />
                 <Text layoutX="212.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$6.50" />
-                <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="162.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="martinImage" fitHeight="128.0" fitWidth="128.0" layoutX="162.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../assets/MartinsPotatoBunImage.png" />
                     </image>
@@ -185,7 +185,7 @@
         </Group>
         <Group layoutX="837.0" layoutY="653.0">
             <children>
-                <Button fx:id="drinkFour" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                <Button fx:id="starterFour" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                     <effect>
                         <DropShadow>
                             <color>
@@ -194,23 +194,13 @@
                     </effect></Button>
                 <Text layoutX="195.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smoked Wings" />
                 <Text layoutX="218.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$10.50" />
-                <ImageView fitHeight="89.0" fitWidth="172.0" layoutX="135.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="wingImage" fitHeight="89.0" fitWidth="172.0" layoutX="135.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../assets/SmokedWingsImage.jpg" />
                     </image>
                 </ImageView>
             </children>
         </Group>
-        <Button fx:id="addQuantityButton" layoutX="1794.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #3BB138; -fx-background-radius: 25;" text="+" textFill="WHITE">
-            <font>
-                <Font size="19.0" />
-            </font>
-        </Button>
-        <Button fx:id="subtractQuantityButton" layoutX="1794.0" layoutY="293.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #D2C01D; -fx-background-radius: 25;" text="-" textFill="WHITE">
-            <font>
-                <Font size="19.0" />
-            </font>
-        </Button>
         <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
             <graphic>
                 <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
@@ -238,5 +228,21 @@
         <Text layoutX="1628.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash" />
         <Text layoutX="1717.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card" />
         <Text layoutX="1793.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Pay" />
+      <Text fx:id="subtotalValueLabel" layoutX="1803.0" layoutY="797.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="taxValueLabel" layoutX="1803.0" layoutY="835.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalValueLabel" fill="#a41515" layoutX="1803.0" layoutY="895.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <VBox fx:id="cartContainer" layoutX="1607.0" layoutY="220.0" />
     </children>
 </AnchorPane>
