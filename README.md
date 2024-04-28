@@ -67,6 +67,6 @@ data rather than calculating it.
 * __[Technical Design Presentation](youtube link here)__
 
 ## Implementation - Final Project
-* __[Final Implementation]((https://github.com/RyanTren/SWE3313-Automation-Project/tree/fmxl-test))__
-* __[How to Run the Project]((https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/setup.md))__
+* __[Final Implementation](https://github.com/RyanTren/SWE3313-Automation-Project/tree/fmxl-test)__
+* __[How to Run the Project](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/setup.md)__
 * __[Presentation](youtube link here)__
