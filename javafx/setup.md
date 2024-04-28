@@ -51,3 +51,5 @@ Assuming you have the following folder structure (note the 2 .idea hidden folder
    ### 4. Run App.java
 
    Make sure you set your SDK to Oracle 22, that is the version our project is currently running.
+
+   ![What it should look like...](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/instructionPics/pic.png?raw=true)
