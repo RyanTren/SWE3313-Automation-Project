@@ -45,8 +45,6 @@ public class ViewFactory {
 
     public void showTableConditions(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/BusboyModel/TableConditions.fxml"));
-        // Set the controller programmatically
-        loader.setController(new TableConditionsController());
         createStage(loader);
     }
 
