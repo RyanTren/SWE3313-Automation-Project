@@ -45,7 +45,7 @@ data rather than calculating it.
 ## Team Assignment
 * __[Team Assignments](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Assignment/Roles)__
 ## Technology Selection
-* __[Technology Description](redirect github sublink here (techdescription.md file))__
+* __[Technology Description](https://github.com/RyanTren/SWE3313-Automation-Project/blob/6934d63d48b1bf7faf6cac7bed4be07e60430544/techdescription.md)__
 
 ## Project Plan
 * __[Project Plan](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Project%20Plan/Intro%20to%20SWE%20Project.pdf)__ 
