@@ -1,7 +1,7 @@
 # Technology Description
 
 ## Guidelines to Follow
-Build an executable program or a cloud-based web application.
+Build an executable program or a cloud-based web application that automates restaurant tasks.
 
 ##  Technologies used:
 
