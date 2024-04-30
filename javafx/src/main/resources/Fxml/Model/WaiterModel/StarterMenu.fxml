@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" width="1927.0">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.3244274854660034" />
+                    </color>
+                </DropShadow>
+            </effect></Rectangle>
+        <Circle fill="#e8d3d3" layoutX="140.0" layoutY="143.0" radius="100.0" stroke="#e8d3d3" strokeType="INSIDE" />
+        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="40.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../assets/J's Restaurant Logo.png" />
+            </image>
+        </ImageView>
+        <Button id="backButton" fx:id="backButton" layoutX="1784.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Back" textFill="WHITE">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+        <Text layoutX="289.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order #1">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Text>
+        <Button id="logoutButton" fx:id="logoutButton" layoutX="14.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="126.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Logout" textFill="WHITE">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="289.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-width: 50; -fx-arc-height: 50;" width="1169.0">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.2099236696958542" />
+                    </color>
+                </DropShadow>
+            </effect></Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="903.0" layoutX="1581.0" layoutY="143.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="299.0">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.3015267252922058" />
+                    </color>
+                </DropShadow>
+            </effect></Rectangle>
+        <Text layoutX="306.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="1607.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Order">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Line endX="135.0" layoutX="1707.0" layoutY="205.0" startX="-100.0" />
+        <Line endX="135.0" layoutX="1713.0" layoutY="923.0" startX="-100.0" />
+        <Line endX="135.0" layoutX="1713.0" layoutY="860.0" startX="-100.0" />
+        <Button fx:id="checkoutButton" layoutX="1607.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="236.0" style="-fx-background-color: #B51D1D; -fx-background-radius: 15;" text="Place Order" textFill="WHITE">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Button>
+        <Text fill="#a41515" layoutX="1613.0" layoutY="896.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="1613.0" layoutY="836.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax 10%">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="1613.0" layoutY="798.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Button fx:id="drinksCategoryButton" layoutX="358.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Drinks">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color></DropShadow>
+            </effect></Button>
+        <Button fx:id="startersCategoryButton" layoutX="569.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: E5E9EA; -fx-background-radius: 15;" text="Starters">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.9058823585510254" green="0.2980392277240753" blue="0.2980392277240753" opacity="0.30000001192092896" />
+                    </color></DropShadow>
+            </effect></Button>
+        <Button fx:id="entreesCategoryButton" layoutX="786.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Entrees">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color></DropShadow>
+            </effect></Button>
+        <Button fx:id="dessertsCategoryButton" layoutX="1003.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Desserts">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color></DropShadow>
+            </effect></Button>
+        <Button fx:id="sidesCategoryButton" layoutX="1230.0" layoutY="220.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E5E9EA; -fx-background-radius: 15;" text="Sides">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color></DropShadow>
+            </effect></Button>
+        <Group layoutX="334.0" layoutY="362.0">
+            <children>
+                <Button fx:id="starterOne" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.30000001192092896" />
+                            </color></DropShadow>
+                    </effect></Button>
+                <Text layoutX="205.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cornbread" />
+                <Text layoutX="219.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3.00" />
+                <ImageView fx:id="cornbreadImage" fitHeight="114.0" fitWidth="114.0" layoutX="176.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/CornbreadImage.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Group>
+        <Group layoutX="837.0" layoutY="362.0">
+            <children>
+                <Button fx:id="starterTwo" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.3009118437767029" />
+                            </color></DropShadow>
+                    </effect></Button>
+                <Text layoutX="186.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="White Bread Loaf" />
+                <Text layoutX="217.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$5.00" />
+                <ImageView fx:id="loafImage" fitHeight="103.0" fitWidth="109.0" layoutX="181.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/WhiteBreadLoafImage.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Group>
+        <Group layoutX="334.0" layoutY="653.0">
+            <children>
+                <Button fx:id="starterThree" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.30000001192092896" />
+                            </color></DropShadow>
+                    </effect></Button>
+                <Text layoutX="173.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martin's Potato Bun" />
+                <Text layoutX="212.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$6.50" />
+                <ImageView fx:id="martinImage" fitHeight="128.0" fitWidth="128.0" layoutX="162.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/MartinsPotatoBunImage.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Group>
+        <Group layoutX="837.0" layoutY="653.0">
+            <children>
+                <Button fx:id="starterFour" mnemonicParsing="false" prefHeight="256.0" prefWidth="470.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.30000001192092896" />
+                            </color></DropShadow>
+                    </effect></Button>
+                <Text layoutX="195.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smoked Wings" />
+                <Text layoutX="218.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$10.50" />
+                <ImageView fx:id="wingImage" fitHeight="89.0" fitWidth="172.0" layoutX="135.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/SmokedWingsImage.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Group>
+        <Button layoutX="1607.0" layoutY="935.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+            <graphic>
+                <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/CashButtonImage.jpg" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button layoutX="1699.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+            <graphic>
+                <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/CardButtonImage.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button layoutX="1784.0" layoutY="934.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="71.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 15;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/ApplePayButtonImage.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Text layoutX="1628.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash" />
+        <Text layoutX="1717.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card" />
+        <Text layoutX="1793.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Pay" />
+      <Text fx:id="subtotalValueLabel" layoutX="1803.0" layoutY="797.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="taxValueLabel" layoutX="1803.0" layoutY="835.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalValueLabel" fill="#a41515" layoutX="1803.0" layoutY="895.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <VBox fx:id="cartContainer" layoutX="1607.0" layoutY="220.0" spacing="10.0" />
+    </children>
+</AnchorPane>

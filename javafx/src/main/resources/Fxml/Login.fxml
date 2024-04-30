@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx.Controllers.LoginController">
+   <children>
+      <VBox layoutX="699.0" layoutY="330.0" maxHeight="500.0" maxWidth="500.0" minHeight="355.0" minWidth="500.0" prefHeight="355.0" prefWidth="500.0">
+         <children>
+            <ImageView fitHeight="359.0" fitWidth="503.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/J's Restaurant Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <TextField fx:id="usernameField" layoutX="824.0" layoutY="711.0" prefHeight="25.0" prefWidth="250.0" promptText="Username" style="-fx-border-color: #C9BCBC; -fx-background-color: #FFF6F2;" />
+      <PasswordField fx:id="passwordField" layoutX="824.0" layoutY="751.0" prefHeight="25.0" prefWidth="250.0" promptText="Password" style="-fx-border-color: #C9BCBC; -fx-background-color: #FFF6F2;" />
+      <Button fx:id="loginButton" layoutX="923.0" layoutY="797.0" mnemonicParsing="false" style="-fx-background-color: #14A433;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fill="#770b03" layoutX="760.0" layoutY="729.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="55.892578125" />
+      <Text fill="#770b03" layoutX="760.0" layoutY="769.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="55.892578125" />
+      <Label fx:id="errorLabel" layoutX="764.0" layoutY="855.0" prefHeight="17.0" prefWidth="364.0" textAlignment="CENTER" textFill="#f50000">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font>
+      </Label>
+
+
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

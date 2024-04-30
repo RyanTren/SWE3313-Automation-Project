@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="86.0" fitWidth="124.0" layoutX="1782.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../assets/J's Restaurant Logo.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="859.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="838.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Welcome, Manager">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="backButton" layoutX="69.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Back">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="logoutButton" layoutX="437.0" layoutY="32.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="296.0" style="-fx-background-color: #EDCFCF; -fx-background-radius: 25;" text="Logout">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.30000001192092896" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#e8e8e8" height="919.0" layoutX="22.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1876.0" />
+        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="897.0" layoutX="915.0" layoutY="151.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="973.0" />
+        <Text layoutX="33.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By-Day Breakdown for J's Restaurant">
+            <font>
+                <Font size="42.0" />
+            </font>
+        </Text>
+        <Text layoutX="924.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weekly Standing">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c5c5c5" height="840.0" layoutX="926.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="952.0" />
+      <Line endX="-100.0" endY="807.0" layoutX="368.0" layoutY="234.0" startX="-100.0" />
+      <Line endX="-100.0" endY="807.0" layoutX="686.0" layoutY="234.0" startX="-100.0" />
+      <Line endX="512.0" endY="-11.0" layoutX="384.0" layoutY="244.0" startX="-344.0" startY="-11.0" />
+      <Line endX="518.0" endY="-11.0" layoutX="1340.0" layoutY="395.0" startX="-396.0" startY="-11.0" />
+      <Line endX="518.0" endY="-11.0" layoutX="1340.0" layoutY="551.0" startX="-396.0" startY="-11.0" />
+      <Line endX="518.0" endY="-11.0" layoutX="1341.0" layoutY="727.0" startX="-396.0" startY="-11.0" />
+      <Line endX="518.0" endY="-11.0" layoutX="1341.0" layoutY="890.0" startX="-396.0" startY="-11.0" />
+      <Text layoutX="48.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="280.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg. Turnaround Time">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="602.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg. Preparation Time">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="944.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Item(s)" />
+      <Text layoutX="1325.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standings" />
+      <Text layoutX="1602.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generated Revenue" />
+      <Text layoutX="78.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04-30-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-01-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-02-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-03-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-04-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-05-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05-06-2024">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Hour">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Hour">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="354.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="363.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.5 hours">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 hours">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="354.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="354.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="699.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Hour">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="688.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.5 Hours">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="681.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="681.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="681.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="44 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="681.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55 minutes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="701.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Hour">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="949.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
+      <Text layoutX="949.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made Sausages" />
+      <Text layoutX="949.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola Soda" />
+      <Text layoutX="949.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Pudding" />
+      <Text layoutX="949.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lipton Tea" />
+      <Text layoutX="1348.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="1348.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="1348.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="1348.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="1348.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="949.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
+      <Text layoutX="949.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made Sausages" />
+      <Text layoutX="949.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola Soda" />
+      <Text layoutX="949.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mac &amp; Cheese" />
+      <Text layoutX="949.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coleslaw" />
+      <Text layoutX="1348.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="1348.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="1348.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="1348.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="1348.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="949.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
+      <Text layoutX="949.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made Sausages" />
+      <Text layoutX="949.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martin's Potato Rolls" />
+      <Text layoutX="949.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Pudding" />
+      <Text layoutX="949.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lipton Tea" />
+      <Text layoutX="1348.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="1348.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="1348.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="1348.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="1348.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="949.0" layoutY="762.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork" />
+      <Text layoutX="949.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made Sausages" />
+      <Text layoutX="949.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola Soda" />
+      <Text layoutX="949.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Pudding" />
+      <Text layoutX="949.0" layoutY="853.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate French Silk" />
+      <Text layoutX="1348.0" layoutY="760.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="1348.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="1348.0" layoutY="805.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="1348.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="1348.0" layoutY="851.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="949.0" layoutY="920.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baby-Back Ribs" />
+      <Text layoutX="949.0" layoutY="942.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House-Made Sausages" />
+      <Text layoutX="949.0" layoutY="965.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola Soda" />
+      <Text layoutX="949.0" layoutY="988.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Pudding" />
+      <Text layoutX="949.0" layoutY="1011.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lipton Tea" />
+      <Text layoutX="1348.0" layoutY="918.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="1348.0" layoutY="940.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="1348.0" layoutY="963.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="1348.0" layoutY="986.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="1348.0" layoutY="1009.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1618.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" />
+      <Text layoutX="1615.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$420" />
+      <Text layoutX="1615.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$325" />
+      <Text layoutX="1615.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$300" />
+      <Text layoutX="1618.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" />
+      <Text layoutX="1666.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+      <Text layoutX="1666.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text layoutX="1666.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+      <Text layoutX="1666.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text layoutX="1669.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1628.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
+      <Text layoutX="1666.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+      <Line endX="-32.0" layoutX="1719.0" layoutY="241.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-28.0" layoutX="1753.0" layoutY="256.0" startX="-100.0" startY="103.0" />
+      <Text layoutX="1619.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" />
+      <Text layoutX="1616.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$420" />
+      <Text layoutX="1616.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$325" />
+      <Text layoutX="1616.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$300" />
+      <Text layoutX="1619.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" />
+      <Text layoutX="1667.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+      <Text layoutX="1667.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text layoutX="1667.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+      <Text layoutX="1667.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text layoutX="1670.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1629.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
+      <Text layoutX="1667.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+      <Line endX="-32.0" layoutX="1720.0" layoutY="410.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-28.0" layoutX="1754.0" layoutY="425.0" startX="-100.0" startY="103.0" />
+      <Text layoutX="1619.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" />
+      <Text layoutX="1616.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$420" />
+      <Text layoutX="1616.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$325" />
+      <Text layoutX="1616.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$300" />
+      <Text layoutX="1619.0" layoutY="685.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" />
+      <Text layoutX="1667.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+      <Text layoutX="1667.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text layoutX="1667.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+      <Text layoutX="1667.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text layoutX="1670.0" layoutY="685.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1629.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
+      <Text layoutX="1667.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+      <Line endX="-32.0" layoutX="1720.0" layoutY="575.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-28.0" layoutX="1754.0" layoutY="590.0" startX="-100.0" startY="103.0" />
+      <Text layoutX="1619.0" layoutY="761.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" />
+      <Text layoutX="1616.0" layoutY="783.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$420" />
+      <Text layoutX="1616.0" layoutY="806.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$325" />
+      <Text layoutX="1616.0" layoutY="829.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$300" />
+      <Text layoutX="1619.0" layoutY="852.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" />
+      <Text layoutX="1667.0" layoutY="761.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+      <Text layoutX="1667.0" layoutY="783.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text layoutX="1667.0" layoutY="806.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+      <Text layoutX="1667.0" layoutY="829.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text layoutX="1670.0" layoutY="852.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1629.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
+      <Text layoutX="1667.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+      <Line endX="-32.0" layoutX="1720.0" layoutY="742.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-28.0" layoutX="1754.0" layoutY="757.0" startX="-100.0" startY="103.0" />
+      <Text layoutX="1632.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" />
+      <Text layoutX="1629.0" layoutY="947.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$420" />
+      <Text layoutX="1629.0" layoutY="970.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$325" />
+      <Text layoutX="1629.0" layoutY="993.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$300" />
+      <Text layoutX="1632.0" layoutY="1016.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120" />
+      <Text layoutX="1680.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+      <Text layoutX="1680.0" layoutY="947.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text layoutX="1680.0" layoutY="970.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+      <Text layoutX="1680.0" layoutY="993.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text layoutX="1683.0" layoutY="1016.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="1642.0" layoutY="903.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
+      <Text layoutX="1680.0" layoutY="903.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+      <Line endX="-32.0" layoutX="1733.0" layoutY="906.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-28.0" layoutX="1767.0" layoutY="921.0" startX="-100.0" startY="103.0" />
+    </children>
+</AnchorPane>

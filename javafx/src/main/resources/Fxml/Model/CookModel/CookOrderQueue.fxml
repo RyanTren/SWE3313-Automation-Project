@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFF6F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <effect>
+        <DropShadow />
+    </effect>
+   <children>
+      <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Queue">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutButton" layoutX="1743.0" layoutY="14.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="163.0" style="-fx-background-radius: 15; -fx-background-color: B51D1D;" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#d56868" height="982.0" layoutX="20.0" layoutY="78.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="1881.0" />
+      <ScrollBar fx:id="scrollBar" layoutX="1865.0" layoutY="98.0" orientation="VERTICAL" prefHeight="943.0" prefWidth="21.0" />
+      <Group layoutX="41.0" layoutY="98.0">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="232.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="1799.0" />
+            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order # 1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soda x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mac n Cheese x 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="readyButtonOne" layoutX="1702.0" layoutY="186.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #14A433; -fx-background-radius: 25;" text="Ready" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Group layoutX="41.0" layoutY="347.0">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="232.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="1799.0" />
+            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order # 1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soda x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mac n Cheese x 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="readyButtonTwo" layoutX="1702.0" layoutY="186.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #14A433; -fx-background-radius: 25;" text="Ready" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Group layoutX="41.0" layoutY="593.0">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="232.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="1799.0" />
+            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order # 1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soda x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulled Pork x1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mac n Cheese x 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="readyButtonThree" layoutX="1702.0" layoutY="186.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #14A433; -fx-background-radius: 25;" text="Ready" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
