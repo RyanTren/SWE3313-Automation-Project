@@ -12,7 +12,7 @@ Our DatabaseConnection.Java file was the backend that established a connection b
 
 
 ## Security Implementations
-To grab and verify the Employee information from our database, we created a Employee.java file; this was the backend connecting our program to the database containing the employee's username, password, role, id, etc. It ensured that the employee logging in, would be checked and verified through our database. Otherwise, the program throws an error.
+To grab and verify the Employee information from our database, we created a Employee.java file; this was the backend connecting our program to the database containing the employee's username, password, role, id, etc. It ensured that the employee logging in, would be checked and verified through our database. Otherwise, the program would throw an error.
 
 
 
