@@ -49,6 +49,8 @@ data rather than calculating it.
 ## Project Plan
 * __[Project Plan](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Project%20Plan/Intro%20to%20SWE%20Project.pdf)__ 
 
+## Prototype
+* __[Link to our Figma] (https://www.figma.com/file/xBl4wrgJH0OejwlhlZr1bp/Automation-of-J's-Restaurant---Group-1---Designed-by-Ryan-Tran-2024?type=design&node-id=8-1010&mode=design&t=9ztmE8yLmTGoQF7k-0)
 
 ## Project Plan Video Presentation
  * [Click here](video link goes here) - YouTube
