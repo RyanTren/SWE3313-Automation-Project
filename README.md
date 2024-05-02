@@ -53,7 +53,7 @@ data rather than calculating it.
 * [Link to our Figma](https://www.figma.com/file/xBl4wrgJH0OejwlhlZr1bp/Automation-of-J's-Restaurant---Group-1---Designed-by-Ryan-Tran-2024?type=design&node-id=8-1010&mode=design&t=9ztmE8yLmTGoQF7k-0)
 
 ## Project Plan Video Presentation
- * [Click here]((https://youtu.be/PjZWxUfMVFw)) - YouTube
+ * https://youtu.be/PjZWxUfMVFw
 
 ## Requirements 
 * [Requirements Introduction](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Requirements/Intro%20to%20SWE%20Requirements%20Doc.pdf)
