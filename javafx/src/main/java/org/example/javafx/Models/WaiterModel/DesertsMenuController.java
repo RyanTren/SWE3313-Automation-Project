@@ -348,6 +348,8 @@ public class DesertsMenuController implements Initializable {
         Model.getInstance().setSelectedTableStatus(JSTable.TABLE_STATUS.FINISHED.name(), false);
 
         //Navigate to OrderReceiptController/OrderReceipt.fxml
+        Stage stage = (Stage) checkoutButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 }

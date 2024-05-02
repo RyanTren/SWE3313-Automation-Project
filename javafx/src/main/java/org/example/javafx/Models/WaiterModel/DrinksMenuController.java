@@ -362,6 +362,8 @@ public class DrinksMenuController implements Initializable {
         o.save();
 
         //Navigate to OrderReceiptController/OrderReceipt.fxml
+        Stage stage = (Stage) checkoutButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 }
