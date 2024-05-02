@@ -13,7 +13,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 
 @Table(name = "jrestaurant_tables")
-public class JSTable {
+public class JSTable implements DBModel {
     public enum TABLE_STATUS {
         AVAILABLE, OCCUPIED, FINISHED
     }
@@ -47,7 +47,6 @@ public class JSTable {
     }
 
     public void insert() {
-        Database db = new DatabaseConnection().getConnection();
         status = status.toLowerCase();
         db.insert(this);
     }
@@ -57,14 +56,12 @@ public class JSTable {
             insert();
             return;
         }
-        Database db = new DatabaseConnection().getConnection();
         status = status.toLowerCase();
         db.update(this);
     }
 
     public static ArrayList<JSTable> getAllTables() {
         ArrayList<JSTable> tables = new ArrayList<>();
-        Database db = new DatabaseConnection().getConnection();
         String sql = String.format("SELECT * from %s", TABLE_NAME);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
@@ -86,8 +83,6 @@ public class JSTable {
     }
 
     public static JSTable get(int id) {
-        Database db = new DatabaseConnection().getConnection();
-//        return db.where("id=?", id).first(JSTable.class);
         String sql = String.format("SELECT * from %s where id=%d LIMIT 1", TABLE_NAME, id);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);

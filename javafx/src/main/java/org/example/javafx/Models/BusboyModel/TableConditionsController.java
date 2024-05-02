@@ -64,6 +64,7 @@ public class TableConditionsController implements Initializable {
                 JSTable table = JSTable.get(tableID);
                 if (table != null) {
                     table.clean = true;
+                    table.status = "available";
                     table.save();
                     // remove it from view
                     dirtyTableList.getItems().remove(clicked);

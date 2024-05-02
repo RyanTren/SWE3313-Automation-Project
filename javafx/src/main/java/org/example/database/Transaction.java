@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.text.MessageFormat;
 
 @Table(name = "jrestaurant_transactions")
-public class Transaction {
+public class Transaction implements DBModel {
     public static String TABLE_NAME = "jrestaurant_transactions";
 
     @Id
@@ -44,12 +44,10 @@ public class Transaction {
     }
 
     public void insert() {
-        Database db = new DatabaseConnection().getConnection();
         db.insert(this);
     }
 
     public static Transaction get(int id) {
-        Database db = new DatabaseConnection().getConnection();
         String sql = String.format("SELECT * from %s where transaction_id=%d LIMIT 1", TABLE_NAME, id);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
@@ -76,7 +74,6 @@ public class Transaction {
             insert();
             return;
         }
-        Database db = new DatabaseConnection().getConnection();
         db.update(this);
     }
 

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @Table(name = "jrestaurant_employees")
-public class Employee {
+public class Employee implements DBModel {
     public static String TABLE_NAME = "jrestaurant_employees";
     @Id
     @GeneratedValue
@@ -43,17 +43,14 @@ public class Employee {
     }
 
     public void insert() {
-        Database db = new DatabaseConnection().getConnection();
         db.insert(this);
     }
 
     public void save() {
-        Database db = new DatabaseConnection().getConnection();
         db.update(this);
     }
 
     public static Employee get(int id) {
-        Database db = new DatabaseConnection().getConnection();
         String sql = String.format("SELECT * from %s where id=%d LIMIT 1", TABLE_NAME, id);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
@@ -77,9 +74,7 @@ public class Employee {
     }
 
     public static Employee getByUsername(String username) {
-        Database db = new DatabaseConnection().getConnection();
         String sql = String.format("SELECT * from %s where username = '%s' LIMIT 1", TABLE_NAME, username);
-        System.out.println(sql);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
             // query produced no results

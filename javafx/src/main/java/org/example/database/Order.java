@@ -16,7 +16,7 @@ import java.sql.Statement;
 import java.text.MessageFormat;
 
 @Table(name = "jrestaurant_orders")
-public class Order {
+public class Order implements DBModel {
     public static String TABLE_NAME = "jrestaurant_orders";
     @Id
     @GeneratedValue
@@ -42,7 +42,6 @@ public class Order {
     }
 
     public void insert() {
-        Database db = new DatabaseConnection().getConnection();
         String statement = String.format("INSERT INTO %s (transaction_id, items) VALUES (%d, '%s')",
                 TABLE_NAME, transaction_id, items.toJSONString());
         // assign db generated ID to "id" field
@@ -54,15 +53,12 @@ public class Order {
             insert();
             return;
         }
-
-        Database db = new DatabaseConnection().getConnection();
         String statement = String.format("UPDATE %s SET transaction_id=%d, items='%s' WHERE id=%d",
                 TABLE_NAME, transaction_id, items.toJSONString(), id);
         db.sql(statement).execute();
     }
 
     public static Order get(int id) {
-        Database db = new DatabaseConnection().getConnection();
         String sql = String.format("SELECT * from %s where id=%d LIMIT 1", TABLE_NAME, id);
         try (Statement statement = db.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
