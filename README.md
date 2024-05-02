@@ -57,8 +57,7 @@ data rather than calculating it.
 
 ## Requirements 
 * [Requirements Introduction](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Requirements/Intro%20to%20SWE%20Requirements%20Doc.pdf)
-* [Requirements Video Presentation]
-* https://youtu.be/vzdk3hFdcys
+* [Requirements Video Presentation] (https://youtu.be/vzdk3hFdcys)
 
 ## User Interface Design
 * __[User Interface Design Information](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Prototype/SWE3313%20-%20Group_1_Prototype_1.pdf)__
