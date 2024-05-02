@@ -309,6 +309,8 @@ public class DrinksMenuController implements Initializable {
         totalValueLabel.setText(String.format("%.2f", total));
         Transaction transaction = Model.getInstance().getCurrentTransaction();
         transaction.transaction_amount = total;
+        transaction.subtotal = subtotal;
+        transaction.taxes = taxes;
     }
 
 
@@ -359,14 +361,7 @@ public class DrinksMenuController implements Initializable {
         Order o = new Order(cart, transaction.id);
         o.save();
 
-        // reset everything
-        Model.getInstance().currentOrder = null;
-        Model.getInstance().currentTransaction = null;
-        Model.getInstance().setSelectedTableStatus(JSTable.TABLE_STATUS.FINISHED.name(), false);
-
         //Navigate to OrderReceiptController/OrderReceipt.fxml
-        Stage stage = (Stage) checkoutButton.getScene().getWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showOrderReceiptWindow();
     }
 }

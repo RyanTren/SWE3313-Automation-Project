@@ -2,10 +2,7 @@ package org.example.database;
 
 import com.dieselpoint.norm.Database;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigInteger;
 import java.sql.Date;
 import java.sql.ResultSet;
@@ -26,6 +23,9 @@ public class Transaction {
     public BigInteger table_number;
     public BigInteger employee_id;
     public Float transaction_amount;
+
+    @Transient
+    public float taxes, subtotal;
 
     public Transaction(BigInteger table_number, BigInteger employee_id, Float transaction_amount) {
         this.employee_id = employee_id;
