@@ -79,7 +79,7 @@ public class ViewFactory {
     }
 
     public void showOrderReceiptWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Model/WaiterModel/OrderReceipt.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Model/WaiterModel/OrderReceipt.fxml"));
         loader.setController(new OrderReceiptController());
         createStage(loader);
     }
