@@ -36,7 +36,7 @@ All data is automatically collected and processed allowing management to focus o
 data rather than calculating it.
 
 ## Meet Our Team
-* __[Ryan's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/ryansresume.md)__ 
+* __[Ryan's Resume]([https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/RyanTranResumeSummer2024.pdf])__ 
 * __[Shams's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/35f3e3b450360a8aa1f20401adbbe4e6f7219027/Team%20Resumes/shams-resume.pdf)__
 * __[Isa's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/isasresume.md)__
 * __[Prince's Resume](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Team%20Resumes/Prince%20Duepa.pdf)__
