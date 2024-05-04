@@ -49,11 +49,9 @@ data rather than calculating it.
 ## Project Plan
 * __[Project Plan](https://github.com/RyanTren/SWE3313-Automation-Project/blob/main/Project%20Plan/Intro%20to%20SWE%20Project.pdf)__ 
 
-## Prototype
+## Prototype/Project Plan
 * [Link to our Figma](https://www.figma.com/file/xBl4wrgJH0OejwlhlZr1bp/Automation-of-J's-Restaurant---Group-1---Designed-by-Ryan-Tran-2024?type=design&node-id=8-1010&mode=design&t=9ztmE8yLmTGoQF7k-0)
-
-## Project Plan Video Presentation
- * https://youtu.be/PjZWxUfMVFw
+* [Prototype One Video](https://youtu.be/PjZWxUfMVFw)
 
 ## Requirements 
 * [Requirements Introduction](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Requirements/Intro%20to%20SWE%20Requirements%20Doc.pdf)
@@ -63,11 +61,7 @@ data rather than calculating it.
 * __[User Interface Design Information](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/Prototype/SWE3313%20-%20Group_1_Prototype_1.pdf)__
 * __[User Interface Design Video Presentation](https://www.youtube.com/watch?v=UaUEt51wqsY&feature=youtu.be)__
 
-## Technical Design
-* __[Technical Design Information](redirect github sublink here (.md file))__
-* __[Technical Design Presentation](video link goes here)__
-
 ## Implementation - Final Project
 * __[Final Implementation](https://github.com/RyanTren/SWE3313-Automation-Project/tree/fmxl-test)__
 * __[How to Run the Project](https://github.com/RyanTren/SWE3313-Automation-Project/blob/fmxl-test/javafx/setup.md)__
-* __[Presentation](youtube link here)__
+* __[Presentation](https://www.youtube.com/watch?v=X1VPeF0gkeQ)__
