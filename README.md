@@ -2,7 +2,7 @@
 
 Welcome to Group 1 Project Repository! This is the location of all artifacts, presentations, documentation, and source code for our SWE3313 Project.
 
-[![Demo](demo.gif)](https://youtu.be/lxlJ8p9X5X4)
+[![Demo](demo.gif)](https://youtu.be/ZzhiNCoWet8?si=bjc3gooYhtn68oYQ)
 
 ## What is our Software?
 This project develops a computerized system to help restaurant personnel coordinate their
